@@ -93,6 +93,10 @@ Blazor WebAssembly 3.2 (Current)|May 2020||
 .NET 8 (LTS)|November 2023|Eighth|November 2023
 .NET 9 (STS)|November 2024|Ninth|November 2024
 .NET 10 (LTS)|November 2025|Tenth|November 2025
+.NET 11 (STS)|November 2026||
+.NET 12 (LTS)|November 2027|Eleventh|November 2027
+.NET 13 (STS)|November 2028||
+.NET 14 (LTS)|November 2029|Twelth|November 2029
 
 ## Understanding Blazor WebAssembly versioning
 

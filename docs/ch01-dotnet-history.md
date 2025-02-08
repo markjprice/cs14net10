@@ -12,8 +12,6 @@
   - [Web development](#web-development)
   - [Database development](#database-development)
 - [Understanding .NET Standard](#understanding-net-standard)
-- [.NET platforms and tools used by the C# and .NET book editions](#net-platforms-and-tools-used-by-the-c-and-net-book-editions)
-- [Topics covered by Apps and Services with .NET 8](#topics-covered-by-apps-and-services-with-net-8)
 
 # Understanding how C# and .NET are related
 
@@ -118,13 +116,11 @@ One of the features of modern .NET is support for running old Windows Forms and 
 
 **ASP.NET Web Forms** and **Windows Communication Foundation (WCF)** are old web application and service technologies that fewer developers are choosing to use for new development projects today, so they have also been removed from modern .NET. Instead, developers prefer to use **ASP.NET MVC**, **ASP.NET Web API**, **SignalR**, and **gRPC**. These technologies have been refactored and combined into a platform that runs on modern .NET, named **ASP.NET Core**. 
 
-You'll learn about the web development technologies in *Chapter 12, Introducing Web Development Using ASP.NET Core*, *Chapter 13, Building Websites Using ASP.NET Core Razor Pages*, *Chapter 14, Building Websites Using the Model-View-Controller Pattern*, *Chapter 15, Building and Consuming Web Services*, and *Chapter 16, Building User Interfaces Using Blazor*.
-
 > **More Information**: Some .NET Framework developers are upset that ASP.NET Web Forms, WCF, and Windows Workflow (WF) are missing from modern .NET and would like Microsoft to change their minds. There are open-source projects to enable WCF and WF to migrate to modern .NET. You can read more at the following link: https://devblogs.microsoft.com/dotnet/supporting-the-community-with-wf-and-wcf-oss-projects/. **CoreWCF** version 1.0 was released in April 2022: https://devblogs.microsoft.com/dotnet/corewcf-v1-released/. There is an open-source project for Blazor Web Forms components at the following link: https://github.com/FritzAndFriends/BlazorWebFormsComponents.
 
 ## Database development
 
-**Entity Framework (EF) 6** is an object-relational mapping technology that is designed to work with data that is stored in relational databases such as Oracle and SQL Server. It has gained baggage over the years, so the cross-platform API has been slimmed down, has been given support for non-relational databases like Azure Cosmos DB, and has been renamed **Entity Framework Core**. You will learn about it in *Chapter 10, Working with Data Using Entity Framework Core*.
+**Entity Framework (EF) 6** is an object-relational mapping technology that is designed to work with data that is stored in relational databases such as Oracle and SQL Server. It has gained baggage over the years, so the cross-platform API has been slimmed down, has been given support for non-relational databases like Azure Cosmos DB, and has been renamed **Entity Framework Core**. 
 
 If you have existing apps that use the old EF, then version 6.3 is supported on .NET Core 3.0 or later.
 
@@ -132,9 +128,9 @@ If you have existing apps that use the old EF, then version 6.3 is supported on 
 
 The situation with .NET in 2019 was that there were three forked .NET platforms controlled by Microsoft, as shown in the following list:
 
-- .NET Core: For cross-platform and new apps.
-- .NET Framework: For legacy apps.
-- Xamarin: For mobile apps.
+- **.NET Core**: For cross-platform and new apps.
+- **.NET Framework**: For legacy apps.
+- **Xamarin**: For mobile apps.
 
 Each had strengths and weaknesses because they were all designed for different scenarios. This led to the problem that a developer had to learn three platforms, each with annoying quirks and limitations.
 
@@ -157,30 +153,3 @@ Read more about the two runtimes at the following link: https://devblogs.microso
 Even now, apps and websites created for .NET Framework will need to be supported, so it is important to understand that you can create .NET Standard 2.0 class libraries that are backward compatible with legacy .NET platforms.
 
 .NET Standard is now officially legacy. There will be no new versions of .NET Standard so its GitHub repository is archived, as you can read about in the following tweet: https://twitter.com/dotnet/status/1569725004690128898
-
-# .NET platforms and tools used by the C# and .NET book editions
-
-For the first edition of this book, which was published in March 2016, I focused on .NET Core functionality but used .NET Framework when important or useful features had not yet been implemented in .NET Core. That was necessary because it was before the final release of .NET Core 1.0. Visual Studio 2015 was used for most examples, with Visual Studio Code shown only briefly.
-
-The second edition was (almost) completely purged of all .NET Framework code examples so that readers were able to focus on .NET Core 1.1 examples that truly run cross-platform and it was an LTS release.
-
-The third edition completed the switch. It was rewritten so that all the code was pure .NET Core 2.0. But giving step-by-step instructions for both Visual Studio Code and Visual Studio 2017 for all tasks added complexity.
-
-The fourth edition continued the trend by only showing coding examples using Visual Studio Code for all but the last two chapters. In Chapter 20, Building Windows Desktop Apps, it used Visual Studio running on Windows 10, and in Chapter 21, Building Cross-Platform Mobile Apps, it used Visual Studio for Mac.
-
-In the fifth edition, Chapter 20, Building Windows Desktop Apps, was moved to an online-only Appendix B to make space for a new Chapter 20, Building Web User Interfaces Using Blazor. Blazor projects can be created using Visual Studio Code.
-
-In the sixth edition, Chapter 19, Building Mobile and Desktop Apps Using .NET MAUI, was updated to show how mobile and desktop cross-platform apps can be created using Visual Studio 2022 and .NET MAUI (Multi-platform App UI).
-
-In the seventh and eighth editions, I refocused the book on three areas: language, libraries, and web development fundamentals. Readers can use Visual Studio Code for all examples in the book, or any other code editor of their choice.
-
-For .NET MAUI, readers can purchase my other book, Apps and Services with .NET 8. 
-
-# Topics covered by Apps and Services with .NET 8
-
-The following topics are available in a new book, Apps and Services with .NET 8:
-
-- Data: SQL Server, Azure Cosmos DB.
-- Libraries: Dates, times, time zones, and internationalization; reflection and source code generators; third-party libraries for image handling, logging, mapping, generating PDFs; multitasking and concurrency; and so on.
-- Services: gRPC, OData, GraphQL, Azure Functions, SignalR, Minimal Web APIs.
-- User Interfaces: ASP.NET Core, Blazor WebAssembly, .NET MAUI.

@@ -52,6 +52,10 @@ partial class Program
 
     // Set product as added in change tracking.
     EntityEntry<Product> entity = db.Products.Add(p);
+
+    // Alternatively, call Add<Product> on the data context.
+    // EntityEntry<Product> entity = db.Add(p);
+
     WriteLine($"State: {entity.State}, ProductId: {p.ProductId}");
 
     // Save tracked change to database.

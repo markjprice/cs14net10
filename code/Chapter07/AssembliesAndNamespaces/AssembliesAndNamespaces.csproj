@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
+  <ItemGroup Label="To simplify use of Console members.">
     <Using Include="System.Console" Static="true" />
   </ItemGroup>
 
@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <!--Increment to 10 once a package has been published in summer.-->
     <PackageReference Include="Packt.CSdotnet.SharedLibrary" Version="9.0.0" />
   </ItemGroup>
 

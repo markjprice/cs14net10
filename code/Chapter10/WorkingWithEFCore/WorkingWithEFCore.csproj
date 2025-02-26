@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -13,17 +13,17 @@
     </None>
   </ItemGroup>
 
-  <ItemGroup>
+  <ItemGroup Label="To simplify use of Console members.">
     <Using Include="System.Console" Static="true" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0-*">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Version="9.0.0" Include="Microsoft.EntityFrameworkCore.Sqlite" />
-    <PackageReference Version="9.0.0" Include="Microsoft.EntityFrameworkCore.Proxies" />
+    <PackageReference Version="10.0-*" Include="Microsoft.EntityFrameworkCore.Sqlite" />
+    <PackageReference Version="10.0-*" Include="Microsoft.EntityFrameworkCore.Proxies" />
   </ItemGroup>
 
   <ItemGroup>

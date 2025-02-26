@@ -1,25 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
-  <ItemGroup>
+  <ItemGroup Label="Package reference versions are set at the solution level.">
     <PackageReference Include="coverlet.collector" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="xunit" />
     <PackageReference Include="xunit.runner.visualstudio" />
   </ItemGroup>
 
-  <ItemGroup>
+  <ItemGroup Label="Imported namespaces at the project level.">
     <Using Include="Xunit" />
   </ItemGroup>
 
   <ItemGroup>
-    <!-- change Sqlite to SqlServer if you prefer -->
+    <!-- Change Sqlite to SqlServer if you prefer. -->
     <ProjectReference Include="..\Northwind.DataContext.Sqlite\Northwind.DataContext.Sqlite.csproj" />
   </ItemGroup>
 

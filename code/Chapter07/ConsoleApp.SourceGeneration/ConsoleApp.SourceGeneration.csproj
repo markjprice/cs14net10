@@ -2,15 +2,15 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
-    <!--For use with Visual Studio Code and command-line tools-->
+    <!--For use with VS Code and command-line tools-->
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
   </PropertyGroup>
 
-  <ItemGroup>
+  <ItemGroup Label="To simplify use of Console members.">
     <Using Include="System.Console" Static="true" />
   </ItemGroup>
 

@@ -5,15 +5,15 @@
         .NET Framework, Xamarin, modern .NET. -->
     <TargetFramework>netstandard2.0</TargetFramework>
 
-    <!--Compile this library using C# 13 so we can use most
-        modern compiler features. -->
+    <!--To use most modern C# compiler features. -->
+    <!--Change to 14 after .NET 10 GA.-->
     <LangVersion>13</LangVersion>
 
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
+  <ItemGroup Label="To simplify use of Console members.">
     <Using Include="System.Console" Static="true" />
   </ItemGroup>
 

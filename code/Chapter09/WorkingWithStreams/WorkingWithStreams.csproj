@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <LangVersion>preview</LangVersion>
   </PropertyGroup>
 
-  <ItemGroup>
+  <ItemGroup Label="To simplify use of Console, Path, and Environment members.">
     <Using Include="System.Console" Static="true" />
     <Using Include="System.IO.Path" Static="true" />
     <Using Include="System.Environment" Static="true" />

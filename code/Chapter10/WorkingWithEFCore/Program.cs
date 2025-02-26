@@ -6,13 +6,12 @@ using Northwind.EntityModels; // To use Northwind.
 // Disposes the database context at the end of Main.
 
 ConfigureConsole();
-//QueryingCategories();
+QueryingCategories();
 //FilteredIncludes();
 //QueryingProducts();
 //GettingOneProduct();
 //QueryingWithLike();
-//GetRandomProduct();
-GetProductUsingSql();
+//GetProductUsingSql();
 //LazyLoadingWithNoTracking();
 
 /*

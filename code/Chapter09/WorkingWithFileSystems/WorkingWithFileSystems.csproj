@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -11,7 +11,7 @@
     <PackageReference Include="Spectre.Console" Version="0.49.1" />
   </ItemGroup>
 
-  <ItemGroup>
+  <ItemGroup Label="To simplify use of Console, Directory, Path, and Environment members.">
     <Using Include="System.Console" Static="true" />
     <Using Include="System.IO.Directory" Static="true" />
     <Using Include="System.IO.Path" Static="true" />

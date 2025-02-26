@@ -32,4 +32,21 @@ public class CalculatorUnitTests
 
     Assert.Equal(expected, actual);
   }
+
+  /*
+  [Theory]
+  [InlineData(2, 2, 4)]
+  [InlineData(2, 3, 5)]
+  public void TestAdding(double a, double b, double expected)
+  {
+    // Arrange: Set up the unit under test.
+    Calculator calc = new();
+
+    // Act: Execute the function to test.
+    double actual = calc.Add(a, b);
+
+    // Assert: Make assertions to compare expected to actual results.
+    Assert.Equal(expected, actual);
+  }
+  */
 }

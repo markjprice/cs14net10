@@ -106,12 +106,12 @@ for (int i = 0; i < guidAsBytes.Length; i++)
   Write($"{guidAsBytes[i]:X2} ");
 }
 WriteLine();
-/*
+
 WriteLine("Generating three v7 GUIDs:");
 for (int i = 0; i < 3; i++)
 {
   Guid g7 = Guid.CreateVersion7(DateTimeOffset.UtcNow);
   WriteLine($"  {g7}.");
 }
-*/
+
 #endregion

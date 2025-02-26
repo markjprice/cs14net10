@@ -6,14 +6,14 @@
 
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>Packt.CSdotnet.SharedLibrary</PackageId>
-    <PackageVersion>9.0.0.0</PackageVersion>
-    <Title>C# 13 and .NET 9 Shared Library</Title>
+    <PackageVersion>10.0.0.0</PackageVersion>
+    <Title>C# 14 and .NET 10 Shared Library</Title>
     <Authors>Mark J Price</Authors>
     <PackageLicenseExpression>
       MS-PL
     </PackageLicenseExpression>
     <PackageProjectUrl>
-      https://github.com/markjprice/cs13net9
+      https://github.com/markjprice/cs14net10
     </PackageProjectUrl>
     <PackageReadmeFile>readme.md</PackageReadmeFile>
     <PackageIcon>packt-csdotnet-sharedlibrary.png</PackageIcon>
@@ -25,7 +25,7 @@
       Three extension methods to validate a string value.
     </Description>
     <Copyright>
-      Copyright © 2016-2024 Packt Publishing Limited
+      Copyright © 2016-2025 Packt Publishing Limited
     </Copyright>
     <PackageTags>string extensions packt csharp dotnet</PackageTags>
   </PropertyGroup>

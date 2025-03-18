@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup Label="For EF Core 10.">
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.0-preview.1.25081.1" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.0-preview.1.25081.1" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.0-preview.2.25163.8" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.0-preview.2.25163.8" />
   </ItemGroup>
 
   <ItemGroup Label="For unit testing.">
@@ -19,14 +19,14 @@
   </ItemGroup>
 
   <ItemGroup Label="For Blazor.">
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.0-preview.1.25120.3" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.0-preview.1.25120.3" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="10.0.0-preview.1.25120.3" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.0-preview.2.25164.1" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.0-preview.2.25164.1" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="10.0.0-preview.2.25164.1" />
   </ItemGroup>
 
   <ItemGroup Label="For web services.">
-    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0-preview.1.25120.3" />
-    <PackageVersion Include="Microsoft.Extensions.Caching.Hybrid" Version="9.2.0-preview.1.25105.6" />
+    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0-preview.2.25164.1" />
+    <PackageVersion Include="Microsoft.Extensions.Caching.Hybrid" Version="9.3.0" />
   </ItemGroup>
 
 </Project>

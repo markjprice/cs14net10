@@ -2,6 +2,8 @@
 
 If you already have some familiarity with older versions of C# and are excited to find out about the new features in the most recent versions of C#, then I have made it easier for you to jump around by listing language versions and their important new features below, along with the chapter number and topic title where you can learn about them.
 
+> C# programming language in Wikipedia: https://en.wikipedia.org/wiki/C_Sharp_(programming_language)
+
 - [Project COOL](#project-cool)
 - [C# 1, February 2002](#c-1-february-2002)
 - [C# 1.2, 2003](#c-12-2003)
@@ -20,6 +22,7 @@ If you already have some familiarity with older versions of C# and are excited t
 - [C# 11, November 2022](#c-11-november-2022)
 - [C# 12, November 2023](#c-12-november-2023)
 - [C# 13, November 2024](#c-13-november-2024)
+- [C# 14, November 2025](#c-14-november-2025)
 
 
 # Project COOL
@@ -40,6 +43,7 @@ Enabled strong data typing using generics, to improve code performance and reduc
 
 Feature|Chapter|Topic
 ---|---|---
+Partial classes|5|Splitting classes using partial
 Nullable value types|6|Making a value type nullable
 Generics|6|Making types more reusable with generics
 
@@ -52,6 +56,7 @@ Enabled declarative coding with **Language INtegrated Queries (LINQ)** and relat
 Feature|Chapter|Topic
 ---|---|---
 Implicitly typed local variables|2|Inferring the type of a local variable
+Partial methods|5|Partial methods
 LINQ|11|All topics in *Chapter 11, Querying and Manipulating Data Using LINQ*
 
 *Table 2.2: Features of C# 3 covered in this book*
@@ -207,3 +212,16 @@ Partial properties|5|Partial properties
 params collection expression support|5|Passing a variable number of parameters
 
 *Table 2.14: Features of C# 13 mentioned in this book*
+
+# C# 14, November 2025
+
+Focused on features that fill out existing suites of features like partial members, including the topics listed in *Table 2.15*:
+
+Feature|Chapter|Topic
+---|---|---
+field keyword|5|Referencing the hidden field
+Partial instance constructors|5|Partial instance constructors
+Partial events|6|Partial events
+
+*Table 2.15: Features of C# 13 mentioned in this book*
+

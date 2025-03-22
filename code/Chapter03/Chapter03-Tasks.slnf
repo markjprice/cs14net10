@@ -1,0 +1,13 @@
+{
+  "solution": {
+    "path": "Chapter03.sln",
+    "projects": [
+      "Arrays\\Arrays.csproj",
+      "CastingConverting\\CastingConverting.csproj",
+      "HandlingExceptions\\HandlingExceptions.csproj",
+      "IterationStatements\\IterationStatements.csproj",
+      "Operators\\Operators.csproj",
+      "SelectionStatements\\SelectionStatements.csproj"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "solution": {
+    "path": "Chapter03.sln",
+    "projects": [
+      "Exercise_Exceptions\\Exercise_Exceptions.csproj",
+      "Exercise_FizzBuzz\\Exercise_FizzBuzz.csproj",
+      "Exercise_LoopsAndOverflow\\Exercise_LoopsAndOverflow.csproj",
+      "Exercise_Operators\\Exercise_Operators.csproj"
+    ]
+  }
+}

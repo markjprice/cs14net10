@@ -225,3 +225,4 @@ Partial events|6|Partial events
 
 *Table 2.15: Features of C# 13 mentioned in this book*
 
+> **More Information**, The history of C#: https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-version-history

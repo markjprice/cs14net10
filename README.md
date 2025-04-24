@@ -39,6 +39,8 @@ My author page on Goodreads: https://www.goodreads.com/author/show/14224500.Mark
 
 **Modern Web Development**
 - Chapter 12 Introducing Modern Web Development Using .NET: [code/ModernWeb](code/ModernWeb)
+  - [code/ModernWeb/nuget.config](code/ModernWeb/nuget.config)
+  - [code/ModernWeb/Directory.Packages.props](code/ModernWeb/Directory.Packages.props)
 - Chapter 13 Building Websites Using ASP.NET Core: [code/ModernWeb/Northwind.Web](code/ModernWeb/Northwind.Web)
 - Chapter 14 Building Interactive Web Components Using Blazor: [code/ModernWeb/Northwind.Blazor](code/ModernWeb/Northwind.Blazor)
 - Chapter 15 Building and Consuming Web Services: [code/ModernWeb/Northwind.MinimalApi](code/ModernWeb/Northwind.MinimalApi)

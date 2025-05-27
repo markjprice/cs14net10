@@ -52,7 +52,7 @@ for (int y = 0; y <= 10; y += 3)
 
 #region Looping with the foreach statement
 
-string[] names = { "Adam", "Barry", "Charlie" };
+List<string> names = [ "Adam", "Barry", "Charlie" ];
 
 foreach (string name in names)
 {

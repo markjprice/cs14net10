@@ -81,6 +81,7 @@ This documentation section of the repository contains links to all the optional 
 ## Chapter 12 Modern Web Development with .NET
 
 - [New features in ASP.NET Core](ch12-features.md)
+- [Structuring Projects](ch12-structuring-projects.md)
 
 ## Chapter 13 Building Websites Using ASP.NET Core
 

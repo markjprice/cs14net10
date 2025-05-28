@@ -1,9 +1,12 @@
 **Solution Evolution - `.sln`, `.slnx`, and `.slnf`**
 
+- [Solution Files `.sln`](#solution-files-sln)
 - [XML Solution Files `.slnx`](#xml-solution-files-slnx)
 - [Visual Studio support for XML Solution Files](#visual-studio-support-for-xml-solution-files)
 - [Other tool support for XML Solution Files](#other-tool-support-for-xml-solution-files)
 - [Solution Filter Files `.slnf`](#solution-filter-files-slnf)
+
+# Solution Files `.sln`
 
 Visual Studio allows multiple projects to be grouped and opened together using a solution file `.sln`. The format of this file is a custom plain text file. In *Chapter 1*, the reader creates a solution file that references two projects. If the reader opens the solution file, it would look like the following:
 ```
@@ -43,7 +46,7 @@ This is complex and almost impossible to edit manually due to the GUIDs.
 
 # XML Solution Files `.slnx`
 
-A replacement syntax is currently in preview, uses XML, and has the `.slnx` file extension. The preceding file would look like the following markup:
+A modern replacement syntax is currently in preview, uses XML, and has the `.slnx` file extension. The preceding file would look like the following markup:
 ```xml
 <Solution>
   <Project Path="AboutMyEnvironment/AboutMyEnvironment.csproj" />

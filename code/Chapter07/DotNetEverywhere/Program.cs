@@ -1,4 +1,6 @@
-﻿WriteLine("I can run everywhere!");
+﻿using System.Runtime.InteropServices; // To use RuntimeInformation.
+
+WriteLine("I can run everywhere!");
 WriteLine($"OS Version is {Environment.OSVersion}.");
 
 if (OperatingSystem.IsMacOS())
@@ -17,5 +19,10 @@ else
 {
   WriteLine("I am some other mysterious OS.");
 }
+
+WriteLine($"OSArchitecture: {RuntimeInformation.OSArchitecture}");
+WriteLine($"RuntimeIdentifier: {RuntimeInformation.RuntimeIdentifier}");
+WriteLine($"FrameworkDescription: {RuntimeInformation.FrameworkDescription}");
+
 WriteLine("Press any key to stop me.");
 ReadKey(intercept: true);

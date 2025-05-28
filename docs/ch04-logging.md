@@ -10,6 +10,7 @@
 - [Adding packages to a project in VS Code](#adding-packages-to-a-project-in-vs-code)
 - [Reviewing project packages for working with configuration](#reviewing-project-packages-for-working-with-configuration)
 - [Logging information about your source code](#logging-information-about-your-source-code)
+- [Logging good practice](#logging-good-practice)
 
 
 Once you believe that all the bugs have been removed from your code, you would then compile a release version and deploy the application, so that people can use it. But no code is ever bug-free, and during runtime, unexpected errors can occur.
@@ -354,3 +355,9 @@ Trace.Close();
 [C:\cs13net9\Chapter04\Instrumenting\Program.cs]
   <Main>$ on line 44. Expression: unitsInStock > 10
 ```
+
+# Logging good practice
+
+Use the following techniques every time you log:
+- Check that the logging level you want to use is enabled. Available levels include information, warning, error, and critical. Adminstrators can enable different levels when testing, staging, and deploying to production. Log output is controlled through `IConfiguration`, typically using `appsettings.json` or environment variables.
+- Avoid string interpolation in your logged message. Interpolated strings are defined with the `$` symbol and are evaluated even if your chosen logging level is not enabled. Instead, use a log method such as `LogInformation()` or `LogDebug()` and pass parameters in the argument list.

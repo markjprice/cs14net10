@@ -8,8 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference
-      Include="..\PacktLibrary\PacktLibrary.csproj" />
+    <PackageReference Include="Dumpify" Version="0.6.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PacktLibrary\PacktLibrary.csproj" />
   </ItemGroup>
 
   <ItemGroup Label="To simplify use of Console members.">

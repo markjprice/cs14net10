@@ -1,4 +1,5 @@
-﻿using System.Xml; // To use XmlDocument.
+﻿using System.Dynamic; // To use ExpandoObject.
+using System.Xml; // To use XmlDocument.
 
 #region Storing any type of object
 
@@ -33,6 +34,22 @@ Console.WriteLine($"The length of something is {something.Length}");
 
 // Output the type of the something variable.
 Console.WriteLine($"something is an {something.GetType()}");
+
+dynamic person = new ExpandoObject();
+
+// Add properties.
+person.FirstName = "John";
+person.LastName = "Doe";
+person.Age = 30;
+
+Console.WriteLine($"{person.FirstName} {person.LastName} is {person.Age} years old.");
+
+var dict = (IDictionary<string, object>)person;
+
+foreach (var kvp in dict)
+{
+  Console.WriteLine($"{kvp.Key} = {kvp.Value}");
+}
 
 #endregion
 

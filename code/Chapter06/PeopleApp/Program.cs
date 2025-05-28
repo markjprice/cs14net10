@@ -1,4 +1,5 @@
-﻿using Packt.Shared;
+﻿using Dumpify; // To use the Dump extension method.
+using Packt.Shared;
 
 #region Implementing functionality using methods and operators
 
@@ -58,6 +59,8 @@ for (int i = 0; i < lamech.Children.Count; i++)
     arg0: lamech.Name, arg1: i,
     arg2: lamech.Children[i].Name);
 }
+
+lamech.Dump();
 
 #endregion
 

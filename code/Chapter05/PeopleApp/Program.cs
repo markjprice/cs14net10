@@ -1,4 +1,5 @@
 ﻿using Packt.Shared; // To use Person.
+using Dumpify; // To use the Dump extension method.
 
 using Fruit = (string Name, int Number); // Aliasing a tuple type.
 
@@ -143,6 +144,16 @@ WriteLine($"{bob.Name} is a {Person.Species}.");
 
 // Read-only fields are accessible via the variable.
 WriteLine($"{bob.Name} was born on {bob.HomePlanet}.");
+
+#endregion
+
+#region Outputting an object's state using Dumpify
+
+bob.Dump(label: "Default output");
+
+bob.Dump(label: "Include fields and non-public members",
+  members: new MembersConfig { IncludeFields = true, 
+    IncludeNonPublicMembers = true });
 
 #endregion
 

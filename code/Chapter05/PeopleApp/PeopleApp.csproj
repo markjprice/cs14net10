@@ -16,4 +16,8 @@
     <Using Include="System.Console" Static="true" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Dumpify" Version="0.6.6" />
+  </ItemGroup>
+
 </Project>

@@ -151,12 +151,12 @@ Visual Studio has a graphical user interface for adding packages:
 
 Code does not have a mechanism to add NuGet packages to a project, so we will use the command-line tool:
 1.	Navigate to the **TERMINAL** window for the `Instrumenting` project.
-2.	Enter the following command: `dotnet add package Microsoft.Extensions.Configuration.Binder`
-3.	Enter the following command: `dotnet add package Microsoft.Extensions.Configuration.Json`
+2.	Enter the following command: `dotnet package add Microsoft.Extensions.Configuration.Binder`
+3.	Enter the following command: `dotnet package add Microsoft.Extensions.Configuration.Json`
 
-`dotnet add package` adds a reference to a NuGet package to your project file. It will be downloaded during the build process. 
+`dotnet package add` (.NET 10 or later) and `dotnet add package` (.NET 9 or earlier) commands add a reference to a NuGet package to your project file. It will be downloaded during the build process. 
 
-`dotnet add reference` adds a project-to-project reference to your project file. The referenced project will be compiled if needed during the build process.
+`dotnet reference add` (.NET 10 or later) and `dotnet add reference` (.NET 9 or earlier) commands add a project-to-project reference to your project file. The referenced project will be compiled if needed during the build process.
 
 # Reviewing project packages for working with configuration
 

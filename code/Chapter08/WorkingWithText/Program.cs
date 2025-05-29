@@ -99,6 +99,22 @@ WriteLine("Compare (InvariantCultureIgnoreCase): {0}.",
 
 #endregion
 
+#region Numeric ordering for string comparison
+
+StringComparer numericStringComparer = StringComparer.Create(
+  CultureInfo.CurrentCulture, CompareOptions.NumericOrdering);
+
+WriteLine($"07 == 7? {numericStringComparer.Equals("07", "7")}");
+
+string[] oses = { "Windows 10", "Windows 8", "Windows 11" };
+
+foreach (string os in oses.Order(numericStringComparer))
+{
+  WriteLine(os);
+}
+
+#endregion
+
 #region Joining, formatting, and other string members
 
 string recombined = string.Join(" => ", citiesArray);

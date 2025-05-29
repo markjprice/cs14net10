@@ -2,6 +2,8 @@
 using System.Text.Json.Schema; // To use JsonSchemaExporter.
 using System.Xml.Serialization; // To use XmlSerializer.
 using Packt.Shared; // To use Person.
+// To use JsonPatchDocument<T>.
+using Microsoft.AspNetCore.JsonPatch.SystemTextJson;
 
 using FastJson = System.Text.Json.JsonSerializer;
 
@@ -131,5 +133,38 @@ SectionTitle("JSON schema exporter");
 
 WriteLine(JsonSchemaExporter.GetJsonSchemaAsNode(
   JsonSerializerOptions.Default, typeof(Person)));
+
+#endregion
+
+#region JSON Patch implementation improvements
+
+Person person = new()
+{
+  FirstName = "Cassian",
+  LastName = "Andor",
+  DateOfBirth = new DateTime(1990, 1, 1)
+};
+
+// Output original object.
+WriteLine($"Before: {FastJson.Serialize(person)}");
+
+// Define a JSON patch document.
+string jsonPatch = """
+[
+  { "op": "replace", "path": "/FirstName", "value": "Varian" },
+  { "op": "replace", "path": "/LastName", "value": "Skye" },
+  { "op": "remove", "path": "/DateOfBirth"}
+]
+""";
+
+// Deserialize the JSON patch document.
+JsonPatchDocument<Person>? patchDoc = 
+  FastJson.Deserialize<JsonPatchDocument<Person>>(jsonPatch);
+
+// Apply the JSON patch document.
+patchDoc!.ApplyTo(person);
+
+// Output updated object.
+WriteLine($"After: {FastJson.Serialize(person)}");
 
 #endregion

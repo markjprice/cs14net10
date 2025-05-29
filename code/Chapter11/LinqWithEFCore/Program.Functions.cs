@@ -128,6 +128,69 @@ partial class Program
     }
   }
 
+  private static void LeftJoinNet9()
+  {
+    SectionTitle("Left join categories and products");
+
+    using NorthwindDb db = new();
+
+    var query = db.Categories
+      .GroupJoin(
+        db.Products,
+        category => category.CategoryId,
+        product => product.CategoryId,
+        (category, productList) => new { category, subgroup = productList })
+      .SelectMany(
+        joinedSet => joinedSet.subgroup.DefaultIfEmpty(),
+        (category, product) => new
+        {
+          category.category.CategoryName,
+          ProductName = product!.ProductName ?? "[NONE]"
+        });
+
+    foreach (var cp in query)
+    {
+      if (cp.ProductName is null)
+      {
+        WriteLine($"{cp.CategoryName} has no products.");
+      }
+      else
+      {
+        WriteLine($"{cp.CategoryName} contains {cp.ProductName}.");
+      }
+    }
+  }
+
+  private static void LeftJoinNet10()
+  {
+    SectionTitle("Left join categories and products with .NET 10");
+
+    using NorthwindDb db = new();
+
+    var query = db.Categories
+      .LeftJoin(
+        db.Products,
+        category => category.CategoryId,
+        product => product.CategoryId,
+        (category, product) => new
+        {
+          category.CategoryName,
+          ProductName = product!.ProductName ?? "[NONE]"
+        });
+
+    foreach (var cp in query)
+    {
+      if (cp.ProductName is null)
+      {
+        WriteLine($"{cp.CategoryName} has no products.");
+      }
+      else
+      {
+        WriteLine($"{cp.CategoryName} contains {cp.ProductName}.");
+      }
+    }
+  }
+
   private static void AggregateProducts()
   {
     SectionTitle("Aggregate products");

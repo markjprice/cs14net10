@@ -1,8 +1,10 @@
 ﻿ConfigureConsole(); // Sets US English by default.
-FilterAndSort();
+//FilterAndSort();
 //JoinCategoriesAndProducts();
 //GroupJoinCategoriesAndProducts();
 //ProductsLookup();
+//LeftJoinNet9();
+LeftJoinNet10();
 //AggregateProducts();
 //PagingProducts();
 //OutputProductsAsXml();

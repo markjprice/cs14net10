@@ -67,7 +67,7 @@ Improved interoperability with dynamic languages like F# and Python, including t
 
 Feature|Chapter|Topic
 ---|---|---
-Dynamic types|2|Storing dynamic types
+Dynamic types and ExpandoObject|2|Storing dynamic types
 Named/optional arguments|5|Optional parameters and named arguments
 
 *Table 2.3: Features of C# 3 covered in this book*
@@ -215,14 +215,17 @@ params collection expression support|5|Passing a variable number of parameters
 
 # C# 14, November 2025
 
-Focused on features that fill out existing suites of features like partial members, including the topics listed in *Table 2.15*:
+Focused on features that fill out existing suites of features, like partial members and extension members, including the topics listed in *Table 2.15*:
 
 Feature|Chapter|Topic
 ---|---|---
-field keyword|5|Referencing the hidden field
-Partial instance constructors|5|Partial instance constructors
-Partial events|6|Partial events
+No-project C# code files|1|Running a C# code file without a project file
+Improved `nameof`|2|Naming things and assigning values
+Null-conditional assignment operator|3|Null-conditional assignment operator
+`field` keyword|5|Implementing properties using the `field` keyword
+Partial instance constructors and events|5|Partial members
+Extension members|6|Extension members
 
-*Table 2.15: Features of C# 13 mentioned in this book*
+*Table 2.15: Features of C# 14 mentioned in this book*
 
-> **More Information**, The history of C#: https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-version-history
+> **The History of C#**: https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-version-history

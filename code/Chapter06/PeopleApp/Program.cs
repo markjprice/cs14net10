@@ -267,6 +267,12 @@ WriteLine("{0} is a valid e-mail address: {1}",
 
 #endregion
 
+#region Extension members with C# 14 and later
+
+WriteLine($"Extension member: {Path.IsDirectory(@"C:\sqlite")}");
+
+#endregion
+
 #region Mutability and records
 
 C1 c1 = new() { Name = "Bob" };

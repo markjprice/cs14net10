@@ -5,7 +5,8 @@ This documentation section of the repository contains links to all the optional 
 - [Online-only sections](#online-only-sections)
   - [Chapter 1 Hello C#, Welcome .NET!](#chapter-1-hello-c-welcome-net)
   - [Chapter 2 Speaking C#](#chapter-2-speaking-c)
-  - [Chapter 4 - Writing, Debugging, and Testing Functions](#chapter-4---writing-debugging-and-testing-functions)
+  - [Chapter 3 Controlling Flow, Converting Types, and Handling Exceptions](#chapter-3-controlling-flow-converting-types-and-handling-exceptions)
+  - [Chapter 4 Writing, Debugging, and Testing Functions](#chapter-4-writing-debugging-and-testing-functions)
   - [Chapter 6 Implementing Interfaces and Inheriting Classes](#chapter-6-implementing-interfaces-and-inheriting-classes)
   - [Chapter 7 Packaging and Distributing .NET Types](#chapter-7-packaging-and-distributing-net-types)
   - [Chapter 8 Working with Common .NET Types](#chapter-8-working-with-common-net-types)
@@ -36,7 +37,11 @@ This documentation section of the repository contains links to all the optional 
 - [Dynamic Type](ch02-dynamic.md)
 - [Understanding async and await](ch02-async-await.md)
 
-## Chapter 4 - Writing, Debugging, and Testing Functions
+## Chapter 3 Controlling Flow, Converting Types, and Handling Exceptions
+
+- [Returning result types versus throwing exceptions](ch03-result-types.md)
+
+## Chapter 4 Writing, Debugging, and Testing Functions
 
 - [Logging during development and runtime](ch04-logging.md)
 
@@ -54,6 +59,7 @@ This documentation section of the repository contains links to all the optional 
 
 ## Chapter 8 Working with Common .NET Types
 
+- [.NET Collections Overview](ch08-collections.md)
 - [Working with Network Resources](ch08-network-resources.md)
 
 ## Chapter 9 Working with Files, Streams, and Serialization

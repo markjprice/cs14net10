@@ -93,6 +93,8 @@ Method|Services that it registers
 
 You will see more examples of using these extension methods to register services in the next few chapters when working with ASP.NET Core MVC and ASP.NET Core Web API services.
 
+> **Warning!** If you are missing an extension method that you expect to have available, it might because you don't have a required package reference or namespace import. For example, the `UseSerilogRequestLogging()` extension method is only available if you reference the `Serilog.AspNetCore` package and import the `Serilog` namespace.
+
 # Setting up the HTTP pipeline
 
 After building the web application and its services, the next statements configure the HTTP pipeline through which HTTP requests and responses flow in and out. The pipeline is made up of a connected sequence of delegates that can perform processing and then decide to either return a response themselves or pass processing on to the next delegate in the pipeline. Responses that come back can also be manipulated.

@@ -1,37 +1,27 @@
 <Project>
-
-  <!--Last updated package versions: May 26, 2025.-->
-
+  <!--Last updated package versions: June 14, 2025.-->
   <PropertyGroup>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-    <MicrosoftPackageVersion>10.0.0</MicrosoftPackageVersion>
-    
     <!--Preview package versions. Delete after GA and reference above instead.-->
-    <EFCorePackageVersion>10.0.0-preview.4.25258.110</EFCorePackageVersion>
-    <AspNetCorePackageVersion>10.0.0-preview.4.25258.110</AspNetCorePackageVersion>
+    <MicrosoftPackageVersion>10.0.0-preview.5.25277.114</MicrosoftPackageVersion>
   </PropertyGroup>
-
-  <ItemGroup Label="For EF Core 10.">
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="$(EFCorePackageVersion)" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="$(EFCorePackageVersion)" />
+  <ItemGroup Label="For EF Core.">
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="$(MicrosoftPackageVersion)" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="$(MicrosoftPackageVersion)" />
   </ItemGroup>
-
   <ItemGroup Label="For unit testing.">
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.0" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
     <PackageVersion Include="coverlet.collector" Version="6.0.4" />
     <PackageVersion Include="xunit" Version="2.9.3" />
-    <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.0" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.1" />
   </ItemGroup>
-
   <ItemGroup Label="For Blazor.">
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="$(AspNetCorePackageVersion)" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="$(AspNetCorePackageVersion)" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="$(AspNetCorePackageVersion)" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="$(MicrosoftPackageVersion)" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="$(MicrosoftPackageVersion)" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="$(MicrosoftPackageVersion)" />
   </ItemGroup>
-
   <ItemGroup Label="For web services.">
-    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="$(AspNetCorePackageVersion)" />
-    <PackageVersion Include="Microsoft.Extensions.Caching.Hybrid" Version="9.5.0" />
+    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="$(MicrosoftPackageVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Caching.Hybrid" Version="9.6.0" />
   </ItemGroup>
-
 </Project>

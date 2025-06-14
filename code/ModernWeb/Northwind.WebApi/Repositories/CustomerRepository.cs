@@ -25,7 +25,7 @@ public class CustomerRepository : ICustomerRepository
     return _db.Customers.ToArrayAsync();
   }
 
-  public async Task<Customer?> RetrieveAsync(string id, 
+  public async Task<Customer?> RetrieveAsync(string id,
     CancellationToken token = default)
   {
     id = id.ToUpper(); // Normalize to uppercase.
@@ -44,13 +44,11 @@ public class CustomerRepository : ICustomerRepository
 
     // Add to database using EF Core.
     EntityEntry<Customer> added = await _db.Customers.AddAsync(c);
-
     int affected = await _db.SaveChangesAsync();
     if (affected == 1)
     {
       // If saved to database then store in cache.
       await _cache.SetAsync(c.CustomerId, c);
-
       return c;
     }
     return null;
@@ -60,7 +58,21 @@ public class CustomerRepository : ICustomerRepository
   {
     c.CustomerId = c.CustomerId.ToUpper();
 
+    /*
+    // Detach the existing tracked entity if it exists.
+    Customer? alreadyTracked = _db.Customers.Local
+      .FirstOrDefault(local => local.CustomerId == c.CustomerId);
+    if (alreadyTracked is not null)
+    {
+      _db.Entry(alreadyTracked).State = EntityState.Detached;
+    }
+    _db.Entry(c).State = EntityState.Modified;
+    */
+
+    _db.ChangeTracker.Clear();
+
     _db.Customers.Update(c);
+
     int affected = await _db.SaveChangesAsync();
     if (affected == 1)
     {

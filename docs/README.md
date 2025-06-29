@@ -36,6 +36,7 @@ This documentation section of the repository contains links to all the optional 
 - [C# language versions and features](ch02-features.md)
 - [Dynamic Type](ch02-dynamic.md)
 - [Understanding async and await](ch02-async-await.md)
+- [Handling platforms that do not support an API](ch02-api-unsupported-platforms.md)
 
 ## Chapter 3 Controlling Flow, Converting Types, and Handling Exceptions
 
@@ -47,12 +48,15 @@ This documentation section of the repository contains links to all the optional 
 
 ## Chapter 6 Implementing Interfaces and Inheriting Classes
 
+- [Comparing objects using a separate class](ch06-comparing-objects.md)
 - [Managing memory with reference and value types](ch06-memory.md)
+- [Summarizing custom type choices](ch06-summarizing-custom-types.md)
 - [Writing Better Code](ch06-writing-better-code.md)
 
 ## Chapter 7 Packaging and Distributing .NET Types
 
 - [New features in modern .NET](ch07-features.md)
+- [Working with preview features](ch07-preview-features.md)
 - [Decompiling .NET assemblies](ch07-decompiling.md)
 - [Porting from .NET Framework to modern .NET](ch07-porting.md)
 - [Introducing source generators](ch07-source-generators.md)
@@ -104,6 +108,7 @@ This documentation section of the repository contains links to all the optional 
 
 ## Chapter 15 Building and Consuming Web Services
 
+- [In-memory, distributed, and hybrid caches](ch15-caching.md)
 - [Testing requests with the Swagger UI](ch15-swagger-ui.md)
 - [Implementing advanced features for web services](ch15-advanced.md)
 - [Exercise 15.2 – Practice creating and deleting customers with HttpClient](ch15-exercise-2.md)

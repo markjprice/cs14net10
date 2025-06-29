@@ -66,9 +66,9 @@ Modern .NET|`NET10_0`, `NET10_0_ANDROID`, `NET10_0_IOS`, `NET10_0_WINDOWS`, and 
 
 You can then write statements that will compile only for the specified platforms, as shown in the following code:
 ```cs
-#if NET7_0_ANDROID
+#if NET10_0_ANDROID
 // Compile statements that only work on Android.
-#elif NET7_0_IOS
+#elif NET10_0_IOS
 // Compile statements that only work on iOS.
 #else
 // Compile statements that work everywhere else.

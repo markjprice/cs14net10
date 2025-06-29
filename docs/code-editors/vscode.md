@@ -25,6 +25,7 @@ In this article, I provide detailed step-by-step instuctions for using VS Code f
     - [Customizing breakpoints](#customizing-breakpoints)
   - [Hot reloading during development](#hot-reloading-during-development)
     - [Hot reloading using VS Code and dotnet watch](#hot-reloading-using-vs-code-and-dotnet-watch)
+  - [Running unit tests using VS Code](#running-unit-tests-using-vs-code)
 - [Chapter 7 - Packaging and Distributing .NET Types](#chapter-7---packaging-and-distributing-net-types)
   - [Decompiling using the ILSpy extension for VS Code](#decompiling-using-the-ilspy-extension-for-vs-code)
 
@@ -351,11 +352,9 @@ Breakpoints allow us to mark a line of code that we want to pause at to inspect 
 Let's set a breakpoint and then start debugging using VS Code:
 
 1.	Click in line 1, which is the statement that declares the variable named `a`.
-2.	Navigate to **Run** | **Toggle Breakpoint** or press *F9*. A red circle will appear in the margin bar on the left-hand side to indicate that a breakpoint has been set.
+2.	Navigate to **Run** | **Toggle Breakpoint** or press *F9*. A red circle will appear in the margin bar on the left-hand side to indicate that a breakpoint has been set. 
 
-Breakpoints can be toggled off with the same action. You can also left-click in the margin to toggle a breakpoint on and off, or right-click to see more options, such as remove, edit, or disable an existing breakpoint; or add a breakpoint, conditional breakpoint, or logpoint when a breakpoint does not yet exist.
-
-Logpoints, also known as tracepoints, indicate that you want to record some information without having to stop executing the code at that point.
+> Breakpoints can be toggled off with the same action. You can also left-click in the margin to toggle a breakpoint on and off, or right-click to see more options, such as remove, edit, or disable an existing breakpoint; or add a breakpoint, conditional breakpoint, or logpoint when a breakpoint does not yet exist. Logpoints, also known as tracepoints, indicate that you want to record some information without having to stop executing the code at that point.
 
 3.	Navigate to **View** | **Run**, or in the left navigation bar you can click the **Run and Debug** icon (the triangle "play" button and "bug") or press *Ctrl* + *Shift* + *D* (on Windows).
 4.	At the top of the **RUN AND DEBUG** window, click the **Run and Debug** button, and then select the `Debugging` project, as shown in *Figure 4.5*:
@@ -446,7 +445,7 @@ double a = double.Parse(number);
 ![Selecting a debugger for the launch.json file](assets/code/B19586_04_09.png)
 *Figure 4.9: Selecting a debugger for the launch.json file*
 
-7.	In the `launch.json` file editor, click the **Add Configuration...** button, and then select **.NET: Launch .NET Core Console App**, as shown in *Figure 4.10*:
+7.	In the `launch.json` file editor, click the **Add Configuration...** button, and then select **.NET: Launch Executable file (Console)**, as shown in *Figure 4.10*:
 
 ![Adding a launch configuration for a .NET Console App](assets/code/B19586_04_10.png) 
 *Figure 4.10: Adding a launch configuration for a .NET Console App*
@@ -454,7 +453,7 @@ double a = double.Parse(number);
 8.	In `launch.json`, make the following additions and changes, as shown highlighted in the following configuration:
     - Comment out the `preLaunchTask` setting.
     - In the program path, add the `Debugging` project folder after the workspace folder variable.
-    - In the program path, change `<target-framework>` to `net8.0`.
+    - In the program path, change `<target-framework>` to `net10.0`.
     - In the program path, change `<project-name.dll>` to `Debugging.dll`.
     - Change the console setting from `internalConsole` to `integratedTerminal`.
 
@@ -470,7 +469,7 @@ double a = double.Parse(number);
       "type": "coreclr",
       "request": "launch",
       //"preLaunchTask": "build",
-      "program": "${workspaceFolder}/Debugging/bin/Debug/net8.0/Debugging.dll",
+      "program": "${workspaceFolder}/Debugging/bin/Debug/net10.0/Debugging.dll",
       "args": [],
       "cwd": "${workspaceFolder}",
       "stopAtEntry": false,
@@ -572,6 +571,20 @@ Goodbye, Hot Reload!
 Goodbye, Hot Reload!
 dotnet watch 🛑 Shutdown requested. Press Ctrl+C again to force exit.
 ```
+
+## Running unit tests using VS Code
+
+Now we are ready to run the unit tests and see the results:
+
+1.	If you have not recently built the test project, then build the `CalculatorLibUnitTests` project to make sure that the new testing feature in the C# Dev Kit extension recognizes the unit tests that you have written.
+2.	In VS Code, navigate to **View** | **Testing**, and note the **TESTING** window has a mini toolbar with buttons to **Refresh Tests**, **Run Tests**, **Debug Tests**, and so on.
+3.	In the **TESTING** window, expand the **CalculatorLibUnitTests** project to show the two tests.
+4.	Hover your mouse pointer over **CalculatorUnitTests** and then click the **Run Tests** button (black triangle icon) defined in that class.
+5.	Click the **TEST RESULTS** tab and note that the results indicate that two tests ran, one test passed, and one test failed, as shown in *Figure 4.14*:
+
+![The unit test results in VS Code’s TEST RESULTS](assets/code/B31466_04_14.png) 
+*Figure 4.14: The unit test results in VS Code’s TEST RESULTS*
+
 
 # Chapter 7 - Packaging and Distributing .NET Types
 

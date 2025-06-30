@@ -64,7 +64,7 @@ string[][] jagged = // An array of string arrays.
   [ "Alpha", "Beta", "Gamma" ],
   [ "Anne", "Ben", "Charlie", "Doug" ],
   [ "Aardvark", "Bear" ]
-]
+];
 */
 
 WriteLine("Upper bound of the array of arrays is: {0}",

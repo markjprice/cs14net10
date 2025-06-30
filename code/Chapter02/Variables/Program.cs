@@ -35,6 +35,10 @@ Console.WriteLine($"The length of something is {something.Length}");
 // Output the type of the something variable.
 Console.WriteLine($"something is an {something.GetType()}");
 
+#endregion
+
+#region Dynamic types with the ExpandoObject
+
 dynamic person = new ExpandoObject();
 
 // Add properties.
@@ -44,11 +48,13 @@ person.Age = 30;
 
 Console.WriteLine($"{person.FirstName} {person.LastName} is {person.Age} years old.");
 
-var dict = (IDictionary<string, object>)person;
+// Cast the ExpandoObject into a dictionary.
+var dictionary = (IDictionary<string, object>)person;
 
-foreach (var kvp in dict)
+// Each item in the dictionary is a key-value pair.
+foreach (var item in dictionary)
 {
-  Console.WriteLine($"{kvp.Key} = {kvp.Value}");
+  Console.WriteLine($"{item.Key} = {item.Value}");
 }
 
 #endregion

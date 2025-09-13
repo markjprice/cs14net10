@@ -54,7 +54,7 @@ A modern replacement syntax is currently in preview, uses XML, and has the `.sln
 </Solution>
 ```
 
-This is much easier to work with!
+This is much easier to work with, especially with Git because merge conflicts can be reviewed easier.
 
 > **More Information**: Learn more at the following link: https://devblogs.microsoft.com/visualstudio/new-simpler-solution-file-format/.
 

@@ -1,6 +1,6 @@
 # `decimal` vs. `double`
 
-The advice that I give in my book is that `decimal` is generally preferred over `double` in many cases, including CAD and general engineering. But as usual in programming, it's not always that straightforward. The crux of the debate rests on three main pillars:
+The crux of the debate rests on three main pillars:
 
 1.  **Rounding Errors Exist in Both:** `decimal` is not immune to rounding errors. The example `1D / 3D * 4.5D` resulting in `1.4999999999999999999999999998` is a perfect illustration of this. This demonstrates that simply using `decimal` does not eliminate the need to be mindful of precision.
 
@@ -19,12 +19,10 @@ It's helpful to understand the fundamental difference between the two types to a
 
 Both `decimal` vs. `double` have their uses, but they are emphasizing different priorities.
 
-* **My book's advice** is a simplification aimed at preventing common errors by beginners, particularly in financial and monetary applications where base-10 accuracy is non-negotiable. For a beginner or in a general context, steering developers towards `decimal` for any scenario involving fractional numbers can be seen as "safer" advice to avoid the pitfalls of binary floating-point representation.
+* **My book's advice** to prefer `decimal` over `double` is a simplification aimed at preventing common errors by beginners, particularly in financial and monetary applications where base-10 accuracy is non-negotiable. For a beginner or in a general context, steering developers towards `decimal` for any scenario involving fractional numbers can be seen as "safer" advice to avoid the pitfalls of binary floating-point representation.
 
 * **The alternative argument** is a more nuanced and performance-aware take, rooted in the practical realities of specific domains like engineering and graphics-intensive applications. In these fields, the sheer volume of calculations often makes the performance of `double` a necessity, and its precision is generally adequate.
 
 # Summary
-
-That `decimal` is *generally* preferred for applications like CAD is an oversimplification. For high-performance numerical computation, `double` remains the standard and more appropriate choice. 
 
 The key is for developers to understand the trade-offs between the two types and choose the one that best fits the specific requirements of their application, rather than following a one-size-fits-all rule. 

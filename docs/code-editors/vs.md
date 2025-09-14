@@ -1,40 +1,38 @@
-**Using Visual Studio 2022 for Windows**
+**Visual Studio 2026 for Windows**
 
-In this article, I provide detailed step-by-step instuctions for using Visual Studio 2022 for Windows for topics like creating a solution with multiple projects and using debugging tools.
+In this article, I provide detailed step-by-step instuctions for using Visual Studio 2026 for Windows for topics like creating a solution with multiple projects and using debugging tools.
 
 - [Chapter 1 - Hello, C#! Welcome, .NET!](#chapter-1---hello-c-welcome-net)
-  - [Downloading and installing Visual Studio 2022](#downloading-and-installing-visual-studio-2022)
-  - [Building console apps using Visual Studio 2022](#building-console-apps-using-visual-studio-2022)
-    - [Managing multiple projects using Visual Studio 2022](#managing-multiple-projects-using-visual-studio-2022)
-    - [Writing code using Visual Studio 2022](#writing-code-using-visual-studio-2022)
+  - [Downloading and installing Visual Studio](#downloading-and-installing-visual-studio)
+  - [Building console apps using Visual Studio](#building-console-apps-using-visual-studio)
+    - [Managing multiple projects using Visual Studio](#managing-multiple-projects-using-visual-studio)
+    - [Writing code using Visual Studio](#writing-code-using-visual-studio)
   - [Compiling and running code using Visual Studio](#compiling-and-running-code-using-visual-studio)
   - [Understanding the compiler-generated folders and files](#understanding-the-compiler-generated-folders-and-files)
   - [Understanding top-level programs](#understanding-top-level-programs)
     - [Requirements for top-level programs](#requirements-for-top-level-programs)
     - [Implicitly imported namespaces](#implicitly-imported-namespaces)
     - [Revealing the hidden code by throwing an exception](#revealing-the-hidden-code-by-throwing-an-exception)
-  - [Adding a second project using Visual Studio 2022](#adding-a-second-project-using-visual-studio-2022)
+  - [Adding a second project using Visual Studio](#adding-a-second-project-using-visual-studio)
 - [Chapter 4 - Writing, Debugging, and Testing Functions](#chapter-4---writing-debugging-and-testing-functions)
   - [Debugging during development](#debugging-during-development)
     - [Creating code with a deliberate bug](#creating-code-with-a-deliberate-bug)
     - [Setting a breakpoint and starting debugging](#setting-a-breakpoint-and-starting-debugging)
-    - [Using Visual Studio 2022](#using-visual-studio-2022)
+    - [Using Visual Studio](#using-visual-studio)
     - [Navigating with the debugging toolbar](#navigating-with-the-debugging-toolbar)
     - [Debugging windows](#debugging-windows)
     - [Stepping through code](#stepping-through-code)
     - [Customizing breakpoints](#customizing-breakpoints)
   - [Hot reloading during development](#hot-reloading-during-development)
-    - [Hot reloading using Visual Studio 2022](#hot-reloading-using-visual-studio-2022)
-- [Chapter 7 - Packaging and Distributing .NET Types](#chapter-7---packaging-and-distributing-net-types)
-  - [Decompiling using the ILSpy extension for Visual Studio 2022 (coming soon)](#decompiling-using-the-ilspy-extension-for-visual-studio-2022-coming-soon)
+    - [Hot reloading using Visual Studio](#hot-reloading-using-visual-studio)
 
 # Chapter 1 - Hello, C#! Welcome, .NET!
 
-## Downloading and installing Visual Studio 2022
+## Downloading and installing Visual Studio
 
-If you have not already installed Visual Studio 2022 for Windows, let's do so now:
+If you have not already installed Visual Studio 2026 for Windows, let's do so now:
 
-1.	Download Microsoft Visual Studio 2022 version 17.8 or later for Windows from the following link: https://visualstudio.microsoft.com/downloads/.
+1.	Download Microsoft Visual Studio 2026 version 18.0 or later for Windows from the following link: https://visualstudio.microsoft.com/downloads/.
 2.	Start the installer.
 3.	On the **Workloads** tab, select the following:
     -	**ASP.NET and web development**
@@ -42,50 +40,51 @@ If you have not already installed Visual Studio 2022 for Windows, let's do so no
     - **Desktop development with C++** with all default components (because this enables publishing console apps and web services that start faster and have smaller memory footprints).
 4.	Click **Install** and wait for the installer to acquire the selected software and install it.
 5.	When the installation is complete, click **Launch**.
-6.	The first time that you run Visual Studio 2022, you will be prompted to sign in. If you have a Microsoft account, you can use that account. If you don't, then register for a new one at the following link: https://signup.live.com/
-7.	The first time that you run Visual Studio 2022, you will be prompted to configure your environment. For **Development Settings**, choose **Visual C#**. For the color theme, I chose **Blue**, but you can choose whatever tickles your fancy.
+6.	The first time that you run Visual Studio, you will be prompted to sign in. If you have a Microsoft account, you can use that account. If you don't, then register for a new one at the following link: https://signup.live.com/
+7.	The first time that you run Visual Studio, you will be prompted to configure your environment. For **Development Settings**, choose **Visual C#**. For the color theme, I chose **Blue**, but you can choose whatever tickles your fancy.
 8.	If you want to customize your keyboard shortcuts, navigate to **Tools** | **Options...**, and then select the **Keyboard** section.
 
-## Building console apps using Visual Studio 2022
+## Building console apps using Visual Studio
 
-The goal of this section is to showcase how to build a console app using Visual Studio 2022 for Windows. 
+The goal of this section is to showcase how to build a console app using Visual Studio. 
 
-### Managing multiple projects using Visual Studio 2022
+### Managing multiple projects using Visual Studio
 
-Visual Studio 2022 has a concept named a solution that allows you to open and manage multiple projects simultaneously. We will use a solution to manage the two projects that you will create in this chapter.
+Visual Studio has a concept named a solution that allows you to open and manage multiple projects simultaneously. We will use a solution to manage the two projects that you will create in this chapter.
 
-### Writing code using Visual Studio 2022
+### Writing code using Visual Studio
 
 Let's get started writing code!
 
-1.	Start **Visual Studio 2022**. You might see an experimental new **Welcome** tab that replaces the old model dialog box, as shown in *Figure 1.3*. This was introduced with previews of version 17.6 but in more recent previews it has been removed again. Microsoft is surveying what "Welcome Experience" developers prefer so it might return.
-2.	In the **Welcome** tab, click **New Project**, or if you are using a version with the **Visual Studio 2022** modal dialog box, then in the **Get started** section, click **Create a new project**.
+1.	Start **Visual Studio**.
+2.	In the **Visual Studio 2026** | **Get started** window, click **Create a new project**, as shown in *Figure 1.3*:
 
-![Creating a new project in Visual Studio 2022](assets/vs/B19586_01_03.png)
-*Figure 1.3: Creating a new project in Visual Studio 2022*
+![Creating a new project in Visual Studio](assets/vs/B19586_01_03.png)
+*Figure 1.3: Creating a new project in Visual Studio*
 
-3.	In the **Create a new project** dialog,  select the C# language to filter the project templates, and then enter `console` in the **Search for templates** box, and select **Console App**, making sure that you have chosen the cross-platform project template, not the one for .NET Framework, which is Windows-only, and the C# project template rather than another language, such as Visual Basic or TypeScript, so that it is selected as shown in *Figure 1.4*:
+3.	In the **Create a new project** dialog,  select the **C#** language to filter the project templates, and then enter `console` in the **Search for templates** box, and select **Console App**, making sure that you have chosen the cross-platform project template, not the one for .NET Framework, which is Windows-only, and the C# project template rather than another language, such as Visual Basic or TypeScript, so that it is selected as shown in *Figure 1.4*:
 
 ![Selecting the Console App project template](assets/vs/B19586_01_04.png) 
 *Figure 1.4: Selecting the Console App project template*
 
 4.	Click **Next**.
-5.	In the **Configure your new project** dialog, enter `HelloCS` for the project name, enter `C:\cs12dotnet8` for the location, and enter `Chapter01` for the solution name, as shown in *Figure 1.5*:
+5.	In the **Configure your new project** dialog, enter `HelloCS` for the project name, enter `C:\cs14net10` for the location, and enter `Chapter01` for the solution name, as shown in *Figure 1.5*:
 
  ![Configuring names and locations for your new project](assets/vs/B19586_01_05.png)
 *Figure 1.5: Configuring names and locations for your new project*
 
 6.	Click **Next**.
-7.	In the **Additional information** dialog, in the **Framework** drop-down list, note that your .NET SDK choices indicate if that version is **Standard Term Support**, **Long Term Support**, **Preview**, or **Out of support**, and then select **.NET 8.0 (Long Term Support)**.
+7.	In the **Additional information** dialog, in the **Framework** drop-down list, note that your .NET SDK choices indicate if that version is **Standard Term Support**, **Long Term Support**, **Preview**, or **Out of support**, and then select **.NET 10.0 (Long Term Support)**.
 
-> If you are missing a .NET SDK version, then you can install it from the following link: https://dotnet.microsoft.com/en-us/download/dotnet. 
+> If you are missing a .NET SDK version, then you can install it from the following link: https://dotnet.microsoft.com/en-us/download/dotnet. You will need to restart Visual Studio for it to be recognized. 
 
-8. Leave the check box labelled **Do not use top-level statements** cleared, and then click **Create**. (Later in this chapter you will create a console app that selects this option so you can see the difference.)
-9. If you cannot see the **Solution Explorer**, then navigate to **View** | **Solution Explorer**.
+1. Leave the check boxes labeled **Enable container support**, **Do not use top-level statements**, and **Enable native AOT publish** cleared.(you will learn about these other options later in this and other chapters.)
+2. Click **Create**.
+3.  If you cannot see the **Solution Explorer**, then navigate to **View** | **Solution Explorer**.
 10.	If code is not shown, then in  **Solution Explorer**, double-click the file named `Program.cs` to open it, and note that **Solution Explorer** shows the `HelloCS` project, as shown in *Figure 1.6*:
  
-![Editing Program.cs in Visual Studio 2022](assets/vs/B19586_01_06.png)
-*Figure 1.6: Editing Program.cs in Visual Studio 2022*
+![Editing Program.cs in Visual Studio](assets/vs/B19586_01_06.png)
+*Figure 1.6: Editing Program.cs in Visual Studio*
 
 11.	In `Program.cs`, note the code consists of only a comment and a single statement. This is because it uses the top-level program feature introduced in C# 9, as shown in the following code:
 ```cs
@@ -94,7 +93,7 @@ Console.WriteLine("Hello, World!");
 ```
 > As the comment in the code says, you can read more about this template at the following link: https://aka.ms/new-console-template.
 
-12. In `Program.cs`, modify line 2 so that the text that is being written to the console says `Hello, C#!`.
+1.  In `Program.cs`, modify line 2 so that the text that is being written to the console says `Hello, C#!`.
 
 > All code examples and commands that the reader must review or type are shown in plain text so you will never have to read code or commands from a screenshot like in *Figure 1.6* that might be too small or too faint in print.
 
@@ -104,17 +103,16 @@ The next task is to compile and run the code.
 
 1.	In Visual Studio, navigate to **Debug** | **Start Without Debugging**. 
 
-> **Good Practice**: When you start a project in Visual Studio 2022, you can choose to attach a debugger or not. If you do not need to debug, then it is better not to attach one because attaching a debugger requires more resources and slows everything down. Attaching a debugger also limits you to only starting one project. If you want to run more than one project, each with a debugger attached, then you must start multiple instances of Visual Studio. In the toolbar, click the green outline triangle button to start without debugging instead of the green solid triangle button unless you need to debug.
+> **Good Practice**: When you start a project in Visual Studio, you can choose to attach a debugger or not. If you do not need to debug, then it is better not to attach one because attaching a debugger requires more resources and slows everything down. Attaching a debugger also limits you to only starting one project. If you want to run more than one project, each with a debugger attached, then you must start multiple instances of Visual Studio. In the toolbar, click the green outline triangle button to start without debugging instead of the green solid triangle button unless you need to debug.
 
 2.	The output in the console window will show the result of running your application, as shown in *Figure 1.7*: 
  
 ![Running the console app on Windows](assets/vs/B19586_01_07.png)
 *Figure 1.7: Running the console app on Windows*
 
-3.	Press any key to close the console window and return to Visual Studio 2022.
-4. Optionally, close the **Properties** pane to make more vertical space for **Solution Explorer**.
-5. Double-click the `HelloCS` project and note the `HelloCS.csproj` project file shows that this console app targets `net8.0`, as shown in *Figure 1.8*.
-6.	In the **Solution Explorer** toolbar, toggle on the **Show All Files** button, and note the compiler-generated `bin` and `obj` folders are visible, as shown in *Figure 1.8*: 
+3.	Press any key to close the console window and return to Visual Studio.
+4. Double-click the `HelloCS` project and note the `HelloCS.csproj` project file shows that this console app targets `net10.0`, as shown in *Figure 1.8*.
+5.	In the **Solution Explorer** toolbar, toggle on the **Show All Files** button, and note the compiler-generated `bin` and `obj` folders are visible, as shown in *Figure 1.8*: 
 
 ![Showing the compiler-generated folders and files](assets/vs/B19586_01_08.png)
 *Figure 1.8: Showing the compiler-generated folders and files*
@@ -166,13 +164,13 @@ The trick is that we do still need to import the `System` namespace, but it is n
 2. Note that this file is automatically created by the compiler for projects that target .NET 6 or later, and that it uses a feature introduced in C# 10 called **global namespace imports** that imports some commonly used namespaces like `System` for use in all code files, as shown in the following code:
 ```cs
 // <autogenerated />
-global using global::System;
-global using global::System.Collections.Generic;
-global using global::System.IO;
-global using global::System.Linq;
-global using global::System.Net.Http;
-global using global::System.Threading;
-global using global::System.Threading.Tasks;
+global using System;
+global using System.Collections.Generic;
+global using System.IO;
+global using System.Linq;
+global using System.Net.Http;
+global using System.Threading;
+global using System.Threading.Tasks;
 ```
 
 3. In **Solution Explorer**, click the **Show All Files** button to hide the `bin` and `obj` folders. 
@@ -196,21 +194,21 @@ throw new Exception();
 
 4. Press any key to close the console app window and return to Visual Studio.
 
-## Adding a second project using Visual Studio 2022
+## Adding a second project using Visual Studio
 
 Let's add a second project to our solution to work with multiple projects.
 
-1.	In Visual Studio 2022, navigate to **File** | **Add** | **New Project**.
+1.	In Visual Studio, navigate to **File** | **Add** | **New Project**.
 
 > **Warning!** The above step adds a new project to the existing solution. Do NOT navigate to **File** | **New** | **Project…** which instead is meant to be used to create a new project and solution (although the dialog box has a dropdown to choose to add to an existing solution too).
 
 2.	In the **Add a new project** dialog, in **Recent project templates**, select **Console App [C#]** and then click **Next**.
-3.	In the **Configure your new project** dialog, for the **Project name**, enter `AboutMyEnvironment`, leave the location as `C:\cs12dotnet8\Chapter01`, and then click **Next**.
-4.	In the **Additional information** dialog, select **.NET 8.0 (Long Term Support)**, select the **Do not use top-level statements** check box.
+3.	In the **Configure your new project** dialog, for the **Project name**, enter `AboutMyEnvironment`, leave the location as `C:\cs14net10\Chapter01`, and then click **Next**.
+4.	In the **Additional information** dialog, select **.NET 10.0 (Long Term Support)**, select the **Do not use top-level statements** check box.
 
 > **Warning!** Make sure you have selected the check box, so we get to see the older style of `Program.cs`.
 
-5. Click **Create**.
+1. Click **Create**.
 6.	In **Solution Explorer**, in the `AboutMyEnvironment` project, double-click `Program.cs` to open it.
 7.	In the `AboutMyEnvironment` project, in `Program.cs`, note the statements to define a namespace that matches the project name, a class named `Program`, and a method named `Main` with a parameter named `args`, as shown highlighted in the following code:
 ```cs
@@ -226,15 +224,15 @@ namespace AboutMyEnvironment
 }
 ```
 
-8. In `Program.cs`, in the `Main` method, delete the existing `Console.WriteLine` statement and then add statements to output the current directory and the version of the operating system, as shown in the following code:
+1. In `Program.cs`, in the `Main` method, delete the existing `Console.WriteLine` statement and then add statements to output the current directory and the version of the operating system, as shown in the following code:
 ```cs
 Console.WriteLine(Environment.CurrentDirectory);
 Console.WriteLine(Environment.OSVersion.VersionString);
 ```
 
-9. In **Solution Explorer**, right-click the `Chapter01` solution, and then select **Configure Startup Projects…**.
-10. In the **Solution 'Chapter01' Property Pages** dialog box, set **Startup Project** to **Current selection**, and then click **OK**.
-11. In **Solution Explorer**, click the `AboutMyEnvironment` project (or any file or folder within it), and note that Visual Studio indicates that **AboutMyEnvironment** is now the startup project by making the project name bold.
+1. In **Solution Explorer**, right-click the `Chapter01` solution, and then select **Configure Startup Projects…**.
+2.  In the **Solution 'Chapter01' Property Pages** dialog box, set **Startup Project** to **Current selection**, and then click **OK**.
+3.  In **Solution Explorer**, click the `AboutMyEnvironment` project (or any file or folder within it), and note that Visual Studio indicates that **AboutMyEnvironment** is now the startup project by making the project name bold.
 
 > **Good Practice**: I recommend this way of setting the startup project because it then makes it very easy to switch startup projects by simply clicking a project (or any file in a project) to make it the startup project. Although you can right-click a project and set it as a startup project, if you then want to run a different project, you must manually change it again. Simply clicking anywhere in the project is easier.
 
@@ -252,13 +250,13 @@ Microsoft Windows NT 10.0.22621.0
 
 13. Press any key to close the console app window and return to Visual Studio.
 
-> When using Visual Studio 2022 for Windows to run a console app, it executes the app from the `<projectname>\bin\Debug\net8.0` folder. It will be important to remember this when we work with the filesystem in later chapters. When using Visual Studio Code, or more accurately, the dotnet CLI, it has different behavior.
+> When using Visual Studio to run a console app, it executes the app from the `<projectname>\bin\Debug\net8.0` folder. It will be important to remember this when we work with the filesystem in later chapters. When using VS Code, or more accurately, the dotnet CLI, it has different behavior.
 
 # Chapter 4 - Writing, Debugging, and Testing Functions
 
 ## Debugging during development
 
-In this section, you will learn how to debug problems at development time. You must use a code editor that has debugging tools, such as Visual Studio 2022 or Visual Studio Code.
+In this section, you will learn how to debug problems at development time. You must use a code editor that has debugging tools, such as Visual Studio or VS Code.
 
 ### Creating code with a deliberate bug
 
@@ -299,28 +297,28 @@ We will use the debugging tools to hunt for and squish the bug.
 
 Breakpoints allow us to mark a line of code that we want to pause at to inspect the program state and find bugs.
 
-### Using Visual Studio 2022
-Let's set a breakpoint and then start debugging using Visual Studio 2022:
+### Using Visual Studio
+Let's set a breakpoint and then start debugging using Visual Studio:
 
 1.	Click in line 1, which is the statement that declares the variable named `a`.
 2.	Navigate to **Debug** | **Toggle Breakpoint** or press *F9*. A red circle will appear in the margin bar on the left-hand side and the statement will be highlighted in red to indicate that a breakpoint has been set, as shown in *Figure 4.3*:
 
-![Toggling breakpoints using Visual Studio 2022](assets/vs/B19586_04_03.png)
-*Figure 4.3: Toggling breakpoints using Visual Studio 2022*
+![Toggling breakpoints using Visual Studio](assets/vs/B19586_04_03.png)
+*Figure 4.3: Toggling breakpoints using Visual Studio*
 
 Breakpoints can be toggled off with the same action. You can also left-click in the margin to toggle a breakpoint on and off, or right-click a breakpoint to see more options, such as delete, disable, or edit conditions or actions for an existing breakpoint.
 
 3.	Navigate to **Debug** | **Start Debugging** or press *F5*. Visual Studio starts the console application and then pauses when it hits the breakpoint. This is known as break mode. Extra windows titled **Locals** (showing current values of local variables), **Watch 1** (showing any watch expressions you have defined), **Call Stack**, **Exception Settings**, and **Immediate Window** may appear. The **Debugging** toolbar appears. The line that will be executed next is highlighted in yellow, and a yellow arrow points at the line from the margin bar, as shown in *Figure 4.4*:
 
-![Break mode in Visual Studio 2022](assets/vs/B19586_04_04.png)
-*Figure 4.4: Break mode in Visual Studio 2022*
+![Break mode in Visual Studio](assets/vs/B19586_04_04.png)
+*Figure 4.4: Break mode in Visual Studio*
 
 ### Navigating with the debugging toolbar
 
-Visual Studio Code shows a floating toolbar with buttons to make it easy to access debugging features, as shown in *Figure 4.7* and as described in the following list:
+VS Code shows a floating toolbar with buttons to make it easy to access debugging features, as shown in *Figure 4.7* and as described in the following list:
 
-![Debugging toolbars in Visual Studio 2022 and Visual Studio Code](assets/vscode/B19586_04_07.png) 
-*Figure 4.7: Debugging toolbars in Visual Studio 2022 and Visual Studio Code*
+![Debugging toolbars in Visual Studio and VS Code](assets/vscode/B19586_04_07.png) 
+*Figure 4.7: Debugging toolbars in Visual Studio and VS Code*
 
 - **Start**/**Continue**/*F5*: This button is context sensitive. It will either start a project running or continue running the project from the current position until it ends or hits a breakpoint.
 - **Hot Reload**: This button will reload compiled code changes without needing to restart the app.
@@ -333,7 +331,7 @@ Visual Studio Code shows a floating toolbar with buttons to make it easy to acce
 
 ### Debugging windows
 
-While debugging, both Visual Studio 2022 and Visual Studio Code show extra windows that allow you to monitor useful information, such as variables, while you step through your code.
+While debugging, both Visual Studio and VS Code show extra windows that allow you to monitor useful information, such as variables, while you step through your code.
 
 The most useful windows are described in the following list:
 
@@ -347,7 +345,7 @@ When in break mode, there is also a useful window at the bottom of the edit area
 
 ### Stepping through code
 
-Let's explore some ways to step through the code using Visual Studio 2022:
+Let's explore some ways to step through the code using Visual Studio:
 
 1.	Navigate to **Debug** | **Step Into**, click on the **Step Into** button in the toolbar, or press *F11*. The yellow highlight steps forward one line.
 2.	Navigate to **Debug** | **Step Over**, click on the **Step Over** button in the toolbar, or press *F10*. The yellow highlight steps forward one line. At the moment, you can see that there is no difference between using **Step Into** or **Step Over** because we are executing single statements.
@@ -379,10 +377,10 @@ It is easy to make more complex breakpoints:
 9.	Edit the breakpoint or its conditions and change its expression to less than 9.
 10.	Start debugging and note the breakpoint is hit.
 11.	Stop debugging.
-12.	Edit the breakpoint or its conditions (in Visual Studio 2022 click Add condition), select **Hit Count**, then enter a number such as 3, meaning that you would have to hit the breakpoint three times before it activates, as shown in *Figure 4.13*:
+12.	Edit the breakpoint or its conditions (in Visual Studio click Add condition), select **Hit Count**, then enter a number such as 3, meaning that you would have to hit the breakpoint three times before it activates, as shown in *Figure 4.13*:
 
-![Customizing a breakpoint with an expression and hot count using Visual Studio 2022](assets/vs/B19586_04_13.png) 
-*Figure 4.13: Customizing a breakpoint with an expression and hot count using Visual Studio 2022*
+![Customizing a breakpoint with an expression and hot count using Visual Studio](assets/vs/B19586_04_13.png) 
+*Figure 4.13: Customizing a breakpoint with an expression and hot count using Visual Studio*
 
 13.	Hover your mouse over the breakpoint's red circle to see a summary.
 
@@ -399,8 +397,8 @@ Let's see it in action:
 2.	Modify `HotReloading.csproj` to statically import `System.Console` for all code files.
 3.	In `Program.cs`, delete the existing statements and then write a message to the console every two seconds, as shown in the following code:
 ```cs
-/* Visual Studio 2022: run the app, change the message, click Hot Reload.
- * Visual Studio Code: run the app using dotnet watch, change the message. */
+/* Visual Studio: run the app, change the message, click Hot Reload.
+ * VS Code: run the app using dotnet watch, change the message. */
 
 while (true)
 {
@@ -409,9 +407,9 @@ while (true)
 }
 ```
 
-### Hot reloading using Visual Studio 2022
+### Hot reloading using Visual Studio
 If you are using Visual Studio, Hot Reload is built into the user interface:
-1.	In Visual Studio 2022, start the project and note that the message is output every two seconds.
+1.	In Visual Studio, start the project and note that the message is output every two seconds.
 2.	Leave the project running.
 3.	In `Program.cs`, change `Hello` to `Goodbye`.
 4.	Navigate to **Debug** | **Apply Code Changes** or click the **Hot Reload** button in the toolbar as shown in *Figure 4.15*, and note the change is applied without needing to restart the console app.
@@ -421,7 +419,3 @@ If you are using Visual Studio, Hot Reload is built into the user interface:
 *Figure 4.15: Changing Hot Reload options*
 
 6.	Change the message again, save the file, and note the console app updates automatically.
-
-# Chapter 7 - Packaging and Distributing .NET Types
-
-## Decompiling using the ILSpy extension for Visual Studio 2022 (coming soon)

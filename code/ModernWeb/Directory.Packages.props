@@ -1,9 +1,9 @@
 <Project>
-  <!--Last updated package versions: June 14, 2025.-->
+  <!--Last updated package versions: September 18, 2025.-->
   <PropertyGroup>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     <!--Preview package versions. Delete after GA and reference above instead.-->
-    <MicrosoftPackageVersion>10.0.0-preview.5.25277.114</MicrosoftPackageVersion>
+    <MicrosoftPackageVersion>10.0.0-rc.1.25451.107</MicrosoftPackageVersion>
   </PropertyGroup>
   <ItemGroup Label="For EF Core.">
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="$(MicrosoftPackageVersion)" />
@@ -13,7 +13,7 @@
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
     <PackageVersion Include="coverlet.collector" Version="6.0.4" />
     <PackageVersion Include="xunit" Version="2.9.3" />
-    <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.1" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.4" />
   </ItemGroup>
   <ItemGroup Label="For Blazor.">
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="$(MicrosoftPackageVersion)" />
@@ -22,6 +22,6 @@
   </ItemGroup>
   <ItemGroup Label="For web services.">
     <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="$(MicrosoftPackageVersion)" />
-    <PackageVersion Include="Microsoft.Extensions.Caching.Hybrid" Version="9.6.0" />
+    <PackageVersion Include="Microsoft.Extensions.Caching.Hybrid" Version="9.9.0" />
   </ItemGroup>
 </Project>

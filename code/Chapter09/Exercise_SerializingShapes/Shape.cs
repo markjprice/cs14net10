@@ -6,6 +6,6 @@ namespace Packt.Shared;
 [XmlInclude(typeof(Rectangle))]
 public abstract class Shape
 {
-  public string? Colour { get; set; }
+  public string? Color { get; set; }
   public abstract double Area { get; }
 }

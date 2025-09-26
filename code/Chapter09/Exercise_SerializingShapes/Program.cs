@@ -10,11 +10,11 @@ string path = Combine(CurrentDirectory, "shapes.xml");
 // Create a list of Shape objects to serialize.
 List<Shape> listOfShapes = new()
 {
-  new Circle { Colour = "Red", Radius = 2.5 },
-  new Rectangle { Colour = "Blue", Height = 20.0, Width = 10.0 },
-  new Circle { Colour = "Green", Radius = 8 },
-  new Circle { Colour = "Purple", Radius = 12.3 },
-  new Rectangle { Colour = "Blue", Height = 45.0, Width = 18.0 }
+  new Circle { Color = "Red", Radius = 2.5 },
+  new Rectangle { Color = "Blue", Height = 20.0, Width = 10.0 },
+  new Circle { Color = "Green", Radius = 8 },
+  new Circle { Color = "Purple", Radius = 12.3 },
+  new Rectangle { Color = "Blue", Height = 45.0, Width = 18.0 }
 };
 
 // Create an object that knows how to serialize and deserialize 
@@ -45,6 +45,6 @@ else
 {
   foreach (Shape item in loadedShapesXml)
   {
-    WriteLine($"{item.GetType().Name} is {item.Colour} and has an area of {item.Area:N2}");
+    WriteLine($"{item.GetType().Name} is {item.Color} and has an area of {item.Area:N2}");
   }
 }

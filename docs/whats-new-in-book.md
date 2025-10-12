@@ -7,7 +7,11 @@ All [errata](https://github.com/markjprice/cs13net9/blob/main/docs/errata/errata
 The main new sections in *C# 14 and .NET 10 - Modern Cross-Platform Development*, 10th edition compared to the 9th edition can be found in this book's section on the [What's New in your .NET 10 books?](https://github.com/markjprice/markjprice/blob/main/articles/whats-new-in-net10-books.md#c-14-and-net-10---modern-cross-platform-development-fundamentals) page.
 
 # Chapter 1
-
+- New section **Shared content across all my books**: I use my personal GitHub repository to store shared content that is relevant to all my books. 
+- I have streamlined this book by focusing on Visual Studio 2026, which is by far still the most popular IDE for .NET developers, especially beginners. Step-by-step instructions for using VS Code have moved online only: https://github.com/markjprice/cs14net10/blob/main/docs/code-editors/vscode.md
+- New section **Cross-platform development on Windows**: Windows Subsystem for Linux (WSL) is one of the most powerful tools Microsoft has ever given to .NET developers doing cross-platform work.
+- New section **Understanding how .NET and C# are related**: *Figure 1.8* shows how C# and other languages are related to .NET
+- New section **Running a C# code file without a project file**: Rival languages like Python allow you to execute a code file without a project file. C# 14 introduces a similar feature named *file-based apps* that allows developers to execute single `.cs` files directly.
 
 # Chapter 2
 
@@ -35,7 +39,10 @@ output them in one method call using Dumpify.
 - New section **Extension members** including *extension blocks*: In C# 14, you can define other types of extension members beyond just instance methods: static methods, instance properties, static properties, and operators.
 
 # Chapter 7
-- 
+- New section **Choosing between targeting .NET Standard 2.0 and .NET 10 for class libraries**
+- New section **Noun-first alias for dotnet CLI commands**: Starting in .NET 10, the dotnet CLI tool has new aliases for commonly used commands.
+- New section **Setting project properties at the command line**: The `-p` switch in the .NET CLI (`dotnet`) is shorthand for specifying a property or properties for a build or run command. 
+- New section **Version ranges**: Understand the notation for version numbers and how to control version ranges.
 
 # Chapter 8
 

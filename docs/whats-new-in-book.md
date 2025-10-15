@@ -14,7 +14,8 @@ The main new sections in *C# 14 and .NET 10 - Modern Cross-Platform Development*
 - New section **Running a C# code file without a project file**: Rival languages like Python allow you to execute a code file without a project file. C# 14 introduces a similar feature named *file-based apps* that allows developers to execute single `.cs` files directly.
 
 # Chapter 2
-
+- Improved **Good practice** box discussing `double` versus `decimal`: https://github.com/markjprice/cs14net10/blob/main/docs/ch02-decimal-vs-double.md
+- New section **Dynamic types with ExpandoObject**: A `dynamic` object that lets you add and remove properties at runtime, and internally it uses a dictionary to store the keys and values of these properties, but it’s accessible with dot notation just like with a regular class.
 
 # Chapter 3
 - New section **Null-coalescing operators**: summary of common null-related operators.
@@ -45,18 +46,43 @@ output them in one method call using Dumpify.
 - New section **Version ranges**: Understand the notation for version numbers and how to control version ranges.
 
 # Chapter 8
+- New section **Numeric ordering for string comparison**: Numerical string comparison, introduced with .NET 10, compares string values numerically instead of lexicographically. 
+- New section **Using read-only lists**: `IReadOnlyList<string>` is often better than `List<string>` in public APIs when you want to enforce read-only semantics and hide implementation details
+- New content: `OrderedDictionary<TKey, TValue>` provides `TryAdd` and `TryGetValue` for addition and retrieval.
+- Moved section online: **Working with spans, indexes, and ranges**: https://github.com/markjprice/cs14net10/blob/main/docs/ch08-spans-indexes-ranges.md
 
 # Chapter 9
+- New section **Asynchronous ZIP archive APIs**: .NET 10 introduces new asynchronous APIs for working with ZIP archives, making it easier to perform non-blocking operations when reading from or writing to ZIP files.
+- New section **JSON Patch implementation improvements**: .NET 10 introduces a new implementation of JSON Patch (RFC 6902) for ASP.NET Core based on `System.Text.Json`. This new implementation provides improved performance and reduced memory usage compared to the existing `Newtonsoft.Json`-based implementation.
 
 # Chapter 10
+- Added warning about the chapter using synchronous example code for learning but you should use asynchronous calls like `SaveChangesAsync` in production projects.
+- New section **Why the EF Core CLI cannot use data annotations for everything**
+- New content: In EF Core 9 and earlier, you can only have a single query filter per entity type. In EF Core 10 and later, you can name query filters and then disable them in specific LINQ queries.
+- New online section **Implementing asynchronous methods with EF Core**: https://github.com/markjprice/cs14net10/blob/main/docs/ch10-ef-core-async.md
 
 # Chapter 11
+- New section **Difference between GroupBy and ToLookup**: Both GroupBy and ToLookup give you groups keyed by something, but the execution model and type are different.
+- New section **Left and right join LINQ extension methods**: SQL has multiple types of `JOIN`. LINQ has always supported the equivalent of the default join type, `INNER JOIN`. .NET 10 adds support for `LeftJoin` and `RightJoin` methods.
 
 # Chapter 12
+- New content: Microsoft makes extensive use of ASP.NET Core for server-side projects internally, and uses it for Microsoft 365, Xbox services, and most Azure services.
+- New section **Fluent UI React**: It provides robust, accessible React-based components that are highly customizable.
+- New section **Defining project properties to reuse version numbers**: You can define properties at the top of your `Directory.Packages.props` file and then reference these properties throughout the file. This approach keeps package versions consistent and makes updates easy.
+- New section **Package source mapping**: If you use CPM and you have more than one package source configured for your code editor then you will see NuGet Warning NU1507. 
+- Added steps to add statements to temporarily disable and then reenable the `non-nullable field must contain a non-null value when exiting constructor` warning.
 
 # Chapter 13
-
-# Chapter 14
+- Improved the enabling of static files and assets to work better with `MapStaticAssets` in .NET 9 and later. Adding steps to view the injected scripts that are messed with when serving static HTML web pages with `MapStaticAssets`. More details are available here: https://github.com/markjprice/cs14net10/blob/main/docs/ch13-mapstaticassets.md
 
 # Chapter 15
-
+- New section **Documenting web services with Swagger, OpenAPI, and Swashbuckle**: Explains some terminology related to documenting web services.
+- New section **A non-benefit of the Minimal API**: Explains how controller-based web API aren't as bad as some people say.
+- Simplified the implementation of the web service by removing the repository pattern implementation.
+- New section **Validation support in Minimal API web services**: With .NET 10 and later, Minimal API web services now support validation of data sent in requests to your API endpoints. 
+- New sections **Clearing Chrome’s address bar autocomplete** and **Designing for case sensitivity**
+- New section **Reviewing and customizing the OpenAPI document**: With .NET 10, ASP.NET Core added support for generating OpenAPI version 3.1 documents. OpenAPI
+3.1 is a significant update to OAS.
+- New section **Generating OpenAPI documents in YAML format**
+- New section **Populating XML documentation comments into the OpenAPI document**
+- New section **Implementing Scalar for documentation**: Add a modern third-party package to provide a user interface to try out a web service.

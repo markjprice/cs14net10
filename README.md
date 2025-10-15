@@ -12,7 +12,7 @@ Repository for the Packt Publishing book titled "C# 14 and .NET 10 - Modern Cros
 - [Free PDF/ePub of the book and how to contact the publisher Packt](#free-pdfepub-of-the-book-and-how-to-contact-the-publisher-packt)
 - [Author's books](#authors-books)
 - [Chapters and code solutions](#chapters-and-code-solutions)
-- [Code solutions for Visual Studio and Visual Studio Code](#code-solutions-for-visual-studio-and-visual-studio-code)
+- [Code solutions for Visual Studio and VS Code](#code-solutions-for-visual-studio-and-vs-code)
 - [Important](#important)
 - [Miscellaneous](#miscellaneous)
   - [Microsoft Certifications](#microsoft-certifications)
@@ -64,17 +64,18 @@ My author page on Goodreads: https://www.goodreads.com/author/show/14224500.Mark
 **Appendices**
 - *Appendix A, Answers to the Test Your Knowledge Questions*
 - *Appendix B, Setting Up Your Development Environment*
-- Both are included in the free PDF bundle: https://download.packt.com/free-ebook/9781836206637.
+- [*Appendix C, Looking for help*](https://github.com/markjprice/markjprice/blob/main/articles/getting-help.md)
+- Appendices are included with your purchase. Visit https://packtpub.com/unlock, then use the search bar to find this book by name. Double-check the edition shown to make sure you get the right one.
 
-# Code solutions for Visual Studio and Visual Studio Code
+# Code solutions for Visual Studio and VS Code
 
 [Figures for all of the code solution folders](docs/ch01-solution-folders.md).
 
-Visual Studio Code now has an extension named **C# Dev Kit** that includes a solution explorer so it can better work with Visual Studio solution files. Visual Studio for Windows, Visual Studio for Mac, and Visual Studio Code + C# Dev Kit can now use the same code solution files and projects for each chapter, found here: [/code](/code). 
+VS Code now has an extension named **C# Dev Kit** that includes a solution explorer so it can better work with Visual Studio solution files. Visual Studio 2026 for Windows, VS Code + C# Dev Kit, and Rider can use the same code solution files and projects for each chapter, found here: [/code](/code). 
 
-> **For Visual Studio Code:** To use the chapter solution files with Visual Studio Code, install the **C# Dev Kit** extension. Then in Visual Studio Code, open the `ChapterNN` folder that contains a `ChapterNN.sln` solution file and wait for the **SOLUTION EXPLORER** pane to appear at the bottom of the **EXPLORER**. You can drag and drop to reorder the panes to put **SOLUTION EXPLORER** at the top. Learn more about C# Dev Kit at the following link: https://devblogs.microsoft.com/visualstudio/announcing-csharp-dev-kit-for-visual-studio-code/
+> **For VS Code:** To use the chapter solution files with VS Code, install the **C# Dev Kit** extension. Then in VS Code, open the `ChapterNN` folder that contains a `ChapterNN.slnx` solution file and wait for the **SOLUTION EXPLORER** pane to appear at the bottom of the **EXPLORER**. You can drag and drop to reorder the panes to put **SOLUTION EXPLORER** at the top. Learn more about C# Dev Kit at the following link: https://devblogs.microsoft.com/visualstudio/announcing-csharp-dev-kit-for-visual-studio-code/
 
-> **Warning!** If you use both Visual Studio and Visual Studio Code to open these solutions, be aware that the build process can conflict. This is because Visual Studio has its own non-standard build server that is different from the standard build server used by .NET SDK CLI. My recommendation is to only have a solution open in one code editor at any time. You should also clean the solutions between opening in different code editors. For example, after closing the solution in one code editor, I delete the `bin` and `obj` folders before then opening in a different code editor.
+> **Warning!** If you use both Visual Studio and VS Code to open these solutions, be aware that the build process can conflict. This is because Visual Studio has its own non-standard build server that is different from the standard build server used by .NET SDK CLI. My recommendation is to only have a solution open in one code editor at any time. You should also clean the solutions between opening in different code editors. For example, after closing the solution in one code editor, I delete the `bin` and `obj` folders before then opening in a different code editor.
 
 # Important
 

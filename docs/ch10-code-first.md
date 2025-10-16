@@ -166,7 +166,7 @@ using (Academy a = new())
 ```
 3.	Run the code, and note that the first time you run the code it will not need to delete the database because it does not exist yet, as shown in the following output:
 ```
-Connection: Filename=C:\cs12dotnet8\Chapter10\CoursesAndStudents\bin\Debug\net8.0\Academy.db
+Connection: Filename=C:\cs14net10\Chapter10\CoursesAndStudents\bin\Debug\net10.0\Academy.db
 Database deleted: False
 Database created: True
 SQL script used to create database:
@@ -187,7 +187,7 @@ CREATE TABLE "CourseStudent" (
     CONSTRAINT "FK_CourseStudent_Students_StudentsStudentId" FOREIGN KEY ("StudentsStudentId") REFERENCES "Students" ("StudentId") ON DELETE CASCADE
 );
 INSERT INTO "Courses" ("CourseId", "Title")
-VALUES (1, 'C# 11 and .NET 7');
+VALUES (1, 'C# 14 and .NET 10');
 INSERT INTO "Courses" ("CourseId", "Title")
 VALUES (2, 'Web Development');
 INSERT INTO "Courses" ("CourseId", "Title")
@@ -211,12 +211,12 @@ VALUES (3, 3);
 CREATE INDEX "IX_CourseStudent_StudentsStudentId" ON "CourseStudent" ("StudentsStudentId");
 
 Alice Jones attends the following 1 courses:
-  C# 11 and .NET 7
+  C# 14 and .NET 10
 Bob Smith attends the following 2 courses:
-  C# 11 and .NET 7
+  C# 14 and .NET 10
   Web Development
 Cecilia Ramirez attends the following 2 courses:
-  C# 11 and .NET 7
+  C# 14 and .NET 10
   Python for Beginners
 ```
 
@@ -227,7 +227,7 @@ Note the following:
 
 4.	Use SQLiteStudio to connect to the Academy database and view the tables, as shown in *Figure 10.7*:
 
-![](assets/B19586_10_07.png) 
+![Viewing the Academy database tables in SQLiteStudio](assets/B19586_10_07.png) 
 *Figure 10.7: Viewing the Academy database tables in SQLiteStudio*
 
 # Understanding migrations

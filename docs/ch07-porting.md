@@ -80,7 +80,7 @@ Currently, it supports the following .NET Framework project types and more will 
 - Class Library
 
 It is installed as a global `dotnet` tool, as shown in the following command:
-```
+```shell
 dotnet tool install -g upgrade-assistant
 ```
 
@@ -141,7 +141,7 @@ warning NU1701: Package 'DialectSoftware.Collections.Matrix
 1.0.0' was restored using '.NETFramework,Version=v4.6.1,
 .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7,
 .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2,
-.NETFramework,Version=v4.8' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.
+.NETFramework,Version=v4.8' instead of the project target framework 'net10.0'. This package may not be fully compatible with your project.
 x0,y0 (0,0) = 0
 x0,y1 (0,1) = 1
 x0,y2 (0,2) = 2

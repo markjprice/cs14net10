@@ -43,13 +43,11 @@ For .NET Framework 4.0 or later, all the apps on a computer written for .NET Fra
 
 Third parties developed a .NET Framework implementation named the **Mono** project. Mono is cross-platform, but it fell behind the official implementation of .NET Framework.
 
-Mono has found a niche as the foundation of the **Xamarin** mobile platform as well as cross-platform game development platforms like **Unity**.
+Mono found a niche as the foundation of the **Xamarin** mobile platform as well as cross-platform game development platforms like **Unity**.
 
-Microsoft purchased Xamarin in 2016 and now gives away what used to be an expensive Xamarin extension for free with Visual Studio. Microsoft renamed the Xamarin Studio development tool, which could only create mobile apps, to Visual Studio for Mac, and gave it the ability to create other types of projects like console apps and web services. 
+Microsoft purchased Xamarin in 2016. Microsoft renamed the Xamarin Studio development tool, which could only create mobile apps, to Visual Studio for Mac, and gave it the ability to create other types of projects like console apps and web services. 
 
-With Visual Studio 2022 for Mac, Microsoft has replaced parts of the Xamarin Studio editor with parts from Visual Studio 2022 for Windows to provide closer parity of experience and performance. Visual Studio 2022 for Mac was also rewritten to be a truly native macOS UI app to improve reliability and work with macOS's built-in assistive technologies.
-
-Unfortunately, a lot of the user interface of Visual Studio 2022 for Mac is very different from Visual Studio 2022 for Windows so the screenshots in the book can be confusing. That is why I provide online step-by-step instructions for multiple [code editors](../code-editors/README.md).
+> **Warning!** Visual Studio for Mac reached its end-of-life in August 2024. You can read the retirement announcement at the following link: https://devblogs.microsoft.com/visualstudio/visual-studio-for-mac-retirement-announcement/.
 
 ## Understanding .NET Core
 

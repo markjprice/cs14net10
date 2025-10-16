@@ -21,7 +21,7 @@ Let's start by looking at how to list all current environment variables at vario
 2.	In the project file, add a package reference for `Spectre.Console`, and then add elements to statically and globally import the `System.Console` and `System.Environment` classes, and finally import the namespaces to work with `Spectre.Console` and `System.Collections`, as shown in the following configuration:
 ```xml
 <ItemGroup>
-  <PackageReference Include="Spectre.Console" Version="0.47.0" />
+  <PackageReference Include="Spectre.Console" Version="0.52.0" />
 </ItemGroup>
 
 <ItemGroup>
@@ -184,7 +184,7 @@ secret = GetEnvironmentVariable(secret_key,
 WriteLine($"Machine - {secret_key}: {secret}");
 ```
 
-6.	If you are using Visual Studio 2022, then navigate to **Project** | **WorkingWithEnvVars Properties**, click the **Debug** tab, and then click **Open debug launch profiles UI**. In the **Environment variables** section, add an entry with **Name** `MY_SECRET` and Value of `Alpha`.
+6.	If you are using Visual Studio, then navigate to **Project** | **WorkingWithEnvVars Properties**, click the **Debug** tab, and then click **Open debug launch profiles UI**. In the **Environment variables** section, add an entry with **Name** `MY_SECRET` and Value of `Alpha`.
 7.	In the `Properties` folder, open `launchSettings.json`, and note the configured environment variables, as shown in the following configuration:
 ```json
 {

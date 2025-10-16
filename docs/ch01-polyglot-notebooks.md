@@ -10,7 +10,7 @@
 - [Adding Markdown and special commands to a notebook](#adding-markdown-and-special-commands-to-a-notebook)
 - [Executing code in multiple cells](#executing-code-in-multiple-cells)
 
-> **Warning!** At the time of publishing in November 2024, the Polyglot Notebooks extension will still require .NET 8 SDK. It will likely be updated to support or require .NET 9 within a month.
+> **Warning!** At the time of publishing in November 2025, the Polyglot Notebooks extension will still require .NET 9 SDK. It will likely be updated to support or require .NET 10 within a month.
 
 # Learning to code using the Polyglot Notebooks extension   
 
@@ -29,7 +29,7 @@ Polyglot Notebooks has some limitations:
 
 # Exploring code using Polyglot Notebooks
 
-Polyglot Notebooks makes writing code even easier than top-level programs. It requires Visual Studio Code, so if you did not install it and the Polyglot Notebooks extension earlier, please install them now.
+Polyglot Notebooks makes writing code even easier than top-level programs. It requires VS Code, so if you did not install it and the Polyglot Notebooks extension earlier, please install them now.
 
 Visual Studio does have its own extension for notebooks named **Notebook Editor** that was created by Microsoft's machine learning team. It is not as mature as the Polyglot Notebooks extension for VS Code, so I do not recommend it. You can learn more and install Notebook Editor from the following link:
 https://marketplace.visualstudio.com/items?itemName=MLNET.notebook
@@ -53,7 +53,7 @@ First, we need to create a notebook:
 
 > If a newer version of the .NET Interactive engine is available, you might have to wait for it to uninstall the older version and install the newer one. 
 
-6. Navigate to **View** | **Output** and select **Polyglot Notebook : diagnostics** in the drop-down list. Please be patient. It can take a few minutes for the notebook to appear because it must start up a hosting environment for .NET. If nothing happens after a few minutes, then close Visual Studio Code and restart it.
+6. Navigate to **View** | **Output** and select **Polyglot Notebook : diagnostics** in the drop-down list. Please be patient. It can take a few minutes for the notebook to appear because it must start up a hosting environment for .NET. If nothing happens after a few minutes, then close VS Code and restart it.
 
 7. Once the Polyglot Notebooks extension is downloaded and installed, the OUTPUT window diagnostics will show that a kernel process has started (your process numbers will be different from the output below), as shown in the following output:
 ```

@@ -33,8 +33,8 @@ Console.WriteLine($"Hello, {name} has {name.Length} characters!");
 ```
 Build succeeded.
 
-C:\cs12dotnet8\Chapter06\WarningsAsErrors\Program.cs(3,15): warning CS8600: Converting null literal or possible null value to non-nullable type. [C:\cs12dotnet8\Chapter06\WarningsAsErrors\WarningsAsErrors.csproj]
-C:\cs12dotnet8\Chapter06\WarningsAsErrors\Program.cs(9,40): warning CS8602: Dereference of a possibly null reference. [C:\cs12dotnet8\Chapter06\WarningsAsErrors\WarningsAsErrors.csproj]
+C:\cs14net10\Chapter06\WarningsAsErrors\Program.cs(3,15): warning CS8600: Converting null literal or possible null value to non-nullable type. [C:\cs14net10\Chapter06\WarningsAsErrors\WarningsAsErrors.csproj]
+C:\cs14net10\Chapter06\WarningsAsErrors\Program.cs(9,40): warning CS8602: Dereference of a possibly null reference. [C:\cs14net10\Chapter06\WarningsAsErrors\WarningsAsErrors.csproj]
     2 Warning(s)
     0 Error(s)
 ```
@@ -46,9 +46,9 @@ Build succeeded.
     0 Error(s)
 ```
 
-If you use the Visual Studio 2022 **Build** menu and look in the **Error List** then you will continue to see the two warnings because Visual Studio 2022 is not showing the true output from the compiler. Visual Studio 2022 runs its own checks on your code.
+If you use the Visual Studio **Build** menu and look in the **Error List** then you will continue to see the two warnings because Visual Studio is not showing the true output from the compiler. Visual Studio runs its own checks on your code.
 
-> **Good Practice**: You can "clean" a project either using the Visual Studio 2022 **Build** menu or using the command `dotnet clean` so that the warnings reappear the next time you build.
+> **Good Practice**: You can "clean" a project either using the Visual Studio **Build** menu or using the command `dotnet clean` so that the warnings reappear the next time you build.
 
 5.	In the project file, add an entry to ask the compiler to treat warnings as errors, as shown in the following markup:
 ```xml
@@ -56,7 +56,7 @@ If you use the Visual Studio 2022 **Build** menu and look in the **Error List** 
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
@@ -68,8 +68,8 @@ If you use the Visual Studio 2022 **Build** menu and look in the **Error List** 
 6.	Build the `WarningsAsErrors` project and note that the build fails and there are two *errors* (no longer just warnings), as shown in the following output:
 ```
 Build FAILED.
-C:\cs12dotnet8\Chapter06\WarningsAsErrors\Program.cs(3,15): error CS8600: Converting null literal or possible null value to non-nullable type. [C:\cs12dotnet8\Chapter06\WarningsAsErrors\WarningsAsErrors.csproj]
-C:\cs12dotnet8\Chapter06\WarningsAsErrors\Program.cs(9,40): error CS8602: Dereference of a possibly null reference. [C:\cs12dotnet8\Chapter06\WarningsAsErrors\WarningsAsErrors.csproj]
+C:\cs14net10\Chapter06\WarningsAsErrors\Program.cs(3,15): error CS8600: Converting null literal or possible null value to non-nullable type. [C:\cs14net10\Chapter06\WarningsAsErrors\WarningsAsErrors.csproj]
+C:\cs14net10\Chapter06\WarningsAsErrors\Program.cs(9,40): error CS8602: Dereference of a possibly null reference. [C:\cs14net10\Chapter06\WarningsAsErrors\WarningsAsErrors.csproj]
     0 Warning(s)
     2 Error(s)
 ```
@@ -123,7 +123,7 @@ Warning waves are enabled using the `AnalysisLevel` element in your project file
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AnalysisLevel>6.0</AnalysisLevel>
@@ -173,21 +173,21 @@ We have now spent many chapters learning how to write C# code. Before we move on
 
 Let's see it in action:
 1.	Use your preferred code editor to add a **Console App** / `console` project named `CodeAnalyzing` to the `Chapter06` solution using the old style project template that has an explicitly defined `Program` class:
-    - If you are using Visual Studio 2022, then select the check box named **Do not use top-level statements**.
-    - If you are using Visual Studio Code, then use the switch `--use-program-main`.
+    - If you are using Visual Studio, then select the check box named **Do not use top-level statements**.
+    - If you are using VS Code, then use the switch `--use-program-main`.
 2.	In the `CodeAnalyzing` project, add a package reference for `StyleCop.Analyzers`, as shown in the following configuration:
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.435">
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.556">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -196,7 +196,7 @@ Let's see it in action:
 </Project>
 ```
 
-> The current version at the time of writing is `1.2.0-beta.435`. I recommend changing it to `1.2.0-*` so that you automatically get updates while it is still in preview. Once it has a GA release, you can remove the wildcard to fix it to that version, for example, `1.2.0`.
+> The current version at the time of writing is `1.2.0-beta.556` from December 2023. I recommend changing it to `1.2.0-*` so that you automatically get updates while it is still in preview. Once it has a GA release, you can remove the wildcard to fix it to that version, for example, `1.2.0`.
 
 3.	Add a JSON file to your project named `stylecop.json` for controlling StyleCop settings.
 4.	Modify its contents, as shown in the following markup:
@@ -222,7 +222,7 @@ The `$schema` entry enables IntelliSense while editing the `stylecop.json` file 
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -269,7 +269,7 @@ namespace CodeAnalyzing
 
 For example, it wants using directives to be put within the namespace declaration, as shown in the following output:
 ```
-C:\cs12dotnet8\Chapter06\CodeAnalyzing\Program.cs(1,1): warning SA1200: Using directive should appear within a namespace declaration [C:\cs12dotnet8\Chapter06\CodeAnalyzing\CodeAnalyzing.csproj]
+C:\cs14net10\Chapter06\CodeAnalyzing\Program.cs(1,1): warning SA1200: Using directive should appear within a namespace declaration [C:\cs14net10\Chapter06\CodeAnalyzing\CodeAnalyzing.csproj]
 ```
 
 # Suppressing warnings
@@ -320,7 +320,7 @@ Now, let's fix all the other warnings:
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -371,7 +371,7 @@ public class Program
 ```
 
 4.	Build the project.
-5.	Expand the `bin/Debug/net8.0` folder (remember to **Show All Files** if you are using Visual Studio 2022) and note the autogenerated file named `CodeAnalyzing.xml`, as shown in the following markup:
+5.	Expand the `bin/Debug/net10.0` folder (remember to **Show All Files** if you are using Visual Studio 2022) and note the autogenerated file named `CodeAnalyzing.xml`, as shown in the following markup:
 ```xml
 <?xml version="1.0"?>
 <doc>

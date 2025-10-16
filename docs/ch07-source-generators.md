@@ -92,7 +92,7 @@ WriteLine($"Today, {today:D}, the price is {price:C}.");
 ```
 4.  Run the `ConsoleApp.SourceGeneration` project and note the result, as shown in the following output:
 ```
-Today, 07 July 2023, the price is £19.99.
+Today, 11 November 2025, the price is £19.99.
 ```
 
 > My computer is configured to use English (British) culture which is why the currency symbol is British pounds £. When you run this console app on your computer, the date format and currency will match your local culture. This can be a problem with a book where you want the output in the book to match the output on the readers screen. But we also want to see how it would look in our own culture or a specified culture. And, by default, some command prompts and terminals do not show special symbols like the Euro currency symbol. We want to see those too.
@@ -113,7 +113,7 @@ Next, we will create a class library that implements the source generator:
     <TargetFramework>netstandard2.0</TargetFramework>
 
     <!--Must use C# 10 or later to support 'global using' statements.-->
-    <LangVersion>13</LangVersion>
+    <LangVersion>14</LangVersion>
 
     <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
     <Nullable>enable</Nullable>
@@ -124,11 +124,11 @@ Next, we will create a class library that implements the source generator:
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4">
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="5.0.0-1.25277.114">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.6.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="5.0.0-2.final" />
   </ItemGroup>
 
 </Project>
@@ -213,7 +213,7 @@ Finally, we will use the source generator in our console app:
 <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
 ```
 
-> Visual Studio 2022 automatically runs code analyzers so this is not necessary. Visual Studio Code does *not* automatically run code analyzers. We must add this extra entry in the project file to enable the automatic generation of the source generator file. It is fine to enable it for Visual Studio 2022 too.
+> Visual Studio automatically runs code analyzers so this is not necessary. VS Code does *not* automatically run code analyzers. We must add this extra entry in the project file to enable the automatic generation of the source generator file. It is fine to enable it for Visual Studio too.
 
 > You can control the path for automatically generated code files by adding a `<CompilerGeneratedFilesOutputPath>` element.
 
@@ -226,19 +226,19 @@ Finally, we will use the source generator in our console app:
 </ItemGroup>
 ```
 
-3.  Build the `ConsoleApp.SourceGeneration` project.
-4.  Note the auto-generated class file:
-- In Visual Studio 2022, close and reopen the solution to trigger analyzers to be run, and then in **Solution Explorer**, expand the **Dependencies** | **Analyzers** | **Packt.SourceGeneration** | **Packt.Shared.ProgramSourceGenerator** nodes, and then open the `Program.Methods.g.cs` file, as shown in Figure 7B.1:
+1.  Build the `ConsoleApp.SourceGeneration` project.
+2.  Note the auto-generated class file:
+- In Visual Studio, close and reopen the solution to trigger analyzers to be run, and then in **Solution Explorer**, expand the **Dependencies** | **Analyzers** | **Packt.SourceGeneration** | **Packt.Shared.ProgramSourceGenerator** nodes, and then open the `Program.Methods.g.cs` file, as shown in Figure 7B.1:
  
-![The Program.Methods.g.cs file in Visual Studio 2022](assets/B19586_07B_01.png)
+![The Program.Methods.g.cs file in Visual Studio](assets/B19586_07B_01.png)
 
 *Figure 7B.1: The source generated Program.Methods.g.cs file*
 
 > **Good Practice**: Microsoft's naming convention for proejcts that implement source generators seems to be to suffix with either `.SourceGeneration` or `.Generator`. That is why I told you to use `Packt.SourceGeneration` for the class library project name.
 
-- In Visual Studio Code, in **EXPLORER** | **CHAPTER07**, in the `obj/Debug/net8.0` folder, note the `generated` folder and its subfolder `Packt.SourceGeneration/Packt.Shared.ProgramSourceGenerator`folder, and then open the `Program.Methods.g.cs` file, as shown in *Figure 7B.2*:
+- In VS Code, in **EXPLORER** | **CHAPTER07**, in the `obj/Debug/net10.0` folder, note the `generated` folder and its subfolder `Packt.SourceGeneration/Packt.Shared.ProgramSourceGenerator`folder, and then open the `Program.Methods.g.cs` file, as shown in *Figure 7B.2*:
 
-![The Program.Methods.g.cs file in Visual Studio Code](assets/B19586_07B_02.png)
+![The Program.Methods.g.cs file in VS Code](assets/B19586_07B_02.png)
 
 *Figure 7B.2: The source generated Program.Methods.g.cs file*
 
@@ -247,29 +247,29 @@ Finally, we will use the source generator in our console app:
 ConfigureConsole();
 ```
 
-7.  Run the `ConsoleApp.SourceGeneration` project, and note the result, as shown in the following output:
+1.  Run the `ConsoleApp.SourceGeneration` project, and note the result, as shown in the following output:
 ```
 Current culture: English (United States).
 Today, Friday, July 7, 2023, the price is $19.99.
 ```
 
-8. Change the call to use a specific culture like French in France, as shown in the following code:
+1. Change the call to use a specific culture like French in France, as shown in the following code:
 ```cs
 ConfigureConsole(culture: "fr-FR");
 ```
 
-9.  Run the `ConsoleApp.SourceGeneration` project, and note the result, as shown in the following output:
+1.  Run the `ConsoleApp.SourceGeneration` project, and note the result, as shown in the following output:
 ```
 Current culture: French (France).
 Today, vendredi 7 juillet 2023, the price is 19,99 €.
 ```
 
-10.  Change the call to use a specific culture, as shown in the following code:
+1.   Change the call to use a specific culture, as shown in the following code:
 ```
 ConfigureConsole(useComputerCulture: true);
 ```
 
-11.   Run the `ConsoleApp.SourceGeneration` project, and note the result, as shown in the following output:
+1.    Run the `ConsoleApp.SourceGeneration` project, and note the result, as shown in the following output:
 ```
 Current culture: English (United Kingdom).
 Today, 07 July 2023, the price is £19.99.

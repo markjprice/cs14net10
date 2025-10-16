@@ -219,7 +219,7 @@ Focused on features that fill out existing suites of features, like partial memb
 
 Feature|Chapter|Topic
 ---|---|---
-No-project C# code files|1|Running a C# code file without a project file
+File-based apps|1|Running a C# code file without a project file
 Improved `nameof`|2|Naming things and assigning values
 Null-conditional assignment operator|3|Null-conditional assignment operator
 `field` keyword|5|Implementing properties using the `field` keyword

@@ -5,7 +5,7 @@
 - [No, you cannot technically prevent decompilation](#no-you-cannot-technically-prevent-decompilation)
 
 
-One of the best ways to learn how to code for .NET is to see how professionals do it. Most code editors have an extension for decompiling .NET assemblies. Visual Studio 2022 and Visual Studio Code can use the ILSpy extension. JetBrains Rider has a built-in IL Viewer tool.
+One of the best ways to learn how to code for .NET is to see how professionals do it. Most code editors have an extension for decompiling .NET assemblies. Visual Studio and VS Code can use the ILSpy extension. Rider has a built-in IL Viewer tool.
 
 > **Good Practice**: You could decompile someone else's assemblies for non-learning purposes, like copying their code for use in your own production library or application, but remember that you are viewing their intellectual property, so please respect that.
 
@@ -29,7 +29,7 @@ For learning purposes, you can decompile any .NET assembly with a tool like ILSp
 
 12.	In ILSpy, navigate to **File** | **Open…**.
 13.	Navigate to the following folder:
-`cs13net9/Chapter07/DotNetEverywhere/bin/Release/net9.0/linux-x64`
+`cs14net10/Chapter07/DotNetEverywhere/bin/Release/net10.0/linux-x64`
 14.	Select the `System.Linq.dll` assembly and click **Open**.
 15.	In the **Assemblies** tree, expand the **System.Linq (9.0.0.0, .NETCoreApp, v9.0)** assembly, expand the **System.Linq** namespace, expand the **Enumerable** class, and then click the **Count<TSource>(this IEnumerable<TSource>) : int** method.
 16.	In the `Count` method, note the good practice of checking the source parameter and throwing an `ArgumentNullException` if it is `null`, checking for interfaces that the source might implement with their own `Count` properties that would be more efficient to read, and finally, the last resort of enumerating through all the items in the source and incrementing a counter, which would be the least efficient implementation, as shown in *Figure 7.5*:
@@ -82,7 +82,7 @@ The final part of the `Count` method implementation shows how the `foreach` stat
 
 19.	Close ILSpy.
 
-You can learn how to use the ILSpy extension for Code at the following link: https://github.com/markjprice/cs12dotnet8/blob/main/docs/code-editors/vscode.md#decompiling-using-the-ilspy-extension-for-visual-studio-codehttps://github.com/markjprice/cs13net9/blob/main/docs/code-editors/vscode.md#decompiling-using-the-ilspy-extension-for-visual-studio-code.
+You can learn how to use the ILSpy extension for VS Code at the following link: https://github.com/markjprice/cs14net10/blob/main/docs/code-editors/vscode.md#decompiling-using-the-ilspy-extension-for-visual-studio-code.
 
 # Viewing source links with Visual Studio
 Instead of decompiling, Visual Studio has a feature that allows you to view the original source code using source links. This feature is not available in Code.

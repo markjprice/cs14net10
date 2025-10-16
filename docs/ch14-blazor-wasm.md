@@ -24,7 +24,7 @@ First, we need to create a separate project for the Blazor WebAssembly component
     - Project template: **Blazor WebAssembly App Empty** / `blazorwasm-empty`
     - Solution file and folder: `PracticalApps`
     - Project file and folder: `Northwind.Blazor.Wasm`
-2.	In Visual Studio 2022, choose the following options:
+2.	In Visual Studio, choose the following options:
     - **Configure for HTTPS**: Selected.
     - **Progressive Web Application**: Cleared.
 3.	In the `Northwind.Blazor.Wasm.csproj` project file, make changes as shown in the following list, and as shown in the following markup:
@@ -36,7 +36,7 @@ First, we need to create a separate project for the Blazor WebAssembly component
 <Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <NoDefaultLaunchSettingsFile>true</NoDefaultLaunchSettingsFile>
@@ -189,7 +189,7 @@ By default, client-side interactions are disabled. We will switch the pages to u
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>

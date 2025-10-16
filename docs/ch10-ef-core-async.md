@@ -38,7 +38,6 @@ public List<Product> GetProducts()
 
   // This blocks the thread until the database returns data.
   return db.Products.ToList(); 
-  }
 }
 ```
 

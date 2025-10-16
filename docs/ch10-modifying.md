@@ -8,10 +8,10 @@
 
 
 Inserting, updating, and deleting entities using EF Core is an easy task to accomplish. This is often referred to as **CRUD**, an acronym that includes the following operations:
-- C for Create
-- R for Retrieve (or Read)
-- U for Update
-- D for Delete
+- **C** for Create
+- **R** for Retrieve (or Read)
+- **U** for Update
+- **D** for Delete
 
 By default, `DbContext` maintains change tracking automatically, so the local entities can have multiple changes tracked, including adding new entities, modifying existing entities, and removing entities.
 

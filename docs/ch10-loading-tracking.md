@@ -52,7 +52,7 @@ Lazy loading was introduced in EF Core 2.1, and it can automatically load missin
 Let's see this in action:
 1.	In the `WorkingWithEFCore` project, add a package reference for EF Core proxies, as shown in the following markup:
 ```xml
-<PackageReference Version="9.0.0" Include="Microsoft.EntityFrameworkCore.Proxies" />
+<PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="10.0.0" />
 ```
 
 2.	Build the `WorkingWithEFCore` project to restore packages.
@@ -65,11 +65,11 @@ Now, every time the loop enumerates and an attempt is made to read the `Products
 
 4.	Run the code and note that the product counts are now correct. But you will see that the problem with lazy loading is that multiple round trips to the database server are required to eventually fetch all the data. For example, getting all the categories and then getting the products for the first category, `Beverages`, requires the execution of two SQL commands, as shown in the following partial output:
 ```
-dbug: 05/03/2022 13:41:40.221 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
+dbug: 05/03/2025 13:41:40.221 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
       Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
       SELECT "c"."CategoryId", "c"."CategoryName", "c"."Description"
       FROM "Categories" AS "c"
-dbug: 05/03/2022 13:41:40.331 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
+dbug: 05/03/2025 13:41:40.331 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
       Executing DbCommand [Parameters=[@__p_0='1'], CommandType='Text', CommandTimeout='30']
       SELECT "p"."ProductId", "p"."CategoryId", "p"."UnitPrice", "p"."Discontinued", "p"."ProductName", "p"."UnitsInStock"
       FROM "Products" AS "p"
@@ -140,12 +140,12 @@ I chose to load products for only two of the eight categories, `Beverages` and `
 ```
 Enable eager loading? (Y/N): n
 Enable explicit loading? (Y/N): y
-dbug: 05/03/2023 13:48:48.541 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
+dbug: 05/03/2025 13:48:48.541 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
       Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
       SELECT "c"."CategoryId", "c"."CategoryName", "c"."Description"
       FROM "Categories" AS "c"
 Explicitly load products for Beverages? (Y/N): y
-dbug: 05/03/2023 13:49:07.416 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
+dbug: 05/03/2025 13:49:07.416 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
       Executing DbCommand [Parameters=[@__p_0='1'], CommandType='Text', CommandTimeout='30']
       SELECT "p"."ProductId", "p"."CategoryId", "p"."UnitPrice", "p"."Discontinued", "p"."ProductName", "p"."UnitsInStock"
       FROM "Products" AS "p"
@@ -164,7 +164,7 @@ Meat/Poultry has 0 products.
 Explicitly load products for Produce? (Y/N): n
 Produce has 0 products.
 Explicitly load products for Seafood? (Y/N): y
-dbug: 05/03/2023 13:49:16.682 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
+dbug: 05/03/2025 13:49:16.682 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
 
       Executing DbCommand [Parameters=[@__p_0='8'], CommandType='Text', CommandTimeout='30']
       SELECT "p"."ProductId", "p"."CategoryId", "p"."UnitPrice", "p"."Discontinued", "p"."ProductName", "p"."UnitsInStock"
@@ -311,7 +311,7 @@ private static void LazyLoadingWithNoTracking()
 2.	In `Program.cs`, add a call to `LazyLoadingWithNoTracking`. You might want to comment out any other method calls except `ConfigureConsole`, which ensures you see the same currency and other formatting as shown in the book.
 3.	Run the code and note that it works without throwing an exception as it would have done with previous versions of EF Core.
 
-> If you want to see the runtime exception for yourself, in the project file, change the version numbers of the three EF Core packages from `9.0.0` to any package version older than `8.0.0`, like `7.0.0` or `6.0.0`.
+> If you want to see the runtime exception for yourself, in the project file, change the version numbers of the three EF Core packages from `10.0.0` to any package version older than `8.0.0`, like `7.0.0` or `6.0.0`.
 
 # Summary of tracking
 

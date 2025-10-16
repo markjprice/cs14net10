@@ -15,6 +15,7 @@ If you already have some familiarity with older versions of ASP.NET and are exci
 - [ASP.NET Core 7, November 2022](#aspnet-core-7-november-2022)
 - [ASP.NET Core 8, November 2023](#aspnet-core-8-november-2023)
 - [ASP.NET Core 9, November 2024](#aspnet-core-9-november-2024)
+- [ASP.NET Core 10, November 2025](#aspnet-core-10-november-2025)
 
 > **Note**: Chapter number `*` in the tables means the online-only chapter about ASP.NET Core MVC that is available at the following link: https://github.com/markjprice/cs12dotnet8/blob/main/docs/aspnetcoremvc.md.
 
@@ -139,3 +140,15 @@ OpenAPI document generation|15|Understanding the OpenAPI Specification
 `HybridCache` class|15|Hybrid caching
 
 *Table 12.9: Features of ASP.NET Core 9 covered in this book*
+
+# ASP.NET Core 10, November 2025
+
+Focused on improving performance, including the topics listed in *Table 12.10*:
+
+Feature|Chapter|Topic
+---|---|---
+Validation attribute support|15|Validation support in Minimal API web services
+YAML format for OpenAPI docs|15|Generating OpenAPI documents in YAML format
+XML doc for OpenAPI docs|15|Populating XML documentation comments into the OpenAPI document
+
+*Table 12.10: Features of ASP.NET Core 10 covered in this book*

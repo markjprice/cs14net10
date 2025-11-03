@@ -11,6 +11,7 @@ Repository for the Packt Publishing book titled "C# 14 and .NET 10 - Modern Cros
 - [C# 14 and .NET 10 - Modern Cross-Platform Development Fundamentals, Tenth Edition](#c-14-and-net-10---modern-cross-platform-development-fundamentals-tenth-edition)
 - [Free PDF/ePub of the book and how to contact the publisher Packt](#free-pdfepub-of-the-book-and-how-to-contact-the-publisher-packt)
 - [Author's books](#authors-books)
+- [.NETPro Newsletter](#netpro-newsletter)
 - [Chapters and code solutions](#chapters-and-code-solutions)
 - [Code solutions for Visual Studio and VS Code](#code-solutions-for-visual-studio-and-vs-code)
 - [Important](#important)
@@ -33,6 +34,12 @@ My author page on Amazon: https://www.amazon.com/Mark-J-Price/e/B071DW3QGN/
 All of my books on Packt's website: https://subscription.packtpub.com/search?query=mark+j.+price
 
 My author page on Goodreads: https://www.goodreads.com/author/show/14224500.Mark_J_Price
+
+# .NETPro Newsletter
+
+Subscribe to .NETPro to receive .NET tips in your inbox: https://landing.packtpub.com/dotnetpronewsletter/
+
+Catch up on previous newsletters in the archive: https://packtnetpro.substack.com/archive 
 
 # Chapters and code solutions
 

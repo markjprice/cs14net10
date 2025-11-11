@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="CoursesAndStudents/CoursesAndStudents.csproj" />
+  <Project Path="Exercise_DataSerialization/Exercise_DataSerialization.csproj" />
+  <Project Path="Northwind.EntityModels/Northwind.EntityModels.csproj" />
+  <Project Path="WorkingWithEFCore/WorkingWithEFCore.csproj" />
+</Solution>

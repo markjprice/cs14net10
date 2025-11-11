@@ -1,0 +1,12 @@
+<Solution>
+  <Project Path="Arrays/Arrays.csproj" />
+  <Project Path="CastingConverting/CastingConverting.csproj" />
+  <Project Path="Exercise_Exceptions/Exercise_Exceptions.csproj" />
+  <Project Path="Exercise_FizzBuzz/Exercise_FizzBuzz.csproj" />
+  <Project Path="Exercise_LoopsAndOverflow/Exercise_LoopsAndOverflow.csproj" />
+  <Project Path="Exercise_Operators/Exercise_Operators.csproj" />
+  <Project Path="HandlingExceptions/HandlingExceptions.csproj" />
+  <Project Path="IterationStatements/IterationStatements.csproj" />
+  <Project Path="Operators/Operators.csproj" />
+  <Project Path="SelectionStatements/SelectionStatements.csproj" />
+</Solution>

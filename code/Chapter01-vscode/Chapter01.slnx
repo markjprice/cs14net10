@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="AboutMyEnvironment/AboutMyEnvironment.csproj" />
+  <Project Path="HelloCS/HelloCS.csproj" />
+</Solution>

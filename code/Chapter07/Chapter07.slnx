@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="AotConsole/AotConsole.csproj" />
+  <Project Path="AssembliesAndNamespaces/AssembliesAndNamespaces.csproj" />
+  <Project Path="ConsoleApp.SourceGeneration/ConsoleApp.SourceGeneration.csproj" />
+  <Project Path="ControlSDK/ControlSDK.csproj" />
+  <Project Path="DotNetEverywhere/DotNetEverywhere.csproj" />
+  <Project Path="Packt.SourceGeneration/Packt.SourceGeneration.csproj" />
+  <Project Path="SharedLibrary/SharedLibrary.csproj" />
+  <Project Path="SourceLinks/SourceLinks.csproj" />
+</Solution>

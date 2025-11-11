@@ -1,6 +1,6 @@
 {
   "solution": {
-    "path": "Chapter03.sln",
+    "path": "Chapter03.slnx",
     "projects": [
       "Arrays\\Arrays.csproj",
       "CastingConverting\\CastingConverting.csproj",

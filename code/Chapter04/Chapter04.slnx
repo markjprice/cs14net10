@@ -1,0 +1,14 @@
+<Solution>
+  <Project Path="CalculatorLib/CalculatorLib.csproj" />
+  <Project Path="CalculatorLibUnitTests/CalculatorLibUnitTests.csproj" />
+  <Project Path="CallStackExceptionHandling/CallStackExceptionHandling.csproj" />
+  <Project Path="CallStackExceptionHandlingLib/CallStackExceptionHandlingLib.csproj" />
+  <Project Path="Debugging/Debugging.csproj" />
+  <Project Path="Exercise_PrimeFactorsApp/Exercise_PrimeFactorsApp.csproj" />
+  <Project Path="Exercise_PrimeFactorsLib/Exercise_PrimeFactorsLib.csproj" />
+  <Project Path="Exercise_PrimeFactorsTests/Exercise_PrimeFactorsTests.csproj" />
+  <Project Path="HotReloading/HotReloading.csproj" />
+  <Project Path="Instrumenting/Instrumenting.csproj" />
+  <Project Path="TopLevelFunctions/TopLevelFunctions.csproj" />
+  <Project Path="WritingFunctions/WritingFunctions.csproj" />
+</Solution>

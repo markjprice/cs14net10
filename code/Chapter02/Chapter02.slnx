@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="Arguments/Arguments.csproj" />
+  <Project Path="AsyncConsole/AsyncConsole.csproj" />
+  <Project Path="Exercise_Numbers/Exercise_Numbers.csproj" />
+  <Project Path="Formatting/Formatting.csproj" />
+  <Project Path="Numbers/Numbers.csproj" />
+  <Project Path="Vocabulary/Vocabulary.csproj" />
+  <Project Path="Variables/Variables.csproj" />
+</Solution>

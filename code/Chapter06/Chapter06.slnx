@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="CodeAnalyzing/CodeAnalyzing.csproj" />
+  <Project Path="Exercise_Inheritance/Exercise_Inheritance.csproj" />
+  <Project Path="NullHandling/NullHandling.csproj" />
+  <Project Path="PacktLibrary/PacktLibrary.csproj" />
+  <Project Path="PeopleApp/PeopleApp.csproj" />
+  <Project Path="WarningsAsErrors/WarningsAsErrors.csproj" />
+</Solution>

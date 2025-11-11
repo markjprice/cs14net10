@@ -1,6 +1,6 @@
 {
   "solution": {
-    "path": "Chapter03.sln",
+    "path": "Chapter03.slnx",
     "projects": [
       "Exercise_Exceptions\\Exercise_Exceptions.csproj",
       "Exercise_FizzBuzz\\Exercise_FizzBuzz.csproj",

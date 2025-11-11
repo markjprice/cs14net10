@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Namespaces/Namespaces.csproj" />
+  <Project Path="PacktLibraryModern/PacktLibraryModern.csproj" />
+  <Project Path="PacktLibraryNet2/PacktLibraryNet2.csproj" />
+  <Project Path="PeopleApp/PeopleApp.csproj" />
+</Solution>

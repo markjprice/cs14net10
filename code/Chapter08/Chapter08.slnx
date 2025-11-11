@@ -1,0 +1,12 @@
+<Solution>
+  <Project Path="Exercise_NumbersAsWordsApp/Exercise_NumbersAsWordsApp.csproj" />
+  <Project Path="Exercise_NumbersAsWordsLib/Exercise_NumbersAsWordsLib.csproj" />
+  <Project Path="Exercise_NumbersAsWordsTests/Exercise_NumbersAsWordsTests.csproj" />
+  <Project Path="Exercise_RegularExpressions/Exercise_RegularExpressions.csproj" />
+  <Project Path="WorkingWithCollections/WorkingWithCollections.csproj" />
+  <Project Path="WorkingWithNetworkResources/WorkingWithNetworkResources.csproj" />
+  <Project Path="WorkingWithNumbers/WorkingWithNumbers.csproj" />
+  <Project Path="WorkingWithRanges/WorkingWithRanges.csproj" />
+  <Project Path="WorkingWithRegularExpressions/WorkingWithRegularExpressions.csproj" />
+  <Project Path="WorkingWithText/WorkingWithText.csproj" />
+</Solution>

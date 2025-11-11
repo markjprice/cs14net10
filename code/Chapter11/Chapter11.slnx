@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Exercise_LinqQueries/Exercise_LinqQueries.csproj" />
+  <Project Path="LinqInParallel/LinqInParallel.csproj" />
+  <Project Path="LinqWithEFCore/LinqWithEFCore.csproj" />
+  <Project Path="LinqWithObjects/LinqWithObjects.csproj" />
+  <Project Path="PacktLinqExtensions/PacktLinqExtensions.csproj" />
+</Solution>

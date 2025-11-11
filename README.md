@@ -69,9 +69,9 @@ Catch up on previous newsletters in the archive: https://packtnetpro.substack.co
 - Chapter 15 Building and Consuming Web Services: [code/ModernWeb/Northwind.MinimalApi](code/ModernWeb/Northwind.MinimalApi)
 
 **Appendices**
-- *Appendix A, Answers to the Test Your Knowledge Questions*
-- *Appendix B, Setting Up Your Development Environment*
-- [*Appendix C, Looking for help*](https://github.com/markjprice/markjprice/blob/main/articles/getting-help.md)
+- [*Appendix A, Answers to the Test Your Knowledge Questions*](docs/B31466_Appendix%20A.pdf)
+- [*Appendix B, Setting Up Your Development Environment*](docs/B31466_Appendix%20B.pdf)
+- [*Appendix C, Looking for help*](https://github.com/markjprice/markjprice/blob/main/articles/getting-help.md) and [PDF](docs/B31466_Appendix%20C.pdf)
 - Appendices are included with your purchase. Visit https://packtpub.com/unlock, then use the search bar to find this book by name. Double-check the edition shown to make sure you get the right one.
 
 # Code solutions for Visual Studio and VS Code

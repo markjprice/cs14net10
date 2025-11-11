@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc; // To use ProblemDetails.
-using Northwind.EntityModels; // To use Customer.
-using Northwind.WebApi.Repositories; // To use ICustomerRepository.
+using Microsoft.EntityFrameworkCore; // To use ToArrayAsync, FindAsync, AddAsync, Update, Remove.
+using Microsoft.EntityFrameworkCore.ChangeTracking; // To use EntityEntry<T>.
+using Northwind.EntityModels; // To use NorthwindContext and Customer.
+using System.ComponentModel.DataAnnotations; // To use [Required].
 
 static partial class Program
 {
@@ -8,81 +10,108 @@ static partial class Program
   {
     // GET: /customers
     app.MapGet(pattern: "/customers", handler:
-      async (ICustomerRepository repo) =>
+      async (NorthwindContext db) =>
     {
-      return await repo.RetrieveAllAsync();
+      return await db.Customers.ToArrayAsync();
     });
 
     // GET: /customers/in/[country]
     app.MapGet(pattern: "/customers/in/{country}", handler:
-      async (string country, ICustomerRepository repo) =>
+      async ([Required] string country, NorthwindContext db) =>
     {
-      return (await repo.RetrieveAllAsync())
-        .Where(customer => customer.Country == country);
+      return await db.Customers
+        .Where(customer => customer.Country == country)
+        .ToArrayAsync();
     });
 
     // GET: /customers/[id]
-    app.MapGet("/customers/{id:regex(^[A-Z]{{5}}$)}", 
-      async Task<IResult> (string id, ICustomerRepository repo,
-        CancellationToken token = default) =>
+    app.MapGet("/customers/{id:regex(^[A-Za-z]{{5}}$)}", 
+      async Task<IResult> (string id, NorthwindContext db) =>
     {
-      Customer? c = await repo.RetrieveAsync(id, token);
-      if (c is null)
+      id = id.ToUpper(); // Normalize to uppercase.
+
+      Customer? customer = await db.Customers.FindAsync(id);
+
+      if (customer is null)
       {
         return TypedResults.NotFound(); // 404 Resource not found.
       }
-      return TypedResults.Ok(c); // 200 OK with customer in body.
+      return TypedResults.Ok(customer); // 200 OK with customer in body.
     });
 
     // POST: /customers
     // BODY: Customer (JSON)
     app.MapPost(pattern: "/customers", handler:
-      async Task<IResult> (Customer c, 
-        ICustomerRepository repo) =>
+      async Task<IResult> (Customer? c, NorthwindContext db) =>
     {
       if (c is null)
       {
         return TypedResults.BadRequest(); // 400 Bad request.
       }
-      Customer? addedCustomer = await repo.CreateAsync(c);
-      if (addedCustomer is null)
+
+      c.CustomerId = c.CustomerId.ToUpper(); // Normalize to uppercase.
+
+      // Add to database using EF Core.
+      EntityEntry<Customer> added =
+        await db.Customers.AddAsync(c);
+
+      int affected = await db.SaveChangesAsync();
+      if (affected == 1)
       {
-        return TypedResults.BadRequest("Repository failed to create customer.");
+        return TypedResults.Created( // 201 Created.
+          uri: $"/customers/{c.CustomerId}", value: c);
       }
       else
       {
-        return TypedResults.Created( // 201 Created.
-          uri: $"/customers/{addedCustomer.CustomerId}",
-          value: addedCustomer);
+        return TypedResults.BadRequest("Failed to create customer.");
       }
     });
 
     // PUT: /customers/[id]
     // BODY: Customer (JSON)
-    app.MapPut(pattern: "/customers/{id}", handler:
-      async Task<IResult> (Customer c,
-        string id, ICustomerRepository repo,
-        CancellationToken token = default) =>
+    app.MapPut(pattern: "/customers/{id:regex(^[A-Za-z]{{5}}$)}", handler:
+      async Task<IResult> (Customer? replacement,
+        string id, NorthwindContext db) =>
     {
-      id = id.ToUpper();
-      c.CustomerId = c.CustomerId.ToUpper();
-      if (c is null || c.CustomerId != id)
+      if (replacement is null)
       {
-        return TypedResults.BadRequest(); // 400 Bad request.
+        return TypedResults.BadRequest("Replacement customer is null."); // 400 Bad request.
       }
-      Customer? existing = await repo.RetrieveAsync(id, token);
+
+      // Normalize the IDs to uppercase.
+      id = id.ToUpper();
+      replacement.CustomerId = replacement.CustomerId.ToUpper();
+
+      if (replacement.CustomerId != id)
+      {
+        return TypedResults.BadRequest("Customer ID mismatch."); // 400 Bad request.
+      }
+
+      Customer? existing = await db.Customers.FindAsync(id);
+
       if (existing is null)
       {
         return TypedResults.NotFound(); // 404 Resource not found.
       }
-      await repo.UpdateAsync(c);
-      return TypedResults.NoContent(); // 204 No content.
+
+      // Detach the existing customer from change tracking.
+      db.Entry(existing).State = EntityState.Detached;
+
+      // Start change tracking the replacement customer.
+      db.Customers.Update(replacement);
+
+      int affected = await db.SaveChangesAsync();
+      if (affected == 1)
+      {
+        return TypedResults.NoContent(); // 204 No content.
+      }
+      return TypedResults.BadRequest( // 400 Bad request.
+        $"Customer {id} was found but failed to update.");
     });
 
     // DELETE: /customers/[id]
     app.MapDelete(pattern: "/customers/{id}", handler:
-      async Task<IResult> (string id, ICustomerRepository repo,
-        CancellationToken token = default) =>
+      async Task<IResult> (string id, NorthwindContext db) =>
     {
       // Take control of problem details.
       if (id == "bad")
@@ -97,20 +126,25 @@ static partial class Program
         return TypedResults.BadRequest(problemDetails); // 400 Bad Request
       }
 
-      Customer? existing = await repo.RetrieveAsync(id, token);
+      id = id.ToUpper();
+      Customer? existing = await db.Customers.FindAsync(id);
+
       if (existing is null)
       {
         return TypedResults.NotFound(); // 404 Resource not found.
       }
-      bool? deleted = await repo.DeleteAsync(id);
-      if (deleted.HasValue && deleted.Value) // Short circuit AND.
+
+      db.Customers.Remove(existing);
+
+      int affected = await db.SaveChangesAsync();
+      if (affected == 1)
       {
         return TypedResults.NoContent(); // 204 No content.
       }
       else
       {
         return TypedResults.BadRequest( // 400 Bad request.
-      $"Customer {id} was found but failed to delete.");
+          $"Customer {id} was found but failed to delete.");
       }
     });
   }

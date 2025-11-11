@@ -4,6 +4,8 @@ namespace Northwind.EntityModels;
 
 public partial class NorthwindContext : DbContext
 {
+  // Temporarily disable the non-nullable field must contain a non-null value when exiting constructor warning.
+#pragma warning disable CS8618
   public NorthwindContext()
   {
   }
@@ -12,6 +14,7 @@ public partial class NorthwindContext : DbContext
       : base(options)
   {
   }
+#pragma warning restore CS8618 // Reenable the warning.
 
   public virtual DbSet<Category> Categories { get; set; }
 
@@ -38,9 +41,9 @@ public partial class NorthwindContext : DbContext
       string dir = Environment.CurrentDirectory;
       string path = string.Empty;
 
-      if (dir.EndsWith("net9.0"))
+      if (dir.EndsWith("net10.0"))
       {
-        // In the <project>\bin\<Debug|Release>\net9.0 directory.
+        // In the <project>\bin\<Debug|Release>\net10.0 directory.
         path = Path.Combine("..", "..", "..", "..", database);
       }
       else

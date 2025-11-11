@@ -4,11 +4,14 @@
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <InterceptorsNamespaces>
+      $(InterceptorsNamespaces);Microsoft.AspNetCore.Http.Validation.Generated
+    </InterceptorsNamespaces>
   </PropertyGroup>
 
   <ItemGroup Label="Package reference versions are set at the solution level.">
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
-    <PackageReference Include="Microsoft.Extensions.Caching.Hybrid" />
+    <PackageReference Include="Scalar.AspNetCore" />
   </ItemGroup>
 
   <ItemGroup Label="To simplify use of Console members.">

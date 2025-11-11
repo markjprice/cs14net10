@@ -1,7 +1,7 @@
 ﻿@page "/suppliers"
 @inject NorthwindContext _db
 @code {
-  private IEnumerable<Supplier>? Companies { get; set; }
+  public IEnumerable<Supplier>? Companies { get; set; }
 
   protected override void OnInitialized()
   {

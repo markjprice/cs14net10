@@ -12,6 +12,9 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" />
+    
+    <!--Temporary fix to avoid security warning.-->
+    <PackageReference Include="Microsoft.Build.Tasks.Core" VersionOverride="17.14.8" />
   </ItemGroup>
 
 </Project>

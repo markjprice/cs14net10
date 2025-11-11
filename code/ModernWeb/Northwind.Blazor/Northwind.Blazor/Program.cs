@@ -9,8 +9,7 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
 
-builder.Services.AddNorthwindContext(
-  relativePath: @"..\..");
+builder.Services.AddNorthwindContext(relativePath: @"..\..");
 
 builder.Services.AddTransient<INorthwindService,
   NorthwindServiceServerSide>();
@@ -35,6 +34,7 @@ app.UseHttpsRedirection();
 app.UseAntiforgery();
 
 app.MapStaticAssets();
+
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
     .AddInteractiveWebAssemblyRenderMode()

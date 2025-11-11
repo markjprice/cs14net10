@@ -39,7 +39,6 @@ else
     </tbody>
   </table>
 }
-
 @code {
   [Parameter]
   public string? Country { get; set; }
@@ -50,13 +49,13 @@ else
   {
     if (string.IsNullOrWhiteSpace(Country))
     {
-      customers = await Http.GetFromJsonAsync<Customer[]>(
-        "/customers");
+      customers = await Http.GetFromJsonAsync
+        <Customer[]>("/customers");
     }
     else
     {
-      customers = await Http.GetFromJsonAsync<Customer[]>(
-        $"/customers/in/{Country}");
+      customers = await Http.GetFromJsonAsync
+        <Customer[]>($"/customers/in/{Country}");
     }
   }
 }

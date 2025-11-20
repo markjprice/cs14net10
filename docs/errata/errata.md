@@ -1,4 +1,4 @@
-**Errata** (2 items)
+**Errata** (3 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
@@ -7,6 +7,16 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 521 - Managing the Northwind sample database with SQLiteStudio, Page 628 - Creating the Northwind database](#page-521---managing-the-northwind-sample-database-with-sqlitestudio-page-628---creating-the-northwind-database)
 - [Appendix B - Setting Up Your Development Environment](#appendix-b---setting-up-your-development-environment)
   - [Page 833 - Creating the Northwind sample database locally](#page-833---creating-the-northwind-sample-database-locally)
+
+# Page 70 - Raw string literals
+
+In the book, the following exampleis wrong:
+
+![Wrong indentation for final quotes](page70-bad.png)
+
+It should be:
+
+![Correct indentation for final quotes](page70-good.png)
 
 
 # Page 521 - Managing the Northwind sample database with SQLiteStudio, Page 628 - Creating the Northwind database

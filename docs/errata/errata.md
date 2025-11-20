@@ -4,13 +4,14 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 
 > **Warning!** Avoid copying and pasting links that break over multiple lines and include hyphens or dashes because your PDF reader might remove a hyphen thinking that it being helpful but break the link! Just click on the links and they will work. Or carefully check that your PDF reader has not removed a hyphen after pasting into your web browser address bar. [See an example of this issue here](https://github.com/markjprice/cs13net9/issues/77).
 
+- [Page 70 - Raw string literals](#page-70---raw-string-literals)
 - [Page 521 - Managing the Northwind sample database with SQLiteStudio, Page 628 - Creating the Northwind database](#page-521---managing-the-northwind-sample-database-with-sqlitestudio-page-628---creating-the-northwind-database)
 - [Appendix B - Setting Up Your Development Environment](#appendix-b---setting-up-your-development-environment)
   - [Page 833 - Creating the Northwind sample database locally](#page-833---creating-the-northwind-sample-database-locally)
 
 # Page 70 - Raw string literals
 
-In the book, the following exampleis wrong:
+In the book, the following example is wrong:
 
 ![Wrong indentation for final quotes](page70-bad.png)
 

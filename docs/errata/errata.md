@@ -11,6 +11,8 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 
 # Page 70 - Raw string literals
 
+> Thanks to [Paul Marangoni](https://github.com/pmarangoni) for raising [this issue on November 19, 2025](https://github.com/markjprice/cs14net10/issues/1).
+
 In the book, the following example is wrong:
 
 ![Wrong indentation for final quotes](page70-bad.png)

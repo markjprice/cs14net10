@@ -14,6 +14,7 @@ All errata and improvements will be included in the 11th edition planned for pub
 
 Who|Errata|Improvements
 ---|---|---
+[Paul Marangoni](https://github.com/pmarangoni)|1|0
 José Luis García|1|0
 [Amar Jamal](https://github.com/amarjamal)|1|0
 [alhi44](https://github.com/alhi44)|0|1

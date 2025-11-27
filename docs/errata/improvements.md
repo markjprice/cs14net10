@@ -1,6 +1,38 @@
-**Improvements** (2 items)
+**Improvements** (3 items)
 
 If you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
+
+- [Page 119 - Null-conditional assignment operator](#page-119---null-conditional-assignment-operator)
+- [Page 267 - Controlling how parameters are passed](#page-267---controlling-how-parameters-are-passed)
+- [Page 640 - Improving the class-to-table mapping](#page-640---improving-the-class-to-table-mapping)
+
+
+# Page 119 - Null-conditional assignment operator
+
+After C# 14 was released, someone asked a question on LinkedIn: "Wasnt the null-conditional assignment operator a thing before? I mean I have been using it for a while now... Am I missing smth?" In the next edition, I will add more details to clarify.
+
+The **null-conditional operator** `?.` (for safe reading) was introduced in C# 6. Before C# 14 you could safely read from a possibly-`null` object using `?.`, but you could not safely assign through it, as shown in the following code:
+
+```cs
+Person? p = GetPersonOrNull();
+
+// Reading: OK with C# 6 and later.
+string? maybeName = p?.Name;
+
+// But this won't compile with C# 6 to 13.
+p?.Name = "Alice";
+
+// You have to do this before C# 14.
+if (p is not null)
+{
+  p.Name = "Alice";
+}
+
+// With C# 14 and later, you can now safely assign with the concise syntax.
+p?.Name = "Alice";
+```
+
+To summarize, previously `?.` only worked on the right side (for **null-conditional** reading). With C# 14 you can use it on the left side of an assignment (**null-conditional assignment**). 
 
 # Page 267 - Controlling how parameters are passed
 

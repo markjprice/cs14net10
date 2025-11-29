@@ -1,10 +1,11 @@
-**Errata** (4 items)
+**Errata** (5 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
 > **Warning!** Avoid copying and pasting links that break over multiple lines and include hyphens or dashes because your PDF reader might remove a hyphen thinking that it being helpful but break the link! Just click on the links and they will work. Or carefully check that your PDF reader has not removed a hyphen after pasting into your web browser address bar. [See an example of this issue here](https://github.com/markjprice/cs13net9/issues/77).
 
 - [Page 70 - Raw string literals](#page-70---raw-string-literals)
+- [Page 71 - Raw string literals](#page-71---raw-string-literals)
 - [Page 521 - Managing the Northwind sample database with SQLiteStudio, Page 628 - Creating the Northwind database](#page-521---managing-the-northwind-sample-database-with-sqlitestudio-page-628---creating-the-northwind-database)
 - [Page 677 - Using shared layouts with Blazor static SSR pages](#page-677---using-shared-layouts-with-blazor-static-ssr-pages)
 - [Appendix B - Setting Up Your Development Environment](#appendix-b---setting-up-your-development-environment)
@@ -22,6 +23,35 @@ It should be:
 
 ![Correct indentation for final quotes](page70-good.png)
 
+# Page 71 - Raw string literals
+
+> Thanks to [mushobeti](https://github.com/mushobeti) for raising [this issue on November 29, 2025](https://github.com/markjprice/cs14net10/issues/2).
+
+The following code example mistakenly indents the last three-quotes by one space:
+```cs
+string json = $$"""
+{
+  "first_name": "{{person.FirstName}}",
+  "age": {{person.Age}},
+  "calculation": "{{ 1 + 2 }}"
+}
+ """;
+```
+
+This causes the compiler to give `Error CS8999: Line does not start with the same whitespace as the closing line of the raw string literal.`
+
+To fix this error, delete the extra space at the start of the last statement, as shown in the following code:
+```cs
+string json = $$"""
+{
+  "first_name": "{{person.FirstName}}",
+  "age": {{person.Age}},
+  "calculation": "{{ 1 + 2 }}"
+}
+""";
+```
+
+This code example was correct in earlier editions so must have been accidently introduced during the editing process. I apologize for missing it.
 
 # Page 521 - Managing the Northwind sample database with SQLiteStudio, Page 628 - Creating the Northwind database
 

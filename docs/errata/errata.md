@@ -1,4 +1,4 @@
-**Errata** (5 items)
+**Errata** (6 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
@@ -6,6 +6,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 
 - [Page 70 - Raw string literals](#page-70---raw-string-literals)
 - [Page 71 - Raw string literals](#page-71---raw-string-literals)
+- [Page 103 - Getting key input from the user](#page-103---getting-key-input-from-the-user)
 - [Page 521 - Managing the Northwind sample database with SQLiteStudio, Page 628 - Creating the Northwind database](#page-521---managing-the-northwind-sample-database-with-sqlitestudio-page-628---creating-the-northwind-database)
 - [Page 677 - Using shared layouts with Blazor static SSR pages](#page-677---using-shared-layouts-with-blazor-static-ssr-pages)
 - [Appendix B - Setting Up Your Development Environment](#appendix-b---setting-up-your-development-environment)
@@ -52,6 +53,12 @@ string json = $$"""
 ```
 
 This code example was correct in earlier editions so must have been accidently introduced during the editing process. I apologize for missing it.
+
+# Page 103 - Getting key input from the user
+
+> Thanks to [mushobeti](https://github.com/mushobeti) for raising [this issue on November 30, 2025](https://github.com/markjprice/cs14net10/issues/3).
+
+In Steps 2 and 4, the output of the `Modifiers` should be `None` instead of `0`. To output the integer value of the `Modifiers` enum, we would use `arg2: (int)key.Modifiers`.
 
 # Page 521 - Managing the Northwind sample database with SQLiteStudio, Page 628 - Creating the Northwind database
 

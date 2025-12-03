@@ -1,10 +1,11 @@
-**Improvements** (3 items)
+**Improvements** (4 items)
 
 If you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
 - [Page 119 - Null-conditional assignment operator](#page-119---null-conditional-assignment-operator)
 - [Page 267 - Controlling how parameters are passed](#page-267---controlling-how-parameters-are-passed)
 - [Page 640 - Improving the class-to-table mapping](#page-640---improving-the-class-to-table-mapping)
+- [Appendix - Exercise 3.3 – Test your knowledge](#appendix---exercise-33--test-your-knowledge)
 
 
 # Page 119 - Null-conditional assignment operator
@@ -60,3 +61,9 @@ To avoid this, you must use the appropriate line ending for your operating syste
 - For Unix/macOS (LF): Use `$0\n`
 
 In the next edition, I will use `$0\r\n` in the main example and add a note box to explain that Linux and Mac users should use `$0\n`.
+
+# Appendix - Exercise 3.3 – Test your knowledge
+
+> Thanks to [s3ba-b](https://github.com/s3ba-b) for raising this [issue on December 2, 2025](https://github.com/markjprice/cs12dotnet8/issues/106).
+
+In the 11th edition, I will add a link to the documentation: https://learn.microsoft.com/en-us/dotnet/api/system.dividebyzeroexception, and quote it, "Dividing a floating-point value by zero doesn't throw an exception; it results in positive infinity, negative infinity, or not a number (NaN), according to the rules of IEEE 754 arithmetic."

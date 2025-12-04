@@ -1,10 +1,11 @@
-**Improvements** (4 items)
+**Improvements** (5 items)
 
 If you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
 - [Page 119 - Null-conditional assignment operator](#page-119---null-conditional-assignment-operator)
 - [Page 267 - Controlling how parameters are passed](#page-267---controlling-how-parameters-are-passed)
 - [Page 640 - Improving the class-to-table mapping](#page-640---improving-the-class-to-table-mapping)
+- [Page 737 - Creating an ASP.NET Core Minimal API project](#page-737---creating-an-aspnet-core-minimal-api-project)
 - [Appendix - Exercise 3.3 – Test your knowledge](#appendix---exercise-33--test-your-knowledge)
 
 
@@ -61,6 +62,14 @@ To avoid this, you must use the appropriate line ending for your operating syste
 - For Unix/macOS (LF): Use `$0\n`
 
 In the next edition, I will use `$0\r\n` in the main example and add a note box to explain that Linux and Mac users should use `$0\n`.
+
+# Page 737 - Creating an ASP.NET Core Minimal API project
+
+> Thanks to [Amar Jamal](https://github.com/amarjamal) for raising [this issue on December 3, 2025](https://github.com/markjprice/cs13net9/issues/89).
+
+In Step 2, the reader is told, "In `Program.Weather.cs`, add statements to extend the automatically generated partial `Program` class by moving (cut and paste the statements) the weather-related statements from `Program.cs`..." 
+
+The "weather-related statements" include the `record WeatherForecast` so the reader should have moved the `record` from `Program.cs`. In the 11th edition, I will make that clearer.
 
 # Appendix - Exercise 3.3 – Test your knowledge
 

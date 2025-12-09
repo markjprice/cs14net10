@@ -58,7 +58,7 @@ This code example was correct in earlier editions so must have been accidently i
 
 # Page 84 - Storing dynamic types
 
-> Thanks to [iheartdotnet](https://github.com/iheartdotnet) for raising [this issue on August 2, 2025](https://github.com/markjprice/cs13net9/issues/61) and to [Chris Alberty](https://github.com/Vrykodin) for noticing that I had missed fixing it in the 10th edition.
+> Thanks to [iheartdotnet](https://github.com/iheartdotnet) for raising [this issue on August 2, 2025](https://github.com/markjprice/cs13net9/issues/61) and to [Chris Alberty](https://github.com/calberty) for noticing that I had missed fixing it in the 10th edition.
 
 In the last paragraph of this section, I wrote, "Dynamic types are most useful when interoperating with non-.NET systems. For example, you might need to work with a class library written in F#, Python, or some JavaScript. You might also need to interop with technologies like the Component Object Model (COM), for example, when automating Excel or Word."
 

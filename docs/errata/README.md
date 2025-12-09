@@ -18,6 +18,7 @@ Who|Errata|Improvements
 [mushobeti](https://github.com/mushobeti)|2|0
 [Paul Marangoni](https://github.com/pmarangoni)|1|0
 [iheartdotnet](https://github.com/iheartdotnet)|1|0
+[Chris Alberty](https://github.com/calberty)|1|0
 José Luis García|1|0
 [alhi44](https://github.com/alhi44)|0|1
 [s3ba-b](https://github.com/s3ba-b)|0|1

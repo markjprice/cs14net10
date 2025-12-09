@@ -2,7 +2,7 @@
 
 If you find any mistakes in the tenth edition, *C# 14 and .NET 10 - Modern Cross-Platform Development Fundamentals*, or if you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
-[**Errata** (7 items)](errata.md): Typos, tool user interface and behavior changes, or mistakes in code that would cause a compilation error that prevents a successful build.
+[**Errata** (8 items)](errata.md): Typos, tool user interface and behavior changes, or mistakes in code that would cause a compilation error that prevents a successful build.
 
 [**Improvements** (5 items)](improvements.md): Changes to text or code that would improve the content. These are optional.
 
@@ -17,6 +17,7 @@ Who|Errata|Improvements
 [Amar Jamal](https://github.com/amarjamal)|3|2
 [mushobeti](https://github.com/mushobeti)|2|0
 [Paul Marangoni](https://github.com/pmarangoni)|1|0
+[iheartdotnet](https://github.com/iheartdotnet)|1|0
 José Luis García|1|0
 [alhi44](https://github.com/alhi44)|0|1
 [s3ba-b](https://github.com/s3ba-b)|0|1

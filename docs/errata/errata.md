@@ -1,4 +1,4 @@
-**Errata** (7 items)
+**Errata** (8 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
@@ -6,6 +6,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 
 - [Page 70 - Raw string literals](#page-70---raw-string-literals)
 - [Page 71 - Raw string literals](#page-71---raw-string-literals)
+- [Page 84 - Storing dynamic types](#page-84---storing-dynamic-types)
 - [Page 103 - Getting key input from the user](#page-103---getting-key-input-from-the-user)
 - [Page 521 - Managing the Northwind sample database with SQLiteStudio, Page 628 - Creating the Northwind database](#page-521---managing-the-northwind-sample-database-with-sqlitestudio-page-628---creating-the-northwind-database)
 - [Page 677 - Using shared layouts with Blazor static SSR pages](#page-677---using-shared-layouts-with-blazor-static-ssr-pages)
@@ -54,6 +55,16 @@ string json = $$"""
 ```
 
 This code example was correct in earlier editions so must have been accidently introduced during the editing process. I apologize for missing it.
+
+# Page 84 - Storing dynamic types
+
+> Thanks to [iheartdotnet](https://github.com/iheartdotnet) for raising [this issue on August 2, 2025](https://github.com/markjprice/cs13net9/issues/61).
+
+In the last paragraph of this section, I wrote, "Dynamic types are most useful when interoperating with non-.NET systems. For example, you might need to work with a class library written in F#, Python, or some JavaScript. You might also need to interop with technologies like the Component Object Model (COM), for example, when automating Excel or Word."
+
+I included F# in the list of languages after giving the example of `dynamic` being useful when interoperating with non-.NET systems. This accidently implies that F# is not a .NET language when it is. In the next edition, I will change "non-.NET systems" to "other .NET languages and non-.NET systems". Or I might change the second sentence to, "For example, you might need to work with a library written in Python or some JavaScript (or even a .NET language like F#)."
+
+Although I had planned to fix this in the 10th edition, somehow it was missed. I will fix it in the 11th edition.
 
 # Page 103 - Getting key input from the user
 

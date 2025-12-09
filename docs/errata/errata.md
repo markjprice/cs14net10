@@ -62,7 +62,7 @@ This code example was correct in earlier editions so must have been accidently i
 
 In the last paragraph of this section, I wrote, "Dynamic types are most useful when interoperating with non-.NET systems. For example, you might need to work with a class library written in F#, Python, or some JavaScript. You might also need to interop with technologies like the Component Object Model (COM), for example, when automating Excel or Word."
 
-I included F# in the list of languages after giving the example of `dynamic` being useful when interoperating with non-.NET systems. This accidently implies that F# is not a .NET language when it is. In the next edition, I will change "non-.NET systems" to "other .NET languages and non-.NET systems". Or I might change the second sentence to, "For example, you might need to work with a library written in Python or some JavaScript (or even a .NET language like F#)."
+I included F# in the list of languages after giving the example of `dynamic` being useful when interoperating with non-.NET systems. This accidently implies that F# is not a .NET language when it is. In the next edition, I will change "non-.NET systems" to "other .NET languages and non-.NET systems".
 
 Although I had planned to fix this in the 10th edition, somehow it was missed. I will fix it in the 11th edition.
 

@@ -16,9 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <!--Increment to 10 once a package has been published in summer.-->
-    <PackageReference Include="Packt.CSdotnet.SharedLibrary" Version="9.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="Packt.CSdotnet.SharedLibrary" Version="10.0.0" />
   </ItemGroup>
 
 </Project>

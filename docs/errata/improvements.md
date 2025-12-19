@@ -15,7 +15,9 @@ If you have suggestions for improvements, then please [raise an issue in this re
 
 In *Table 2.9*, all the codes are for specifying custom date and time formats using multiple characters, not single characters. So in the row for `y`, `yy`, the description is correct to say, "The year of the current century, from `0` through `99`, or with a leading zero from `00` through `99`." For example, with the custom formats, `d/M/y` or `d/M/yy`, Christmas Day this year would be formatted as `25/12/25`. But if you use the `y` code on it's own, it is not processed as a custom format, it is processed as a standard format, that outputs the month and year. Christmas Day this year would be `December 2025`. You will see a similar effect for `d`, `m`, and so on. When used in a custom format, `d` represents the day of the month, but when used as a single character, it is a standard date format meaning `dd/MM/yyyy`. 
 
-In the next edition, I will add more explanation about this subtle difference, and add a row to *Table 2.10* for the standard format for `y`.
+In the next edition, I will add a warning about this subtle difference, like the one below, and add a row to *Table 2.10* for the standard format for `y`.
+
+> **Warning!** When defining a custom format you should use multiple different characters. If you try to define a custom format with a single character, like `d` or `y`, then your format could be interpreted as a standard format, as defined in *Table 2.10*. Standard format codes take priority over custom format codes.
 
 # Page 119 - Null-conditional assignment operator
 

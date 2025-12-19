@@ -1,13 +1,21 @@
-**Improvements** (5 items)
+**Improvements** (6 items)
 
 If you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
+- [Page 98 - Custom number formatting](#page-98---custom-number-formatting)
 - [Page 119 - Null-conditional assignment operator](#page-119---null-conditional-assignment-operator)
 - [Page 267 - Controlling how parameters are passed](#page-267---controlling-how-parameters-are-passed)
 - [Page 640 - Improving the class-to-table mapping](#page-640---improving-the-class-to-table-mapping)
 - [Page 737 - Creating an ASP.NET Core Minimal API project](#page-737---creating-an-aspnet-core-minimal-api-project)
 - [Appendix - Exercise 3.3 – Test your knowledge](#appendix---exercise-33--test-your-knowledge)
 
+# Page 98 - Custom number formatting
+
+> Thanks to [Chris Alberty](https://github.com/calberty) who raised an [issue on December 19, 2025](https://github.com/markjprice/cs14net10/issues/6) that prompted this improvement.
+
+In *Table 2.9*, all the codes are for specifying custom date and time formats using multiple characters, not single characters. So in the row for `y`, `yy`, the description is correct to say, "The year of the current century, from `0` through `99`, or with a leading zero from `00` through `99`." For example, with the custom formats, `d/M/y` or `d/M/yy`, Christmas Day this year would be formatted as `25/12/25`. But if you use the `y` code on it's own, it is not processed as a custom format, it is processed as a standard format, that outputs the month and year. Christmas Day this year would be `December 2025`. You will see a similar effect for `d`, `m`, and so on. When used in a custom format, `d` represents the day of the month, but when used as a single character, it is a standard date format meaning `dd/MM/yyyy`. 
+
+In the next edition, I will add more explanation about this subtle difference, and add a row to *Table 2.10* for the standard format for `y`.
 
 # Page 119 - Null-conditional assignment operator
 

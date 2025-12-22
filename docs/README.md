@@ -122,12 +122,12 @@ The appendix and color figures are available to download as PDFs:
 
 # [Errata, Improvements, and Common Mistakes](errata/README.md)
 
-If you find any mistakes in the ninth edition, *C# 13 and .NET 9 - Modern Cross-Platform Development Fundamentals*, or if you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs13net9/issues) or email me at markjprice (at) gmail.com.
+If you find any mistakes in the tenth edition, *C# 14 and .NET 10 - Modern Cross-Platform Development Fundamentals*, or if you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs13net9/issues) or email me at markjprice (at) gmail.com.
 
 # Miscellaneous
 
 [**Book Links**](book-links.md): All links in the published book.
 
-[**Ninth Edition's support for .NET 10**](dotnet10.md): How to use the 9th edition of this book with .NET 10 previews starting in February 2025.
+[**Tenth Edition's support for .NET 10**](dotnet10.md): How to use the 9th edition of this book with .NET 10 previews starting in February 2025.
 
-[**What's New in the 9th Edition**](whats-new-in-book.md): There are hundreds of minor fixes and improvements throughout the 9th edition.
+[**What's New in the 10th Edition**](whats-new-in-book.md): There are hundreds of minor fixes and improvements throughout the 9th edition.

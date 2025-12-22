@@ -17,7 +17,6 @@ This documentation section of the repository contains links to all the optional 
   - [Chapter 13 Building Websites Using ASP.NET Core](#chapter-13-building-websites-using-aspnet-core)
   - [Chapter 14 Building Interactive Web Components Using Blazor](#chapter-14-building-interactive-web-components-using-blazor)
   - [Chapter 15 Building and Consuming Web Services](#chapter-15-building-and-consuming-web-services)
-  - [Bonus content](#bonus-content)
 - [Errata, Improvements, and Common Mistakes](#errata-improvements-and-common-mistakes)
 - [Miscellaneous](#miscellaneous)
 
@@ -113,21 +112,14 @@ This documentation section of the repository contains links to all the optional 
 - [Implementing advanced features for web services](ch15-advanced.md)
 - [Exercise 15.2 – Practice creating and deleting customers with HttpClient](ch15-exercise-2.md)
 
-## Bonus content
-
-The appendix and color figures are available to download as PDFs:
-
-- [Appendix, Answers to the Test Your Knowledge Questions](B22322_Appendix.pdf).
-- [Color images of the screenshots/diagrams used in this book](9781835881224_ColorImages.pdf).
-
 # [Errata, Improvements, and Common Mistakes](errata/README.md)
 
-If you find any mistakes in the tenth edition, *C# 14 and .NET 10 - Modern Cross-Platform Development Fundamentals*, or if you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs13net9/issues) or email me at markjprice (at) gmail.com.
+If you find any mistakes in the tenth edition, *C# 14 and .NET 10 - Modern Cross-Platform Development Fundamentals*, or if you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
 # Miscellaneous
 
 [**Book Links**](book-links.md): All links in the published book.
 
-[**Tenth Edition's support for .NET 10**](dotnet10.md): How to use the 9th edition of this book with .NET 10 previews starting in February 2025.
+[**Tenth Edition's support for .NET 11**](dotnet11.md): How to use the 10th edition of this book with .NET 11 previews starting in February 2026.
 
-[**What's New in the 10th Edition**](whats-new-in-book.md): There are hundreds of minor fixes and improvements throughout the 9th edition.
+[**What's New in the 10th Edition**](whats-new-in-book.md): There are hundreds of minor fixes and improvements throughout the 10th edition.

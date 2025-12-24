@@ -47,7 +47,8 @@ Let’s explore how to use Google Chrome to make HTTP requests:
 ![Chrome Developer Tools recording network traffic](assets/B31466_12_07.png)
 *Figure 12.7: Chrome Developer Tools recording network traffic*
 
-4. In Chrome’s address box, enter the address of Microsoft’s website for learning ASP.NET, which is the following URL: https://dotnet.microsoft.com/en-us/learn/aspnet
+4. In Chrome’s address box, enter the address of Microsoft’s website for learning ASP.NET front-end web development, which is the following URL: https://dotnet.microsoft.com/en-us/learn/front-end-web-dev
+
 5. In **Developer Tools**, in the list of recorded requests, scroll to the top and click on the first entry, the row where **Type** is **document**, as shown in *Figure 12.8*:
 
 ![Recorded requests in Developer Tools](assets/B31466_12_08.png)

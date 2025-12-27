@@ -112,6 +112,13 @@ public class Person
 
 Now `System.Text.Json` will serialize `Name` and set `Name` during deserialization despite the private setter. 
 
+To summarize:
+- Public auto-properties: included automatically
+- Anything that looks like intentional encapsulation: excluded
+- `[JsonInclude]`: “I meant to do this. Don’t second-guess me.” This attribute is for members that look excluded on purpose but shouldn’t be.
+
+You don’t use `[JsonInclude]` to include normal properties. You use it to override the serializer’s safety rules when your class design is more sophisticated than public getters and setters everywhere. Once you start writing immutable models or proper domain objects, the attribute suddenly stops looking redundant and starts looking necessary.
+
 # Page 640 - Improving the class-to-table mapping
 
 > Thanks to [Amar Jamal](https://github.com/amarjamal) who raised an [issue on November 7, 2025](https://github.com/markjprice/cs13net9/issues/81) that prompted this improvement.

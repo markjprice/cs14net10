@@ -1,4 +1,4 @@
-**Improvements** (7 items)
+**Improvements** (8 items)
 
 If you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
@@ -6,6 +6,7 @@ If you have suggestions for improvements, then please [raise an issue in this re
 - [Page 119 - Null-conditional assignment operator](#page-119---null-conditional-assignment-operator)
 - [Page 267 - Controlling how parameters are passed](#page-267---controlling-how-parameters-are-passed)
 - [Page 507 - Controlling JSON processing](#page-507---controlling-json-processing)
+- [Page 523 - Choosing an EF Core database provider](#page-523---choosing-an-ef-core-database-provider)
 - [Page 640 - Improving the class-to-table mapping](#page-640---improving-the-class-to-table-mapping)
 - [Page 737 - Creating an ASP.NET Core Minimal API project](#page-737---creating-an-aspnet-core-minimal-api-project)
 - [Appendix - Exercise 3.3 – Test your knowledge](#appendix---exercise-33--test-your-knowledge)
@@ -118,6 +119,14 @@ To summarize:
 - `[JsonInclude]`: “I meant to do this. Don’t second-guess me.” This attribute is for members that look excluded on purpose but shouldn’t be.
 
 You don’t use `[JsonInclude]` to include normal properties. You use it to override the serializer’s safety rules when your class design is more sophisticated than public getters and setters everywhere. Once you start writing immutable models or proper domain objects, the attribute suddenly stops looking redundant and starts looking necessary.
+
+# Page 523 - Choosing an EF Core database provider
+
+> Thanks to [zkazz](https://github.com/zkazz) who raised an [issue on December 29, 2025](https://github.com/markjprice/cs14net10/issues/9) that prompted this improvement.
+
+In the next edition, I will add a note to warn readers that the chapter uses the SQLite EF Core database provider and so all output reflects that. If a reader chooses a different EF Core database provider like the one for SQL Server then their output is likely to be different from what is shown in the book. 
+
+For example, database object name delimiters might be different like quotes `"table name"` or square brackets `[table name]`, data types could be different since not all databases support the same types, and automatically-generated variable names could be different.
 
 # Page 640 - Improving the class-to-table mapping
 

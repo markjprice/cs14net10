@@ -1,4 +1,4 @@
-**Errata** (8 items)
+**Errata** (9 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
@@ -8,6 +8,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 71 - Raw string literals](#page-71---raw-string-literals)
 - [Page 84 - Storing dynamic types](#page-84---storing-dynamic-types)
 - [Page 103 - Getting key input from the user](#page-103---getting-key-input-from-the-user)
+- [Page 317 - Comparing objects when sorting](#page-317---comparing-objects-when-sorting)
 - [Page 521 - Managing the Northwind sample database with SQLiteStudio, Page 628 - Creating the Northwind database](#page-521---managing-the-northwind-sample-database-with-sqlitestudio-page-628---creating-the-northwind-database)
 - [Page 677 - Using shared layouts with Blazor static SSR pages](#page-677---using-shared-layouts-with-blazor-static-ssr-pages)
 - [Page 710 - Abstracting a service for a Blazor component](#page-710---abstracting-a-service-for-a-blazor-component)
@@ -69,6 +70,14 @@ I included F# in the list of languages after giving the example of `dynamic` bei
 > Thanks to [mushobeti](https://github.com/mushobeti) for raising [this issue on November 30, 2025](https://github.com/markjprice/cs14net10/issues/3).
 
 In Steps 2 and 4, the output of the `Modifiers` should be `None` instead of `0`. To output the integer value of the `Modifiers` enum, we would use `arg2: (int)key.Modifiers`.
+
+# Page 317 - Comparing objects when sorting
+
+> Thanks to [Nick Johnston](https://github.com/nick-johnston) for raising [this issue on December 27, 2025](https://github.com/markjprice/cs14net10/issues/8).
+
+In Step 5, I wrote, "In `Person.cs`, after inheriting from `object`, add a comma and enter `IComparable<Person?>`,"
+
+Inheriting from `object` was shown in Chapter 5. I should have written, "In `Person.cs`, after `Person`, enter `: IComparable<Person?>`," and the code highlighting should include the colon. 
 
 # Page 521 - Managing the Northwind sample database with SQLiteStudio, Page 628 - Creating the Northwind database
 

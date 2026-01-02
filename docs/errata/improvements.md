@@ -1,4 +1,4 @@
-**Improvements** (9 items)
+**Improvements** (10 items)
 
 If you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
@@ -6,6 +6,7 @@ If you have suggestions for improvements, then please [raise an issue in this re
 - [Page 119 - Null-conditional assignment operator](#page-119---null-conditional-assignment-operator)
 - [Page 267 - Controlling how parameters are passed](#page-267---controlling-how-parameters-are-passed)
 - [Page 419 - Joining, formatting, and other string members](#page-419---joining-formatting-and-other-string-members)
+- [Page 472 - Managing paths](#page-472---managing-paths)
 - [Page 507 - Controlling JSON processing](#page-507---controlling-json-processing)
 - [Page 523 - Choosing an EF Core database provider](#page-523---choosing-an-ef-core-database-provider)
 - [Page 640 - Improving the class-to-table mapping](#page-640---improving-the-class-to-table-mapping)
@@ -69,6 +70,14 @@ When a parameter is passed into a method, it can be passed in one of several way
 In *Table 8.4*, in the row for `string.IsNullOrWhiteSpace`, I will add that the method also checks for an empty string even though the method name does not specify that. A more accurate name for the method would be `string.IsNullEmptyOrWhiteSpace`. 
 
 In the next edition, I will change the description to, "This checks whether a `string` variable is `null`, empty, or whitespace; ..."
+
+# Page 472 - Managing paths
+
+In Step 1, three methods (`GetDirectoryName`, `GetFileName`, and `GetExtension`) are used on the `string` variable named `textFile` that contains the value `<SpecialFolder.Personal>\OutputFiles\Dummy.txt` where `<SpecialFolder.Personal>` is your operating system's "Documents" folder or similar. 
+
+A reader emailed to ask why the methods work when we had previous deleted the file defined by that path. They work because the methods do not need the file to exist. They look at the `string` value and extract the part of the path that you have requested.
+
+In the next edition, I will add a paragraph to emphasize this.
 
 # Page 507 - Controlling JSON processing
 

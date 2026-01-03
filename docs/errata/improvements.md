@@ -1,4 +1,4 @@
-**Improvements** (10 items)
+**Improvements** (11 items)
 
 If you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
@@ -10,6 +10,7 @@ If you have suggestions for improvements, then please [raise an issue in this re
 - [Page 507 - Controlling JSON processing](#page-507---controlling-json-processing)
 - [Page 523 - Choosing an EF Core database provider](#page-523---choosing-an-ef-core-database-provider)
 - [Page 640 - Improving the class-to-table mapping](#page-640---improving-the-class-to-table-mapping)
+- [Page 697 - Reviewing Blazor routing, layouts, and navigation](#page-697---reviewing-blazor-routing-layouts-and-navigation)
 - [Page 737 - Creating an ASP.NET Core Minimal API project](#page-737---creating-an-aspnet-core-minimal-api-project)
 - [Appendix - Exercise 3.3 – Test your knowledge](#appendix---exercise-33--test-your-knowledge)
 
@@ -159,6 +160,12 @@ To avoid this, you must use the appropriate line ending for your operating syste
 - For Unix/macOS (LF): Use `$0\n`
 
 In the next edition, I will use `$0\r\n` in the main example and add a note box to explain that Linux and Mac users should use `$0\n`.
+
+# Page 697 - Reviewing Blazor routing, layouts, and navigation
+
+In Step 7, I tell the reader to: "Note that `NavMenu.razor` has its own isolated stylesheet named `NavMenu.razor.css`." 
+
+In the next edition, I will add: "Some code editors like Visual Studio collapse related files under their parent to save space. In **Solution Explorer**, expand `NavMenu.razor` to see its related files like `NavMenu.razor.css`."
 
 # Page 737 - Creating an ASP.NET Core Minimal API project
 

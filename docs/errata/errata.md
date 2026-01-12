@@ -1,9 +1,10 @@
-**Errata** (9 items)
+**Errata** (10 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
 > **Warning!** Avoid copying and pasting links that break over multiple lines and include hyphens or dashes because your PDF reader might remove a hyphen thinking that it being helpful but break the link! Just click on the links and they will work. Or carefully check that your PDF reader has not removed a hyphen after pasting into your web browser address bar. [See an example of this issue here](https://github.com/markjprice/cs13net9/issues/77).
 
+- [Online docs](#online-docs)
 - [Page 70 - Raw string literals](#page-70---raw-string-literals)
 - [Page 71 - Raw string literals](#page-71---raw-string-literals)
 - [Page 84 - Storing dynamic types](#page-84---storing-dynamic-types)
@@ -14,6 +15,12 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 710 - Abstracting a service for a Blazor component](#page-710---abstracting-a-service-for-a-blazor-component)
 - [Appendix B - Setting Up Your Development Environment](#appendix-b---setting-up-your-development-environment)
   - [Page 833 - Creating the Northwind sample database locally](#page-833---creating-the-northwind-sample-database-locally)
+
+# Online docs
+
+> Thanks to [Donald Maisey](https://github.com/donaldmaisey) for raising [this issue on January 12, 2026](https://github.com/markjprice/cs14net10/issues/12).
+
+The link to an online topic about async/await was moved in the book from Chapter 2 to Chapter 4, but the online files and link were not. These have now been moved to where they should be. Also, some links to online topics were missing from the docs `README.md` file. These have now been added.
 
 # Page 70 - Raw string literals
 

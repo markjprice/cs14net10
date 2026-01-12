@@ -12,7 +12,7 @@ Let's see an example of how they can be used in a console app, and then, later, 
 One of the limitations with console apps is that you can only use the `await` keyword inside methods that are marked as `async`, but C# 7 and earlier do not allow the `Main` method to be marked as `async`! Luckily, a new feature introduced in C# 7.1 was support for `async` in the `Main` method.
 
 Let's see it in action:
-1.	Use your preferred code editor to add a new **Console App** / `console` project named `AsyncConsole` to the `Chapter02` solution.
+1.	Use your preferred code editor to add a new **Console App** / `console` project named `AsyncConsole` to the `Chapter04` solution.
 2.	In the `AsyncConsole.csproj` file, after the `<PropertyGroup>` section, add a new `<ItemGroup>` section to statically import `System.Console` for all C# files using the implicit usings .NET SDK feature, as shown in the following markup:
 ```xml
 <ItemGroup>

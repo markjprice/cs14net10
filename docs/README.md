@@ -33,8 +33,8 @@ This documentation section of the repository contains links to all the optional 
 ## Chapter 2 Speaking C#
 
 - [C# language versions and features](ch02-features.md)
+- [`decimal` vs. `double`](ch02-decimal-vs-double.md)
 - [Dynamic Type](ch02-dynamic.md)
-- [Understanding async and await](ch02-async-await.md)
 - [Handling platforms that do not support an API](ch02-api-unsupported-platforms.md)
 
 ## Chapter 3 Controlling Flow, Converting Types, and Handling Exceptions
@@ -44,6 +44,7 @@ This documentation section of the repository contains links to all the optional 
 ## Chapter 4 Writing, Debugging, and Testing Functions
 
 - [Logging during development and runtime](ch04-logging.md)
+- [Understanding async and await](ch04-async-await.md)
 
 ## Chapter 6 Implementing Interfaces and Inheriting Classes
 
@@ -59,10 +60,12 @@ This documentation section of the repository contains links to all the optional 
 - [Decompiling .NET assemblies](ch07-decompiling.md)
 - [Porting from .NET Framework to modern .NET](ch07-porting.md)
 - [Introducing source generators](ch07-source-generators.md)
+- [Improving performance in .NET](ch07-performance.md)
 
 ## Chapter 8 Working with Common .NET Types
 
 - [.NET Collections Overview](ch08-collections.md)
+- [Working with spans, indexes, and ranges](ch08-spans-indexes-ranges.md)
 - [Working with Network Resources](ch08-network-resources.md)
 
 ## Chapter 9 Working with Files, Streams, and Serialization
@@ -77,6 +80,7 @@ This documentation section of the repository contains links to all the optional 
 - [Loading and tracking patterns with EF Core](ch10-loading-tracking.md)
 - [Modifying data with EF Core](ch10-modifying.md)
 - [Working with transactions](ch10-transactions.md)
+- [Implementing asynchronous methods with EF Core](ch10-ef-core-async.md)
 - [Code First EF Core models](ch10-code-first.md)
 - [App Secrets](ch10-app-secrets.md)
 
@@ -92,9 +96,11 @@ This documentation section of the repository contains links to all the optional 
 
 - [New features in ASP.NET Core](ch12-features.md)
 - [Structuring Projects](ch12-structuring-projects.md)
+- [Understanding web development](ch12-http-web-techs.md)
 
 ## Chapter 13 Building Websites Using ASP.NET Core
 
+- [Understanding `MapStaticAssets`](ch13-mapstaticassets.md)
 - [Prototyping with Bootstrap](ch13-bootstrap.md)
 - [ASP.NET Core common classes and methods](ch13-common-classes.md)
 - [Configuring services and the HTTP request pipeline](ch13-http-pipeline.md)
@@ -107,6 +113,7 @@ This documentation section of the repository contains links to all the optional 
 
 ## Chapter 15 Building and Consuming Web Services
 
+- [Implementing asynchronous operations](ch15-async-endpoints.md)
 - [In-memory, distributed, and hybrid caches](ch15-caching.md)
 - [Testing requests with the Swagger UI](ch15-swagger-ui.md)
 - [Implementing advanced features for web services](ch15-advanced.md)

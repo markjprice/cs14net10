@@ -228,7 +228,7 @@ Copy the path to the version of SQL Server Configuration Manager you have instal
 1.	In the `WorkingWithEFCore` project, add package references to the EF Core data provider for SQL Server (which has a dependency on the ADO.NET Provider for SQL Server), and globally and statically import the `System.Console` class for all C# files, as shown in the following markup:
 ```xml
 <ItemGroup>
-  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.1" />
 </ItemGroup>
 
 <ItemGroup>
@@ -328,6 +328,8 @@ To use SQL Server, you will not need to do anything if you already set up the No
   </PackageReference>  
 </ItemGroup>
 ```
+
+> The `ModernWeb` folder contains the `Directory.Packages.props` file that defines package version numbers centrally so that they do not need to be specified in each project file: https://github.com/markjprice/cs14net10/blob/main/code/ModernWeb/Directory.Packages.props
 
 3.	Delete the `Class1.cs` file.
 4.	Build the `Northwind.EntityModels.SqlServer` project to restore packages.

@@ -44,18 +44,14 @@ First, we need to create a separate project for the Blazor WebAssembly component
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Version="8.0.0"
-      Include="Microsoft.AspNetCore.Components.WebAssembly" />
-    <PackageReference Version="8.0.0"
-      Include="Microsoft.Extensions.Http" />
+    <PackageReference Version="10.0.1" Include="Microsoft.AspNetCore.Components.WebAssembly" />
+    <PackageReference Version="10.0.1" Include="Microsoft.Extensions.Http" />
   </ItemGroup>
 
   <ItemGroup>
     <!-- change Sqlite to SqlServer if you prefer -->
-    <ProjectReference Include="..\Northwind.EntityModels.Sqlite\
-Northwind.EntityModels.Sqlite.csproj" />
-    <ProjectReference Include="..\Northwind.Blazor.Services\
-Northwind.Blazor.Services.csproj" />
+    <ProjectReference Include="..\Northwind.EntityModels.Sqlite\Northwind.EntityModels.Sqlite.csproj" />
+    <ProjectReference Include="..\Northwind.Blazor.Services\Northwind.Blazor.Services.csproj" />
   </ItemGroup>
 
 </Project>
@@ -195,18 +191,14 @@ By default, client-side interactions are disabled. We will switch the pages to u
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Version="8.0.0" Include=
-      "Microsoft.AspNetCore.Components.WebAssembly.Server" />
+    <PackageReference Version="10.0.1" Include="Microsoft.AspNetCore.Components.WebAssembly.Server" />
   </ItemGroup>
 
   <ItemGroup>
     <!-- change Sqlite to SqlServer if you prefer -->
-    <ProjectReference Include="..\Northwind.DataContext.Sqlite\
-Northwind.DataContext.Sqlite.csproj" />
-    <ProjectReference Include="..\Northwind.Blazor.Services\
-Northwind.Blazor.Services.csproj" />
-    <ProjectReference Include="..\Northwind.Blazor.Wasm\
-Northwind.Blazor.Wasm.csproj" />
+    <ProjectReference Include="..\Northwind.DataContext.Sqlite\Northwind.DataContext.Sqlite.csproj" />
+    <ProjectReference Include="..\Northwind.Blazor.Services\Northwind.Blazor.Services.csproj" />
+    <ProjectReference Include="..\Northwind.Blazor.Wasm\Northwind.Blazor.Wasm.csproj" />
   </ItemGroup>
 
   <ItemGroup>

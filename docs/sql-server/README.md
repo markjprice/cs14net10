@@ -225,19 +225,18 @@ Copy the path to the version of SQL Server Configuration Manager you have instal
 
 ## Defining the Northwind database context class
 
-1.	In the `WorkingWithEFCore` project, add package references to the EF Core data provider for SQL Server and the ADO.NET Provider for SQL Server, and globally and statically import the `System.Console` class for all C# files, as shown in the following markup:
+1.	In the `WorkingWithEFCore` project, add package references to the EF Core data provider for SQL Server (which has a dependency on the ADO.NET Provider for SQL Server), and globally and statically import the `System.Console` class for all C# files, as shown in the following markup:
 ```xml
 <ItemGroup>
   <Using Include="System.Console" Static="true" />
 </ItemGroup>
 
 <ItemGroup>
-  <PackageReference Version="5.2.0" Include="Microsoft.Data.SqlClient" />
-  <PackageReference Version="8.0.4" Include="Microsoft.EntityFrameworkCore.SqlServer" />
+  <PackageReference Version="10.0.1" Include="Microsoft.EntityFrameworkCore.SqlServer" />
 </ItemGroup>
 ```
 
-> You can check for the most recent package versions at the following links: https://www.nuget.org/packages/Microsoft.Data.SqlClient#versions-body-tab and https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/#versions-body-tab.
+> You can check for the most recent package versions at the following link: https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/#versions-body-tab.
 
 2.	Build the `WorkingWithEFCore` project to restore packages.
 3.	Add a new class file named `NorthwindDb.cs`.
@@ -324,10 +323,8 @@ To use SQL Server, you will not need to do anything if you already set up the No
 2.	In the `Northwind.EntityModels.SqlServer` project, add package references for the SQL Server database provider and EF Core design-time support, as shown in the following markup:
 ```xml
 <ItemGroup>
-  <PackageReference
-    Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
-  <PackageReference 
-    Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.1" />
+  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.1">
     <PrivateAssets>all</PrivateAssets>
     <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
   </PackageReference>  
@@ -384,19 +381,18 @@ You will now define a database context class library:
     - Project file and folder: `Northwind.DataContext.SqlServer`
     - Solution file and folder: `PracticalApps`
 
-2.	In the `Northwind.DataContext.SqlServer` project, statically and globally import the `Console` class, add a project reference to the `Northwind.EntityModels.SqlServer` project, and add package references for the EF Core database provider and the ADO.NET database provider for SQL Server, as shown in the following markup:
+2.	In the `Northwind.DataContext.SqlServer` project, statically and globally import the `Console` class, add a project reference to the `Northwind.EntityModels.SqlServer` project, and add a package reference for the EF Core database provider for SQL Server, as shown in the following markup:
 ```xml
 <ItemGroup>
   <Using Include="System.Console" Static="true" />
 </ItemGroup>
 
 <ItemGroup>
-  <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
-  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+  <ProjectReference Include="..\Northwind.EntityModels.SqlServer\Northwind.EntityModels.SqlServer.csproj" />
 </ItemGroup>
 
 <ItemGroup>
-  <ProjectReference Include="..\Northwind.EntityModels.SqlServer\Northwind.EntityModels.SqlServer.csproj" />
+  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.1" />
 </ItemGroup>
 ```
 

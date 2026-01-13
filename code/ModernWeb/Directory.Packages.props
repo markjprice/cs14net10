@@ -1,10 +1,10 @@
 <Project>
 
-  <!--Last updated package versions: December 10, 2025.-->
+  <!--Last updated package versions: January 13, 2026.-->
 
   <PropertyGroup>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-    <Net10>10.0.1</Net10>
+    <Net10>10.0.2</Net10>
   </PropertyGroup>
 
   <ItemGroup Label="For EF Core.">
@@ -28,7 +28,7 @@
 
   <ItemGroup Label="For web services.">
     <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="$(Net10)" />
-    <PackageVersion Include="Scalar.AspNetCore" Version="2.11.3" />
+    <PackageVersion Include="Scalar.AspNetCore" Version="2.12.6" />
   </ItemGroup>
 
 </Project>

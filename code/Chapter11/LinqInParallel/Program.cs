@@ -6,13 +6,18 @@ Stopwatch watch = Stopwatch.StartNew();
 int max = 45;
 IEnumerable<int> numbers = Enumerable.Range(start: 1, count: max);
 
+// Although IEnumerable<int> enables the AsParallel extension method,
+// to work well you should use a type that implements IList<T>.
+IList<int> numbersAsList = numbers.ToList();
+
 WriteLine($"Calculating Fibonacci sequence up to term {max}. Please wait...");
 
-// int[] fibonacciNumbers = numbers
+// int[] fibonacciNumbers = numbersAsList
 //   .Select(number => Fibonacci(number))
 //   .ToArray();
 
-int[] fibonacciNumbers = numbers.AsParallel()
+int[] fibonacciNumbers = numbersAsList
+  .AsParallel()
   .Select(number => Fibonacci(number))
   .OrderBy(number => number)
   .ToArray();

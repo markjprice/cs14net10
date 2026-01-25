@@ -400,7 +400,7 @@ You will now define a database context class library:
 
 3.	In the `Northwind.DataContext.SqlServer` project, delete the `Class1.cs` file.
 4.	Build the `Northwind.DataContext.SqlServer` project to restore packages.
-5.  In the Northwind.DataContext.Sqlite project, add a class named `NorthwindContextLogger.cs`. 
+5.  In the `Northwind.DataContext.SqlServer` project, add a class named `NorthwindContextLogger.cs`. 
 6.  Modify its contents to define a static method named `WriteLine` that appends a string to the end of a text file named `northwindlog.txt` on the desktop, as shown in the following code:
 ```cs
 using static System.Environment;

@@ -1,13 +1,17 @@
 <Project>
 
-  <!--Last updated package versions: January 13, 2026.-->
+  <!--Last updated package versions: February 10, 2026.-->
 
   <PropertyGroup>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-    <Net10>10.0.2</Net10>
+    <Net10>10.0.3</Net10>
+    <Net11>11.0.0-preview.1.26104.118</Net11>
   </PropertyGroup>
 
   <ItemGroup Label="For EF Core.">
+    <!-- To use the .NET 11 preview packages, change the versions below from $(Net10) to $(Net11). -->
+    <!-- Your projects should also target net11 and you must install .NET 11 Preview SDK. -->
+    
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="$(Net10)" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="$(Net10)" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="$(Net10)" />
@@ -28,7 +32,7 @@
 
   <ItemGroup Label="For web services.">
     <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="$(Net10)" />
-    <PackageVersion Include="Scalar.AspNetCore" Version="2.12.6" />
+    <PackageVersion Include="Scalar.AspNetCore" Version="2.12.36" />
   </ItemGroup>
 
 </Project>

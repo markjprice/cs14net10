@@ -10,7 +10,7 @@
 
   <ItemGroup Label="For EF Core.">
     <!-- To use the .NET 11 preview packages, change the versions below from $(Net10) to $(Net11). -->
-    <!-- Your projects should also target net11 and you must install .NET 11 Preview SDK. -->
+    <!-- Your projects should target net11.0 and you must install .NET 11 Preview SDK. -->
     
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="$(Net10)" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="$(Net10)" />

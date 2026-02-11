@@ -1,4 +1,4 @@
-**Errata** (10 items)
+**Errata** (11 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
@@ -10,6 +10,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 84 - Storing dynamic types](#page-84---storing-dynamic-types)
 - [Page 103 - Getting key input from the user](#page-103---getting-key-input-from-the-user)
 - [Page 317 - Comparing objects when sorting](#page-317---comparing-objects-when-sorting)
+- [Page 515 - Understanding Entity Framework Core](#page-515---understanding-entity-framework-core)
 - [Page 521 - Managing the Northwind sample database with SQLiteStudio, Page 628 - Creating the Northwind database](#page-521---managing-the-northwind-sample-database-with-sqlitestudio-page-628---creating-the-northwind-database)
 - [Page 677 - Using shared layouts with Blazor static SSR pages](#page-677---using-shared-layouts-with-blazor-static-ssr-pages)
 - [Page 710 - Abstracting a service for a Blazor component](#page-710---abstracting-a-service-for-a-blazor-component)
@@ -85,6 +86,22 @@ In Steps 2 and 4, the output of the `Modifiers` should be `None` instead of `0`.
 In Step 5, I wrote, "In `Person.cs`, after inheriting from `object`, add a comma and enter `IComparable<Person?>`,"
 
 Inheriting from `object` was shown in Chapter 5. I should have written, "In `Person.cs`, after `Person`, enter `: IComparable<Person?>`," and the code highlighting should include the colon. 
+
+# Page 515 - Understanding Entity Framework Core
+
+On February 10, 2026, the EF Core team published packages for EF Core 11 Preview 1, and a page for what's new: https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-11.0/whatsnew
+
+It includes an important note: "EF11 requires the .NET 11 SDK to build and requires the .NET 11 runtime to run. EF11 will not run on earlier .NET versions, and will not run on .NET Framework."
+
+In my book, I wrote: "EF Core 10 targets .NET 10 or later, and EF Core 11 will also target .NET 10 because the EF Core team wants as many developers as possible to benefit from new features in future releases, even if you must target only long-term support releases of .NET. This means that you can use all the new features of EF Core 11 with either .NET 10 or .NET 11."
+
+In the past, the EF Core team often targeted the latest LTS .NET so you could adopt the new EF Core STS version without moving your whole app runtime. Microsoft’s own “Supported .NET implementations” page even states that as the general approach: “In general, we target the latest LTS release of .NET… There may be exceptions… as runtime features sometimes get added that require us to depend on the latest version of .NET.” From: https://learn.microsoft.com/en-us/ef/core/miscellaneous/platforms
+
+But EF Core 11 is now explicitly saying that it requires the .NET 11 SDK to build and the .NET 11 runtime to run, and it won’t run on earlier .NET versions.
+
+Why? The EF team’s own platform guidance acknowledges that sometimes they must depend on the latest .NET due to runtime features. In practice, “won’t run on earlier .NET” usually means they’re compiling against and taking dependencies on assemblies/APIs that simply are not present (or not the same versions) on earlier runtimes, and the team has decided not to carry the extra compatibility shims or multi-targeting.
+
+Net result: EF Core 11 only running on .NET 11 is the documented requirement. If you want to stay on .NET 10 LTS, EF Core 10 is the ceiling. If you move to .NET 11 (STS), EF Core 11 becomes available.
 
 # Page 521 - Managing the Northwind sample database with SQLiteStudio, Page 628 - Creating the Northwind database
 

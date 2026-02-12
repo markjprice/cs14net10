@@ -25,6 +25,8 @@ Repository for the Packt Publishing book titled "C# 14 and .NET 10 - Modern Cros
 
 The next-gen online **Packt Reader** and a **free PDF/ePub copy** of this book are included with your purchase. Visit https://packtpub.com/unlock, then use the search bar to find this book by name. Double-check the edition shown to make sure you get the right one.
 
+Apply for free PDF after purchase of any Packt book including paperback and Kindle: https://www.packtpub.com/page/companion-ebook
+
 For questions about book pricing, distribution, and so on, please contact the publisher Packt at the following email address: customercare@packt.com
 
 # Author's books

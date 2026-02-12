@@ -1,9 +1,10 @@
-**Improvements** (11 items)
+**Improvements** (12 items)
 
 If you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
 - [Page 98 - Custom number formatting](#page-98---custom-number-formatting)
 - [Page 119 - Null-conditional assignment operator](#page-119---null-conditional-assignment-operator)
+- [Page 221 - Creating a class library](#page-221---creating-a-class-library)
 - [Page 267 - Controlling how parameters are passed](#page-267---controlling-how-parameters-are-passed)
 - [Page 419 - Joining, formatting, and other string members](#page-419---joining-formatting-and-other-string-members)
 - [Page 472 - Managing paths](#page-472---managing-paths)
@@ -50,6 +51,14 @@ p?.Name = "Alice";
 ```
 
 To summarize, previously `?.` only worked on the right side (for **null-conditional** reading). With C# 14 you can use it on the left side of an assignment (**null-conditional assignment**). 
+
+# Page 221 - Creating a class library
+
+> Thanks to **JSho** in the book's Discord channel who asked a question about why the class library targets .NET Standard 2.0 that prompted this improvement.
+
+I introduce this section and the step-by-step instructions with the following: "The first task is to create a reusable .NET class library:"
+
+In the next edition, I will add some more text: "The first task is to create a reusable .NET class library that can be used not just with .NET 10 projects but with older .NET projects like .NET Core 2.0 and later, .NET 5 and later, .NET Framework 4.7.1 and later, Mono and Xamarin:"
 
 # Page 267 - Controlling how parameters are passed
 

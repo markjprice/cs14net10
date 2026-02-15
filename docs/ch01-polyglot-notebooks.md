@@ -1,5 +1,7 @@
 **Polyglot Notebooks**
 
+> **DEPRECATION ANNOUNCEMENT**: The Polyglot Notebooks Extension will be deprecated on March 27th, 2026. https://github.com/dotnet/interactive/issues/4163
+
 > Solution notebooks for all chapters can be found here: [../code/notebooks](../code/notebooks)
 
 - [Learning to code using the Polyglot Notebooks extension](#learning-to-code-using-the-polyglot-notebooks-extension)

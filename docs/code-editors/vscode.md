@@ -2,6 +2,10 @@
 
 In this article, I provide detailed step-by-step instuctions for using VS Code for topics like creating a solution with multiple projects and using debugging tools.
 
+> **Warning!** This document is designed to be read alongside the book. If you just read the contents of this document, you will miss important steps. 
+
+> **Note:** VS Code is a general-purpose, cross-platform code editor. It is not specifically designed for .NET development or coding on Windows. As such, it can feel more awkward to use when writing C# code than alternatives like Visual Studio. 
+
 - [Chapter 1 - Hello, C#! Welcome, .NET!](#chapter-1---hello-c-welcome-net)
   - [Downloading and installing VS Code](#downloading-and-installing-vs-code)
     - [Installing other extensions](#installing-other-extensions)

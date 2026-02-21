@@ -1,7 +1,8 @@
-**Improvements** (12 items)
+**Improvements** (13 items)
 
 If you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
+- [Page 26 - Implicitly imported namespaces](#page-26---implicitly-imported-namespaces)
 - [Page 98 - Custom number formatting](#page-98---custom-number-formatting)
 - [Page 119 - Null-conditional assignment operator](#page-119---null-conditional-assignment-operator)
 - [Page 221 - Creating a class library](#page-221---creating-a-class-library)
@@ -14,6 +15,18 @@ If you have suggestions for improvements, then please [raise an issue in this re
 - [Page 697 - Reviewing Blazor routing, layouts, and navigation](#page-697---reviewing-blazor-routing-layouts-and-navigation)
 - [Page 737 - Creating an ASP.NET Core Minimal API project](#page-737---creating-an-aspnet-core-minimal-api-project)
 - [Appendix - Exercise 3.3 – Test your knowledge](#appendix---exercise-33--test-your-knowledge)
+
+# Page 26 - Implicitly imported namespaces
+
+> Thanks to [MertKushan](https://github.com/MertKushan) for raising [this issue on February 21, 2026](https://github.com/markjprice/cs14net10/issues/13).
+
+In Step 1, I wrote, "In **Solution Explorer**, expand the `obj`, `Debug`, and `net10.0` folders, and open the file named
+`HelloCS.GlobalUsings.g.cs`." This assumes that you are using Visual Studio 2026 because it is in the section about "Compiling and running code using Visual Studio", not in the online-only section about VS Code.
+
+At the end of this section, at the bottom of page 30, I wrote, "When using VS Code, or more accurately, the `dotnet` CLI, it has different behavior, as you will see if you complete the optional online section about writing code with VS Code, found at the following link:
+https://github.com/markjprice/cs14net10/blob/main/docs/code-editors/vscode.md."
+
+In the next edition, I will add a note to the Visual Studio 2026 section in the print book about VS Code not showing `bin` folders in **Solution Explorer** so you need to look in the **Folders** view of **EXPLORER**.
 
 # Page 98 - Custom number formatting
 

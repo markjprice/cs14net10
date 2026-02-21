@@ -4,7 +4,7 @@ If you find any mistakes in the tenth edition, *C# 14 and .NET 10 - Modern Cross
 
 [**Errata** (11 items)](errata.md): Typos, tool user interface and behavior changes, or mistakes in code that would cause a compilation error that prevents a successful build.
 
-[**Improvements** (12 items)](improvements.md): Changes to text or code that would improve the content. These are optional.
+[**Improvements** (13 items)](improvements.md): Changes to text or code that would improve the content. These are optional.
 
 [**Common Mistakes**](https://github.com/markjprice/markjprice/blob/main/articles/common-mistakes.md): These are some of the most common mistakes that a reader might encounter when trying to get code in book tasks to work, or when trying to write your own code. (Links to the `markjprice` shared articles repository.)
 
@@ -22,6 +22,7 @@ Who|Errata|Improvements
 [Paul Marangoni](https://github.com/pmarangoni)|1|0
 [iheartdotnet](https://github.com/iheartdotnet)|1|0
 José Luis García|1|0
+[MertKushan](https://github.com/MertKushan)|0|1
 [alhi44](https://github.com/alhi44)|0|1
 [s3ba-b](https://github.com/s3ba-b)|0|1
 [zkazz](https://github.com/zkazz)|0|1

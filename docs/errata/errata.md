@@ -1,4 +1,4 @@
-**Errata** (11 items)
+**Errata** (12 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
@@ -14,6 +14,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 521 - Managing the Northwind sample database with SQLiteStudio, Page 628 - Creating the Northwind database](#page-521---managing-the-northwind-sample-database-with-sqlitestudio-page-628---creating-the-northwind-database)
 - [Page 677 - Using shared layouts with Blazor static SSR pages](#page-677---using-shared-layouts-with-blazor-static-ssr-pages)
 - [Page 710 - Abstracting a service for a Blazor component](#page-710---abstracting-a-service-for-a-blazor-component)
+- [Page 735 - Creating an ASP.NET Core Minimal API project](#page-735---creating-an-aspnet-core-minimal-api-project)
 - [Appendix B - Setting Up Your Development Environment](#appendix-b---setting-up-your-development-environment)
   - [Page 833 - Creating the Northwind sample database locally](#page-833---creating-the-northwind-sample-database-locally)
 
@@ -139,6 +140,12 @@ In Step 6, the existing reference to the data context project starts the path wi
 ```xml
 <ProjectReference Include="..\..\Northwind.DataContext.Sqlite\Northwind.DataContext.Sqlite.csproj" />
 ```
+
+# Page 735 - Creating an ASP.NET Core Minimal API project
+
+> Thanks to [hungvuongvo](https://github.com/hungvuongvo) for raising [this issue on February 22, 2026](https://github.com/markjprice/cs14net10/issues/14).
+
+In Step 4, I wrote, "Build the `Northwind.WebApi` project." And then in Step 5, I tell the reader to remove the `Version` attribute from the package. These steps should be swapped otherwise you will get a compile error on Step 4.
 
 # Appendix B - Setting Up Your Development Environment
 

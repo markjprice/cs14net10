@@ -60,7 +60,6 @@
   - [File system, encoding, streams, and serialization](#file-system-encoding-streams-and-serialization)
   - [JSON](#json)
 - [Chapter 10 - Working with Data Using Entity Framework Core](#chapter-10---working-with-data-using-entity-framework-core)
-  - [Legacy EF 6](#legacy-ef-6)
   - [EF Core](#ef-core)
   - [EF Core database providers](#ef-core-database-providers)
   - [SQLite](#sqlite)
@@ -554,18 +553,17 @@ The official announcement links are useful because they describe the most import
 
 # Chapter 10 - Working with Data Using Entity Framework Core
 
-## Legacy EF 6
-- [Entity Framework 6.3 and its .NET Core 3.0 and later support](https://devblogs.microsoft.com/dotnet/announcing-ef-core-3-0-and-ef-6-3-general-availability/)
-
 ## EF Core
 - [EF Core documentation](https://learn.microsoft.com/en-us/ef/core/)
-- [Announcing Entity Framework Core 7 RC2: JSON Columns](https://devblogs.microsoft.com/dotnet/announcing-ef7-release-candidate-2/)
+- [New features in EF Core 11](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-11.0/whatsnew)
+- [New features in EF Core 10](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-10.0/whatsnew)
+- [New features in EF Core 9](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-9.0/whatsnew)
+- [New features in EF Core 8](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-8.0/whatsnew)
 - [New features in EF Core 7](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-7.0/whatsnew)
 - [New features in EF Core 6](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-6.0/whatsnew)
 - [New features in EF Core 5](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-5.0/whatsnew)
-- [New features in Entity Framework Core 3.x](https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-3.x/)
-- [Plans for Entity Framework Core 6.0 revealed as Microsoft admits it is unlikely to match Dapper for performance](https://www.theregister.com/2021/01/19/entity_framework_core_6/)
 - [Entity Framework Community Standup - Performance Tuning an EF Core App](https://www.youtube.com/watch?v=VgNFFEqwZPU)
+- [Entity Framework 6.3 and its .NET Core 3.0 and later support](https://devblogs.microsoft.com/dotnet/announcing-ef-core-3-0-and-ef-6-3-general-availability/)
 
 ## EF Core database providers
 - [EF Core database providers](https://learn.microsoft.com/en-us/ef/core/providers/)

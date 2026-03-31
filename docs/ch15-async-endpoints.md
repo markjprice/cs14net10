@@ -20,9 +20,7 @@ public async Task<Customer?> CreateAsync(Customer c)
   c.CustomerId = c.CustomerId.ToUpper(); // Normalize to uppercase.
 
   // Add to database using EF Core.
-  EntityEntry<Customer> added =
- 
-  await _db.Customers.AddAsync(c);
+  EntityEntry<Customer> added = await _db.Customers.AddAsync(c);
   int affected = await _db.SaveChangesAsync();
  
   if (affected == 1)

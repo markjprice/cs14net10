@@ -1,4 +1,4 @@
-**Errata** (12 items)
+**Errata** (13 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
@@ -8,6 +8,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 70 - Raw string literals](#page-70---raw-string-literals)
 - [Page 71 - Raw string literals](#page-71---raw-string-literals)
 - [Page 84 - Storing dynamic types](#page-84---storing-dynamic-types)
+- [Page 88 - What does new do?](#page-88---what-does-new-do)
 - [Page 103 - Getting key input from the user](#page-103---getting-key-input-from-the-user)
 - [Page 317 - Comparing objects when sorting](#page-317---comparing-objects-when-sorting)
 - [Page 515 - Understanding Entity Framework Core](#page-515---understanding-entity-framework-core)
@@ -73,6 +74,23 @@ This code example was correct in earlier editions so must have been accidently i
 In the last paragraph of this section, I wrote, "Dynamic types are most useful when interoperating with non-.NET systems. For example, you might need to work with a class library written in F#, Python, or some JavaScript. You might also need to interop with technologies like the Component Object Model (COM), for example, when automating Excel or Word."
 
 I included F# in the list of languages after giving the example of `dynamic` being useful when interoperating with non-.NET systems. This accidently implies that F# is not a .NET language when it is. In the next edition, I will change "non-.NET systems" to "other .NET languages and non-.NET systems".
+
+# Page 88 - What does new do?
+
+> Thanks to [CalebFord](https://github.com/CalebFord) who raised this [issue on March 31, 2026](https://github.com/markjprice/cs14net10/issues/19).
+
+I wrote, "Consider the following code, which declares some local variables:"
+```cs
+short age; // Allocates 2 bytes of memory on the stack to store a System.Int16 value.
+```
+
+Below the code block I wrote, "Note the following about the preceding code:
+- `age` has a value of `0` and 2 bytes of memory have been allocated in stack memory"
+
+But value-type variables that you have not explicitly set are uninitialized because they do not officially have a value yet, even though internally they will have a value of zero. To protect you from assumptions, the compiler will show an error like `Use of unassigned local variable 'age'` if you try to access the variable. 
+
+In the next edition, I will change the bullet to read:
+- `age` has not been assigned a value (so the compiler with show an error if you attempt to access it) and 2 bytes of memory have been allocated in stack memory
 
 # Page 103 - Getting key input from the user
 

@@ -105,7 +105,7 @@ Next, we will create a class library that implements the source generator:
 
 > Currently, source generators must target .NET Standard 2.0. The default C# version used for class libraries that target .NET Standard 2.0 is C# 7.3, as shown at the following link: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/configure-language-version#defaults.
 
-2.	In the project file, set the C# language version to `13` (so that we can use `global using` statements), enable enforce extended analyzer rules, statically and globally import the `Console` class, and add the NuGet packages `Microsoft.CodeAnalysis.Analyzers` and `Microsoft.CodeAnalysis.CSharp`, as shown in the following markup:
+2.	In the project file, set the C# language version to `14` (so that we can use `global using` statements), enable enforce extended analyzer rules, statically and globally import the `Console` class, and add the NuGet packages `Microsoft.CodeAnalysis.Analyzers` and `Microsoft.CodeAnalysis.CSharp`, as shown in the following markup:
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
@@ -124,11 +124,11 @@ Next, we will create a class library that implements the source generator:
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="5.0.0-1.25277.114">
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="5.3.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="5.3.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="5.0.0-2.final" />
   </ItemGroup>
 
 </Project>
@@ -138,18 +138,23 @@ Next, we will create a class library that implements the source generator:
 4.	Rename `Class1.cs` to `ProgramSourceGenerator.cs`.
 5.	In `ProgramSourceGenerator.cs`, define a class that implements `ISourceGenerator` and is decorated with the `[Generator]` attribute, as shown in the following code:
 ```cs
-// To use [Generator], ISourceGenerator, and so on.
+// To use [Generator], IIncrementalGenerator, and so on.
 using Microsoft.CodeAnalysis;
 
 namespace Packt.Shared;
 
 [Generator]
-public class ProgramSourceGenerator : ISourceGenerator
+public class ProgramSourceGenerator : IIncrementalGenerator
 {
-  public void Execute(GeneratorExecutionContext execContext)
+  public void Initialize(IncrementalGeneratorInitializationContext initContext)
   {
-    IMethodSymbol? mainMethod = execContext.Compilation
-      .GetEntryPoint(execContext.CancellationToken);
+    // Create a pipeline that gets the compilation
+    IncrementalValueProvider<Compilation> compilationProvider = initContext.CompilationProvider;
+
+    // Register the source output
+    initContext.RegisterSourceOutput(compilationProvider, (context, compilation) =>
+    {
+      IMethodSymbol? mainMethod = compilation.GetEntryPoint(context.CancellationToken);
 
     string sourceCode = $@"// Source-generated class.
 #nullable enable
@@ -192,12 +197,7 @@ partial class {mainMethod?.ContainingType.Name}
 ";
 
     string fileName = $"{mainMethod?.ContainingType.Name}.Methods.g.cs";
-    execContext.AddSource(fileName, sourceCode);
-  }
-
-  public void Initialize(GeneratorInitializationContext initContext)
-  {
-    // This source generator does not need any initialization.
+    context.AddSource(fileName, sourceCode);
   }
 }
 ```

@@ -1,17 +1,22 @@
-﻿// To use [Generator], ISourceGenerator, and so on.
+﻿// To use [Generator], IIncrementalGenerator, and so on.
 using Microsoft.CodeAnalysis; 
 
 namespace Packt.Shared;
 
 [Generator]
-public class ProgramSourceGenerator : ISourceGenerator
+public class ProgramSourceGenerator : IIncrementalGenerator
 {
-  public void Execute(GeneratorExecutionContext execContext)
+  public void Initialize(IncrementalGeneratorInitializationContext initContext)
   {
-    IMethodSymbol? mainMethod = execContext.Compilation
-      .GetEntryPoint(execContext.CancellationToken);
-    
-    string sourceCode = $@"// Source-generated class.
+    // Create a pipeline that gets the compilation
+    IncrementalValueProvider<Compilation> compilationProvider = initContext.CompilationProvider;
+
+    // Register the source output
+    initContext.RegisterSourceOutput(compilationProvider, (context, compilation) =>
+    {
+      IMethodSymbol? mainMethod = compilation.GetEntryPoint(context.CancellationToken);
+      
+      string sourceCode = $@"// Source-generated class.
 #nullable enable
 
 using System.Globalization; // To use CultureInfo.
@@ -51,12 +56,8 @@ partial class {mainMethod?.ContainingType.Name}
 }}
 ";
 
-    string fileName = $"{mainMethod?.ContainingType.Name}.Methods.g.cs";
-    execContext.AddSource(fileName, sourceCode);
-  }
-
-  public void Initialize(GeneratorInitializationContext initContext)
-  {
-    // This source generator does not need any initialization.
+      string fileName = $"{mainMethod?.ContainingType.Name}.Methods.g.cs";
+      context.AddSource(fileName, sourceCode);
+    });
   }
 }

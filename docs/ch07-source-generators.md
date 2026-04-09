@@ -156,7 +156,7 @@ public class ProgramSourceGenerator : IIncrementalGenerator
     {
       IMethodSymbol? mainMethod = compilation.GetEntryPoint(context.CancellationToken);
 
-    string sourceCode = $@"// Source-generated class.
+      string sourceCode = $@"// Source-generated class.
 #nullable enable
 
 using System.Globalization; // To use CultureInfo.
@@ -196,8 +196,9 @@ partial class {mainMethod?.ContainingType.Name}
 }}
 ";
 
-    string fileName = $"{mainMethod?.ContainingType.Name}.Methods.g.cs";
-    context.AddSource(fileName, sourceCode);
+      string fileName = $"{mainMethod?.ContainingType.Name}.Methods.g.cs";
+      context.AddSource(fileName, sourceCode);
+    });
   }
 }
 ```

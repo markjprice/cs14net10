@@ -1,10 +1,11 @@
-**Errata** (13 items)
+**Errata** (14 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
 > **Warning!** Avoid copying and pasting links that break over multiple lines and include hyphens or dashes because your PDF reader might remove a hyphen thinking that it being helpful but break the link! Just click on the links and they will work. Or carefully check that your PDF reader has not removed a hyphen after pasting into your web browser address bar. [See an example of this issue here](https://github.com/markjprice/cs13net9/issues/77).
 
 - [Online docs](#online-docs)
+- [Page 12 - Installing other extensions](#page-12---installing-other-extensions)
 - [Page 70 - Raw string literals](#page-70---raw-string-literals)
 - [Page 71 - Raw string literals](#page-71---raw-string-literals)
 - [Page 84 - Storing dynamic types](#page-84---storing-dynamic-types)
@@ -24,6 +25,29 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 > Thanks to [Donald Maisey](https://github.com/donaldmaisey) for raising [this issue on January 12, 2026](https://github.com/markjprice/cs14net10/issues/12).
 
 The link to an online topic about async/await was moved in the book from Chapter 2 to Chapter 4, but the online files and link were not. These have now been moved to where they should be. Also, some links to online topics were missing from the docs `README.md` file. These have now been added.
+
+# Page 12 - Installing other extensions
+
+> Thanks to [Eduardo Almeidabr](https://github.com/eduardoalmeidabr) for raising [this issue on April 19, 2026](https://github.com/markjprice/cs14net10/issues/22).
+
+*Table 1.1 VS Code extensions for .NET development* includes a row for **Polyglot Notebooks** `ms-dotnettools.dotnetinteractive-vscode`, and Polyglot Notebooks are referenced in two other sections of the book, *Explore Polyglot Notebooks* on page 38, and *C# 101 notebooks* on page 169.
+
+However, in February 2026, the .NET Interactive team officially [announced the deprecation](https://github.com/dotnet/interactive/issues/4163) of this extension:
+- The Polyglot Notebooks Extension became deprecated on *March 27th, 2026*.
+- .NET Interactive became deprecated on *April 24th, 2026*.
+
+The team knows notebooks are very unique and nothing can directly replace a notebook. However, for the use case we are continuing to invest in (a lightweight scratch pad for quick experiments, testing code, trying NuGet packages, etc.) file-based apps will provide that path going forward.
+
+Important notes:
+- The Polyglot Notebooks extension will not be disabled or uninstalled from your VS Code.
+- You can continue using the extension as is after its deprecation date if you don't uninstall it, but future VS Code updates may eventually break it.
+- No new features will be added to Polyglot Notebooks or .NET Interactive.
+- Bugs for Polyglot Notebooks or .NET Interactive will not be fixed.
+- Any security vulnerabilities reported for both Polyglot Notebooks and .NET Interactive after their respective deprecation dates will not be addressed.
+
+> **Recommended Action**: Uninstall the Polyglot Notebooks extension and/or uninstall .NET Interactive from your machine once you've migrated to another solution.
+
+In the next edition, all references to Polyglot Notebooks will be removed.
 
 # Page 70 - Raw string literals
 

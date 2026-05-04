@@ -1,4 +1,4 @@
-**Improvements** (13 items)
+**Improvements** (14 items)
 
 If you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
@@ -37,6 +37,16 @@ In *Table 2.9*, all the codes are for specifying custom date and time formats us
 In the next edition, I will add a warning about this subtle difference, like the one below, and add a row to *Table 2.10* for the standard format for `y`.
 
 > **Warning!** When defining a custom format you should use multiple different characters. If you try to define a custom format with a single character, like `d` or `y`, then your format could be interpreted as a standard format, as defined in *Table 2.10*. Standard format codes take priority over custom format codes.
+
+# Page 109 - Explore Spectre and other console app enhancement packages
+
+> Thanks to `Welktickler` in the book's Discord channel for [asking questions about Spectre](https://discordapp.com/channels/963343534323269662/1415638992149414018/1499670984607924286) that inspired me to add this improvement item.
+
+*Chapter 2* ends with the section *Exploring more about console apps*, that covers input and output for console apps using the built-in features provided by .NET. Later in the book, I use a third-party package called `Spectre.Console` to make it even easier to perform more complex console output like tables of information. 
+
+So in the *Exercise 2.1 - Online material* section, I provide some links to the official Spectre website (see screenshot below). In the next edition, I will make it clearer that these links are optional, and more for future reference than for reading immediately. When I do use Spectre later in the book, I give complete instructions on how to use it for the tasks we need so readers do not need to read any of the official Spectre documentation. I might even move this section to the end of *Chapter 9* by which time the reader is hopefully better prepared to handle Spectre's not-so-great documentation. 
+
+![Page 109](improvement-page-109.png)
 
 # Page 119 - Null-conditional assignment operator
 

@@ -4,6 +4,7 @@ If you have suggestions for improvements, then please [raise an issue in this re
 
 - [Page 26 - Implicitly imported namespaces](#page-26---implicitly-imported-namespaces)
 - [Page 98 - Custom number formatting](#page-98---custom-number-formatting)
+- [Page 109 - Explore Spectre and other console app enhancement packages](#page-109---explore-spectre-and-other-console-app-enhancement-packages)
 - [Page 119 - Null-conditional assignment operator](#page-119---null-conditional-assignment-operator)
 - [Page 221 - Creating a class library](#page-221---creating-a-class-library)
 - [Page 267 - Controlling how parameters are passed](#page-267---controlling-how-parameters-are-passed)

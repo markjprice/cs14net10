@@ -1,4 +1,4 @@
-**Errata** (14 items)
+**Errata** (15 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
@@ -12,6 +12,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 88 - What does new do?](#page-88---what-does-new-do)
 - [Page 103 - Getting key input from the user](#page-103---getting-key-input-from-the-user)
 - [Page 317 - Comparing objects when sorting](#page-317---comparing-objects-when-sorting)
+- [Page 319 - Implicit and explicit interface implementations](#page-319---implicit-and-explicit-interface-implementations)
 - [Page 515 - Understanding Entity Framework Core](#page-515---understanding-entity-framework-core)
 - [Page 521 - Managing the Northwind sample database with SQLiteStudio, Page 628 - Creating the Northwind database](#page-521---managing-the-northwind-sample-database-with-sqlitestudio-page-628---creating-the-northwind-database)
 - [Page 677 - Using shared layouts with Blazor static SSR pages](#page-677---using-shared-layouts-with-blazor-static-ssr-pages)
@@ -129,6 +130,30 @@ In Steps 2 and 4, the output of the `Modifiers` should be `None` instead of `0`.
 In Step 5, I wrote, "In `Person.cs`, after inheriting from `object`, add a comma and enter `IComparable<Person?>`,"
 
 Inheriting from `object` was shown in Chapter 5. I should have written, "In `Person.cs`, after `Person`, enter `: IComparable<Person?>`," and the code highlighting should include the colon. 
+
+# Page 319 - Implicit and explicit interface implementations
+
+> Thanks to Clint Mayers who emailed me about this issue on May 20, 2026.
+
+In the code example, I wrote comments about explicit interfaces:
+```cs
+// Explicit implementation can be any access modifier.
+void IGamePlayer.Lose() // Defaults to private.
+{
+  // Implement losing a game.
+  WriteLine("Implementation for losing a game.");
+}
+```
+
+After the code example, I added some notes:
+
+> Although the implementation of `IGamePlayer.Lose` in `Human` is `private`, the `IGamePlayer.Lose` member itself has an access modifier of `public`, so if we cast the `Human` instance into the interface type, then that `Lose` implementation is accessible.
+
+> **Warning!** Method access modifiers in an implementation type must match the method definition in the interface. For example, the `Lose` method in the interface is `public`, so the method implementation in the class must also be `public`.
+
+But what I wrote is confusing because you cannot set any modifier on explicit interfaces. As Microsoft say, "An explicit interface implementation doesn't have an access modifier since it isn't accessible as a member of the type it's defined in. Instead, it's only accessible when called through an instance of the interface. If you specify an access modifier for an explicit interface implementation, you get compiler error `CS0106`." This is what I clumsily tried to say in my first note.
+
+In the next edition, I will rewrite this section, and include a link to the official documentation: https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/explicit-interface-implementation
 
 # Page 515 - Understanding Entity Framework Core
 

@@ -1,4 +1,4 @@
-**Improvements** (14 items)
+**Improvements** (15 items)
 
 If you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
@@ -12,6 +12,7 @@ If you have suggestions for improvements, then please [raise an issue in this re
 - [Page 472 - Managing paths](#page-472---managing-paths)
 - [Page 507 - Controlling JSON processing](#page-507---controlling-json-processing)
 - [Page 523 - Choosing an EF Core database provider](#page-523---choosing-an-ef-core-database-provider)
+- [Page 601 - Grouping for lookups](#page-601---grouping-for-lookups)
 - [Page 640 - Improving the class-to-table mapping](#page-640---improving-the-class-to-table-mapping)
 - [Page 697 - Reviewing Blazor routing, layouts, and navigation](#page-697---reviewing-blazor-routing-layouts-and-navigation)
 - [Page 737 - Creating an ASP.NET Core Minimal API project](#page-737---creating-an-aspnet-core-minimal-api-project)
@@ -179,6 +180,22 @@ You don’t use `[JsonInclude]` to include normal properties. You use it to over
 In the next edition, I will add a note to warn readers that the chapter uses the SQLite EF Core database provider and so all output reflects that. If a reader chooses a different EF Core database provider like the one for SQL Server then their output is likely to be different from what is shown in the book. 
 
 For example, database object name delimiters might be different like quotes `"table name"` or square brackets `[table name]`, data types could be different since not all databases support the same types, and automatically-generated variable names could be different.
+
+# Page 601 - Grouping for lookups
+
+> Thanks to Clint Mayers who emailed me on June 5, 2026.
+
+I showed an example of using the `ToLookup` LINQ method, as shown in the following code:
+```cs
+ILookup<int, Product>? productsByCategoryId =
+  db.Products.ToLookup(keySelector: category => category.CategoryId);
+```
+
+Since the query is on the `Products` entityset/table, the name of the variable in the lambda would be better as `product` instead of `category`, although technically any variable name works:
+```cs
+ILookup<int, Product>? productsByCategoryId =
+  db.Products.ToLookup(keySelector: product => product.CategoryId);
+```
 
 # Page 640 - Improving the class-to-table mapping
 

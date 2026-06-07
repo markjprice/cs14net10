@@ -1,7 +1,8 @@
-**Improvements** (15 items)
+**Improvements** (16 items)
 
 If you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
+- [Page 11 - Downloading and installing Visual Studio](#page-11---downloading-and-installing-visual-studio)
 - [Page 26 - Implicitly imported namespaces](#page-26---implicitly-imported-namespaces)
 - [Page 98 - Custom number formatting](#page-98---custom-number-formatting)
 - [Page 109 - Explore Spectre and other console app enhancement packages](#page-109---explore-spectre-and-other-console-app-enhancement-packages)
@@ -17,6 +18,12 @@ If you have suggestions for improvements, then please [raise an issue in this re
 - [Page 697 - Reviewing Blazor routing, layouts, and navigation](#page-697---reviewing-blazor-routing-layouts-and-navigation)
 - [Page 737 - Creating an ASP.NET Core Minimal API project](#page-737---creating-an-aspnet-core-minimal-api-project)
 - [Appendix - Exercise 3.3 – Test your knowledge](#appendix---exercise-33--test-your-knowledge)
+
+# Page 11 - Downloading and installing Visual Studio
+
+> Thanks to [Moisés Sirvente](https://github.com/es-moises) for raising [this issue on June 7, 2026](https://github.com/markjprice/apps-services-net10/issues/32).
+
+In the next edition, after step 7, I will add a notebox to tell readers that if they already have Visual Studio installed and they want to match the settings I use in the book, they can navigate to **Tools** | **Import and Export Settings...**, and then select **Reset all settings**, and then choose **Visual C#**. Otherwise they should expect different shortcuts.
 
 # Page 26 - Implicitly imported namespaces
 

@@ -1,4 +1,4 @@
-**Errata** (15 items)
+**Errata** (16 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
@@ -15,6 +15,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 - [Page 319 - Implicit and explicit interface implementations](#page-319---implicit-and-explicit-interface-implementations)
 - [Page 515 - Understanding Entity Framework Core](#page-515---understanding-entity-framework-core)
 - [Page 521 - Managing the Northwind sample database with SQLiteStudio, Page 628 - Creating the Northwind database](#page-521---managing-the-northwind-sample-database-with-sqlitestudio-page-628---creating-the-northwind-database)
+- [Page 621 - Defining project properties to reuse version numbers](#page-621---defining-project-properties-to-reuse-version-numbers)
 - [Page 677 - Using shared layouts with Blazor static SSR pages](#page-677---using-shared-layouts-with-blazor-static-ssr-pages)
 - [Page 710 - Abstracting a service for a Blazor component](#page-710---abstracting-a-service-for-a-blazor-component)
 - [Page 735 - Creating an ASP.NET Core Minimal API project](#page-735---creating-an-aspnet-core-minimal-api-project)
@@ -178,6 +179,12 @@ Net result: EF Core 11 only running on .NET 11 is the documented requirement. If
 On page 521, in Step 6, I wrote, "You will see the 10 tables..." but there are only 8 tables. For many editions there were 10, but recently I simplified the script to only create 8 tables by removing the unneeded `Territories` and `EmployeeTerritories` tables. 
 
 On page 628, I wrote, "The script for SQLite is a simplified version that only creates 10 tables..." Again, this should be 8 tables. 
+
+# Page 621 - Defining project properties to reuse version numbers
+
+> Thanks to [Paul Marangoni](https://github.com/pmarangoni) for raising [this issue on June 29, 2026](https://github.com/markjprice/cs14net10/issues/23).
+
+I wrote, "within a `<ProjectGroup>` tag", when I should have written "within a `<PropertyGroup>` tag".
 
 # Page 677 - Using shared layouts with Blazor static SSR pages
 

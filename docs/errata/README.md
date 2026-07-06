@@ -2,6 +2,8 @@
 
 If you find any mistakes in the tenth edition, *C# 14 and .NET 10 - Modern Cross-Platform Development Fundamentals*, or if you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
+> **Warning!** You must be signed in to your GitHub account to enable the **New issue** button, otherwise it will mislead you by saying *Issue creation is restricted in this repository*. All signed in GitHub users are allowed to create issues in my public repositories.
+
 [**Errata** (16 items)](errata.md): Typos, tool user interface and behavior changes, or mistakes in code that would cause a compilation error that prevents a successful build.
 
 [**Improvements** (16 items)](improvements.md): Changes to text or code that would improve the content. These are optional.

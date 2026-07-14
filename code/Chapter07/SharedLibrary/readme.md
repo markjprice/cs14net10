@@ -1,9 +1,9 @@
-# README for C# 13 and .NET 9 Shared Library
+# README for C# 14 and .NET 10 Shared Library
 
 # About
 
 This is a shared library that readers build in the book, 
-*C# 13 and .NET 9 - Modern Cross-Platform Development Fundamentals*.
+*C# 14 and .NET 10 - Modern Cross-Platform Development Fundamentals*.
 
 ## How to Use
 

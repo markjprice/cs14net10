@@ -1,14 +1,14 @@
 <Project>
 
-  <!--Last updated package versions: June 9, 2026.-->
+  <!--Last updated package versions: July 14, 2026.-->
 
   <PropertyGroup Label="To enable Central Package Management.">
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
 
   <PropertyGroup Label="Define custom properties for common version numbers.">
-    <Net10>10.0.9</Net10>
-    <Net11>11.0.0-preview.5.26302.115</Net11>
+    <Net10>10.0.10</Net10>
+    <Net11>11.0.0-preview.6.26359.118</Net11>
 
     <!-- To use .NET 11 preview packages: -->
     <!-- 1) Install the latest .NET 11 SDK preview. -->
@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup Label="For unit testing.">
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.6.0" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.8.1" />
     <PackageVersion Include="coverlet.collector" Version="10.0.1" />
 
     <!--xunit package will only be updated for security issues. All future feature work has moved onto v3.-->
@@ -39,7 +39,7 @@
 
   <ItemGroup Label="For web services.">
     <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="$(Net10)" />
-    <PackageVersion Include="Scalar.AspNetCore" Version="2.16.2" />
+    <PackageVersion Include="Scalar.AspNetCore" Version="2.16.11" />
   </ItemGroup>
 
 </Project>

@@ -4,7 +4,7 @@ If you find any mistakes in the tenth edition, *C# 14 and .NET 10 - Modern Cross
 
 > **Warning!** You must be signed in to your GitHub account to enable the **New issue** button, otherwise it will mislead you by saying *Issue creation is restricted in this repository*. All signed in GitHub users are allowed to create issues in my public repositories.
 
-[**Errata** (16 items)](errata.md): Typos, tool user interface and behavior changes, or mistakes in code that would cause a compilation error that prevents a successful build.
+[**Errata** (17 items)](errata.md): Typos, tool user interface and behavior changes, or mistakes in code that would cause a compilation error that prevents a successful build.
 
 [**Improvements** (16 items)](improvements.md): Changes to text or code that would improve the content. These are optional.
 
@@ -23,6 +23,7 @@ Who|Errata|Improvements
 [Nick Johnston](https://github.com/nick-johnston)|1|1
 Clint Mayers|1|1
 José Luis García|1|0
+[Mark Alexander](https://github.com/mark-alexander-1976)|1|0
 [Eduardo Almeidabr](https://github.com/eduardoalmeidabr)|1|0
 [CalebFord](https://github.com/CalebFord)|1|0
 [Donald Maisey](https://github.com/donaldmaisey)|1|0

@@ -1,4 +1,4 @@
-**Errata** (16 items)
+**Errata** (17 items)
 
 If you find any mistakes, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
 
@@ -6,6 +6,7 @@ If you find any mistakes, then please [raise an issue in this repository](https:
 
 - [Online docs](#online-docs)
 - [Page 12 - Installing other extensions](#page-12---installing-other-extensions)
+- [Page 24 - Attaching the debugger in Visual Studio](#page-24---attaching-the-debugger-in-visual-studio)
 - [Page 70 - Raw string literals](#page-70---raw-string-literals)
 - [Page 71 - Raw string literals](#page-71---raw-string-literals)
 - [Page 84 - Storing dynamic types](#page-84---storing-dynamic-types)
@@ -50,6 +51,16 @@ Important notes:
 > **Recommended Action**: Uninstall the Polyglot Notebooks extension and/or uninstall .NET Interactive from your machine once you've migrated to another solution.
 
 In the next edition, all references to Polyglot Notebooks will be removed.
+
+# Page 24 - Attaching the debugger in Visual Studio
+
+> Thanks to [Mark Alexander](https://github.com/mark-alexander-1976) for raising [this issue on July 24, 2026](https://github.com/markjprice/cs14net10/issues/24).
+
+I wrote, "Attaching a debugger also limits you to only starting one project. If you want to run more than one project, each with a debugger attached, then you must start multiple instances of Visual Studio (one benefit of Rider is that it doesn’t have this limitation)."
+
+This is not true, and I even show you how to configure multiple start up projects, with or without debugging, in the last chapter of the book.
+
+In the next edition, I will replace that paragraph with, "Visual Studio and Rider can also start and debug multiple projects from one solution. You will configure that later when a client and web service must run together."
 
 # Page 70 - Raw string literals
 

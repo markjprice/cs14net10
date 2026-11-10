@@ -10,8 +10,8 @@
     <Net10>10.0.15</Net10>
     <Net11>11.0.0</Net11>
 
-    <!-- To use .NET 11 preview packages: -->
-    <!-- 1) Install the latest .NET 11 SDK preview. -->
+    <!-- To use .NET 11 packages: -->
+    <!-- 1) Install the latest .NET 11 SDK. -->
     <!-- 2) Change project target framework from net10.0 to net11.0. -->
     <!-- 3) Change the version values below from $(Net10) to $(Net11). -->
   </PropertyGroup>
